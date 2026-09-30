@@ -3,216 +3,201 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Clientes — ERP Locação de Salas</title>
+  <title>Funcionários — ERP Locação de Salas</title>
 </head>
 <body>
   <!--
-  Área principal da aplicação.
-  Este elemento funciona como o container onde
-  o conteúdo principal do sistema será carregado.
+  Título principal do formulário.
+  Informa ao usuário que ele está realizando
+  o cadastro de um novo funcionário.
 -->
-<section class="app-shell" id="app-shell-root"></section>
+<h2>Cadastrar Funcionário</h2>
 
 
 <!--
-  Fundo/estrutura responsável por exibir o modal.
-  O ID "modal-backdrop" permite que o JavaScript
-  controle a abertura e o fechamento da janela.
+  Texto explicativo apresentado abaixo do título.
+  Informa que o funcionário terá acesso ao sistema
+  para executar suas atividades.
 -->
-<section class="modal-backdrop" id="modal-backdrop">
+<p class="page-subtitle">
+  Informe os dados do funcionário para registrá-lo no sistema e configurar suas permissões de acesso
+</p>
+
+
+<!--
+  Área destinada à apresentação de mensagens
+  de erro durante o preenchimento ou envio
+  do formulário.
+
+  O JavaScript poderá inserir mensagens
+  neste elemento.
+-->
+
+
+
+<!--
+  Seção responsável pelo preenchimento
+  do nome do funcionário.
+-->
+<section class="form-field">
 
   <!--
-    Formulário utilizado para cadastrar um novo cliente.
-    O evento de envio pode ser tratado pelo JavaScript
-    através do ID "create-form".
+    Identificação do campo de nome.
+    O atributo "for" relaciona o label
+    diretamente ao input correspondente.
   -->
-  <form class="modal" id="create-form">
+  <label for="f-name">
+    Nome
+  </label>
 
-    <!--
-      Título da janela de cadastro.
-      Identifica claramente a finalidade do formulário.
-    -->
-    <h2>Novo cliente</h2>
+  <!--
+    Campo utilizado para informar o nome
+    completo do funcionário.
 
+    O atributo "required" determina que
+    o preenchimento deste campo é obrigatório.
+  -->
+  <input
+    type="text"
+    id="f-name"
+    name="name"
+    autocomplete="name"
+    required
+  />
 
-    <!--
-      Área destinada à apresentação de mensagens de erro.
-      O JavaScript pode inserir aqui mensagens de validação
-      ou problemas ocorridos durante o cadastro.
-    -->
-    <section id="modal-error"></section>
-
-
-    <!--
-      Campo destinado ao nome completo do cliente.
-      O atributo "required" torna o preenchimento obrigatório.
-    -->
-    <section class="form-field">
-
-      <!-- Identificação do campo de nome. -->
-      <label for="f-name">Nome</label>
-
-      <!--
-        Campo para inserção do nome do cliente.
-        O atributo "required" impede o envio sem preenchimento.
-      -->
-      <input
-        type="text"
-        id="f-name"
-        required
-      />
-
-    </section>
+</section>
 
 
-    <!--
-      Campo destinado ao endereço de e-mail do cliente.
-    -->
-    <section class="form-field">
+<!--
+  Seção responsável pelo preenchimento
+  do cargo do funcionário.
+-->
+<section class="form-field">
 
-      <!-- Identificação do campo de e-mail. -->
-      <label for="f-email">E-mail</label>
+  <!-- Identificação do campo de cargo. -->
+  <label for="f-position">
+    Cargo
+  </label>
 
-      <!--
-        Campo de e-mail.
-        O navegador também realiza uma validação básica
-        do formato do endereço informado.
-      -->
-      <input
-        type="email"
-        id="f-email"
-        required
-      />
+  <!--
+    Campo utilizado para informar a função
+    ou cargo exercido pelo funcionário.
 
-    </section>
+    O atributo "placeholder" apresenta um
+    exemplo para orientar o preenchimento.
+  -->
+  <input
+    type="text"
+    id="f-position"
+    name="position"
+    autocomplete="organization-title"
+    placeholder="Ex.: Recepcionista, Zelador..."
+    required
+  />
 
-
-    <!--
-      Campo destinado ao telefone do cliente.
-      O preenchimento não é obrigatório.
-    -->
-    <section class="form-field">
-
-      <!-- Identificação do campo de telefone. -->
-      <label for="f-phone">Telefone</label>
-
-      <!-- Campo para inserção do telefone. -->
-      <input
-        type="tel"
-        id="f-phone"
-      />
-
-    </section>
+</section>
 
 
-    <!--
-      Campo destinado ao CPF ou CNPJ do cliente.
-    -->
-    <section class="form-field">
+<!--
+  Seção responsável pelo cadastro do e-mail
+  que será utilizado como login do funcionário.
+-->
+<section class="form-field">
 
-      <!-- Identificação do campo de documento. -->
-      <label for="f-document">CPF/CNPJ</label>
+  <!-- Identificação do campo de e-mail. -->
+  <label for="f-email">
+    E-mail (login)
+  </label>
 
-      <!--
-        Campo para CPF ou CNPJ.
-        O placeholder orienta o usuário a informar
-        somente os números do documento.
-      -->
-      <input
-        type="text"
-        id="f-document"
-        placeholder="Somente números"
-      />
+  <!--
+    Campo utilizado para informar o endereço
+    de e-mail do funcionário.
 
-    </section>
+    O tipo "email" permite que o navegador
+    faça uma validação básica do endereço.
+  -->
+  <input
+    type="email"
+    id="f-email"
+    name="email"
+    autocomplete="email"
+    required
+  />
 
-
-    <!--
-      Área responsável pela opção de criação
-      de acesso ao sistema para o cliente.
-    -->
-    <section class="checkbox-field">
-
-      <!--
-        Caixa de seleção que permite ao usuário
-        solicitar a criação de um acesso.
-      -->
-      <input
-        type="checkbox"
-        id="f-create-login"
-      />
-
-      <!--
-        Texto explicativo associado à caixa de seleção.
-      -->
-      <label for="f-create-login">
-        Criar acesso ao sistema para este cliente
-      </label>
-
-    </section>
+</section>
 
 
-    <!--
-      Campo destinado à senha provisória do cliente.
-      O ID "password-field" permite que o JavaScript
-      controle a exibição deste campo.
-    -->
-    <section
-      class="form-field"
-      id="password-field"
-    >
+<!--
+  Seção responsável pelo cadastro da senha
+  provisória do funcionário.
+-->
+<section class="form-field">
 
-      <!-- Identificação do campo de senha. -->
-      <label for="f-password">
-        Senha provisória
-      </label>
+  <!-- Identificação do campo de senha. -->
+  <label for="f-password">
+    Senha provisória
+  </label>
 
-      <!--
-        Campo para criação da senha provisória.
-        O atributo "minlength" exige pelo menos
-        8 caracteres.
-      -->
-      <input
-        type="password"
-        id="f-password"
-        minlength="8"
-      />
+  <!--
+    Campo utilizado para informar a senha
+    inicial do funcionário.
 
-    </section>
+    O tipo "password" impede que os caracteres
+    digitados sejam exibidos diretamente.
 
+    O atributo "minlength" exige pelo menos
+    8 caracteres.
+  -->
+  <input
+    type="password"
+    id="f-password"
+    name="password"
+    autocomplete="new-password"
+    minlength="8"
+    required
+  />
 
-    <!--
-      Área destinada aos botões de ação do formulário.
-    -->
-    <section class="modal-actions">
-
-      <!--
-        Botão responsável por cancelar o cadastro.
-        O tipo "button" impede que ele envie o formulário.
-      -->
-      <button
-        type="button"
-        class="btn btn--outline"
-        id="cancel-btn"
-      >
-        Cancelar
-      </button>
+</section>
 
 
-      <!--
-        Botão responsável por enviar o formulário
-        e concluir o cadastro do cliente.
-      -->
-      <button
-        type="submit"
-        class="btn btn--primary"
-      >
-        Salvar
-      </button>
+<!--
+  Seção responsável pelos botões de ação
+  disponíveis no formulário.
+-->
+<section class="modal-actions">
 
-    </section>
+  <!--
+    Botão utilizado para cancelar o cadastro.
 
-  </form>
+    O tipo "button" impede que o botão envie
+    o formulário.
+
+    O JavaScript pode utilizar o ID
+    "cancel-btn" para fechar o modal.
+  -->
+  <button
+    type="button"
+    class="btn btn--outline"
+    id="cancel-btn"
+  >
+    Cancelar
+  </button>
+
+
+  <!--
+    Botão responsável pelo envio do formulário.
+
+    O tipo "submit" faz com que o evento
+    de envio do formulário seja acionado,
+    permitindo que o JavaScript processe
+    o cadastro do funcionário.
+  -->
+  <button
+    type="submit"
+    class="btn btn--primary"
+  >
+    Salvar
+  </button>
 
 </section>
 
