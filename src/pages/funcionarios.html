@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Funcionários — ERP Locação de Salas</title>
+</head>
+<body>
+  <!--
+  Título principal do formulário.
+  Informa ao usuário que ele está realizando
+  o cadastro de um novo funcionário.
+-->
+<h2>Novo funcionário</h2>
+
+
+<!--
+  Texto explicativo apresentado abaixo do título.
+  Informa que o funcionário terá acesso ao sistema
+  para executar suas atividades.
+-->
+<p class="page-subtitle">
+  Todo funcionário recebe acesso ao sistema
+  para operar suas tarefas.
+</p>
+
+
+<!--
+  Área destinada à apresentação de mensagens
+  de erro durante o preenchimento ou envio
+  do formulário.
+
+  O JavaScript poderá inserir mensagens
+  neste elemento.
+-->
+<section
+  id="modal-error"
+  role="alert"
+  aria-live="polite"
+></section>
+
+
+<!--
+  Seção responsável pelo preenchimento
+  do nome do funcionário.
+-->
+<section class="form-field">
+
+  <!--
+    Identificação do campo de nome.
+    O atributo "for" relaciona o label
+    diretamente ao input correspondente.
+  -->
+  <label for="f-name">
+    Nome
+  </label>
+
+  <!--
+    Campo utilizado para informar o nome
+    completo do funcionário.
+
+    O atributo "required" determina que
+    o preenchimento deste campo é obrigatório.
+  -->
+  <input
+    type="text"
+    id="f-name"
+    name="name"
+    autocomplete="name"
+    required
+  />
+
+</section>
+
+
+<!--
+  Seção responsável pelo preenchimento
+  do cargo do funcionário.
+-->
+<section class="form-field">
+
+  <!-- Identificação do campo de cargo. -->
+  <label for="f-position">
+    Cargo
+  </label>
+
+  <!--
+    Campo utilizado para informar a função
+    ou cargo exercido pelo funcionário.
+
+    O atributo "placeholder" apresenta um
+    exemplo para orientar o preenchimento.
+  -->
+  <input
+    type="text"
+    id="f-position"
+    name="position"
+    autocomplete="organization-title"
+    placeholder="Ex.: Recepcionista, Zelador..."
+    required
+  />
+
+</section>
+
+
+<!--
+  Seção responsável pelo cadastro do e-mail
+  que será utilizado como login do funcionário.
+-->
+<section class="form-field">
+
+  <!-- Identificação do campo de e-mail. -->
+  <label for="f-email">
+    E-mail (login)
+  </label>
+
+  <!--
+    Campo utilizado para informar o endereço
+    de e-mail do funcionário.
+
+    O tipo "email" permite que o navegador
+    faça uma validação básica do endereço.
+  -->
+  <input
+    type="email"
+    id="f-email"
+    name="email"
+    autocomplete="email"
+    required
+  />
+
+</section>
+
+
+<!--
+  Seção responsável pelo cadastro da senha
+  provisória do funcionário.
+-->
+<section class="form-field">
+
+  <!-- Identificação do campo de senha. -->
+  <label for="f-password">
+    Senha provisória
+  </label>
+
+  <!--
+    Campo utilizado para informar a senha
+    inicial do funcionário.
+
+    O tipo "password" impede que os caracteres
+    digitados sejam exibidos diretamente.
+
+    O atributo "minlength" exige pelo menos
+    8 caracteres.
+  -->
+  <input
+    type="password"
+    id="f-password"
+    name="password"
+    autocomplete="new-password"
+    minlength="8"
+    required
+  />
+
+</section>
+
+
+<!--
+  Seção responsável pelos botões de ação
+  disponíveis no formulário.
+-->
+<section class="modal-actions">
+
+  <!--
+    Botão utilizado para cancelar o cadastro.
+
+    O tipo "button" impede que o botão envie
+    o formulário.
+
+    O JavaScript pode utilizar o ID
+    "cancel-btn" para fechar o modal.
+  -->
+  <button
+    type="button"
+    class="btn btn--outline"
+    id="cancel-btn"
+  >
+    Cancelar
+  </button>
+
+
+  <!--
+    Botão responsável pelo envio do formulário.
+
+    O tipo "submit" faz com que o evento
+    de envio do formulário seja acionado,
+    permitindo que o JavaScript processe
+    o cadastro do funcionário.
+  -->
+  <button
+    type="submit"
+    class="btn btn--primary"
+  >
+    Salvar
+  </button>
+
+</section>
+
+</body>
+</html>

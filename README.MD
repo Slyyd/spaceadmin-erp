@@ -3,7 +3,8 @@
 ![SpaceAdmin Logo](https://raw.githubusercontent.com/Slyyd/spaceadmin-erp/main/docs/logo.png)
 
 > **Projeto Acadêmico** — UNICID (Universidade Cidade de São Paulo)  
-> **Curso:** Engenharia de Software | **Disciplina:** Modelagem de Banco de Dados e Desenvolvimento Front-End
+> **Curso:** Engenharia de Software
+> **Disciplina:** Modelagem de Banco de Dados e Desenvolvimento Front-End
 > **Campus:** Tatuapé — 2026  
 
 ---
@@ -50,59 +51,28 @@ A solução conecta a oferta de espaços à demanda crescente por serviços *pay
 ```text
 SpaceAdmin/
 │
-├── docs/                       # Documentações do projeto e diagramas
-│   ├── SpaceAdmin.docx         # Documento descritivo completo
-│   ├── DER.png                 # Diagrama Entidade-Relacionamento
-│   └── fluxogramas.png         # Fluxogramas dos processos de negócio
+├── docs/                             # Documentações do projeto e diagramas
+│   ├── SpaceAdmin.docx               # Documento descritivo completo
+│   ├── DER.pdf                       # Diagrama Entidade-Relacionamento
+│   └── fluxograma.png               # Fluxogramas dos processos de negócio
 │
-├── database/                   # Modelagem e Scripts SQL
-│   ├── schema.sql              # Criação de tabelas, PKs, FKs e restrições
-│   ├── seed.sql                # Carga de dados de teste (Perfis, Permissões, etc.)
-│   └── queries.sql             # Consultas e relatórios complexos
-│
-└── src/                        # Estrutura do Código-Fonte / Frontend HTML
-    ├── assets/                 # Estilos (CSS), scripts (JS) e imagens
-    │   ├── css/
-    │   ├── js/
-    │   └── images/
+└── src/
+    ├── assets/                       # Recursos estáticos do sistema
+    │   └── images/                   # Imagens utilizadas nas páginas HTML (Logos, Ícones, Banners)
     │
-    ├── auth/                   # Autenticação e Perfis
-    │   ├── login.html
-    │   └── recuperar-senha.html
-    │
-    ├── dashboard/              # Painéis e Indicadores
-    │   └── index.html
-    │
-    ├── pessoas/                # Gestão de Clientes, Funcionários e Proprietários
-    │   ├── clientes.html
-    │   ├── funcionarios.html
-    │   └── proprietarios.html
-    │
-    ├── espacos/                # Imóveis, Salas, Equipamentos e Calendário
-    │   ├── imoveis.html
-    │   ├── salas.html
-    │   ├── equipamentos.html
-    │   └── disponibilidade.html
-    │
-    ├── reservas/               # Reservas, Pagamentos, Check-in e Check-out
-    │   ├── reservas.html
-    │   ├── pagamentos.html
-    │   └── checkin-checkout.html
-    │
-    ├── operacoes/              # Limpeza e Manutenção
-    │   ├── ordens-limpeza.html
-    │   └── ordens-manutencao.html
-    │
-    ├── estoque/                # Produtos, Movimentações, Fornecedores e Compras
-    │   ├── produtos.html
-    │   ├── movimentacoes.html
-    │   ├── fornecedores.html
-    │   └── pedidos-compra.html
-    │
-    ├── financeiro/             # Contas a Pagar / Receber e Movimentações
-    │   └── financeiro.html
-    │
-    └── admin/                  # Configurações Gerais, Regras e Taxas
+    └── pages/                        # Interfaces HTML do protótipo web
+        ├── agenda.html
+        ├── clientes.html
+        ├── compras.html
         ├── configuracoes.html
-        ├── regras-cancelamento.html
-        └── taxas.html
+        ├── estoque.html               # (Pendente)
+        ├── financeiro.html            # (Pendente)
+        ├── funcionarios.html
+        ├── imoveis.html               # (Pendente)
+        ├── limpeza.html
+        ├── locadores.html
+        ├── manutencao.html
+        ├── relatorios.html
+        ├── reservas.html
+        ├── usuarios.html              # (Pendente)
+        └── portifolio.html

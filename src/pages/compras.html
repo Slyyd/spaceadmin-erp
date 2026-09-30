@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Compras - ERP Locação de Salas</title>
+</head>
+
+<body>
+
+    <h2>Novo fornecedor</h2>
+
+    <form id="supplier-form">
+
+        <section>
+            <label>Razão social</label>
+            <input type="text" id="sup-name">
+        </section>
+
+        <section>
+            <label>Nome fantasia</label>
+            <input type="text" id="sup-fantasy-name">
+        </section>
+
+        <section>
+            <label>CPF/CNPJ</label>
+            <input type="text" id="sup-document">
+        </section>
+
+        <section>
+            <label>Telefone</label>
+            <input type="text" id="sup-phone">
+        </section>
+
+        <section>
+            <label>E-mail</label>
+            <input type="email" id="sup-email">
+        </section>
+
+        <section>
+            <label>Endereço</label>
+            <input type="text" id="sup-address">
+        </section>
+
+        <section>
+            <label>Número</label>
+            <input type="text" id="sup-number">
+        </section>
+
+        <section>
+            <label>Bairro</label>
+            <input type="text" id="sup-neighborhood">
+        </section>
+
+        <section>
+            <label>Cidade</label>
+            <input type="text" id="sup-city">
+        </section>
+
+        <section>
+            <label>Estado</label>
+            <input type="text" id="sup-state">
+        </section>
+
+        <section>
+            <label>CEP</label>
+            <input type="text" id="sup-cep">
+        </section>
+
+        <br>
+
+        <button type="button">Cancelar</button>
+        <button type="submit">Salvar</button>
+
+    </form>
+
+
+    <h2>Novo pedido de compra</h2>
+
+    <form id="order-form">
+
+        <section>
+            <label>Fornecedor</label>
+
+            <select id="order-supplier">
+                <option value="">Selecione um fornecedor</option>
+            </select>
+        </section>
+
+        <section>
+            <label>Data do pedido</label>
+            <input type="date" id="order-date">
+        </section>
+
+        <section>
+            <label>Data prevista</label>
+            <input type="date" id="order-expected-date">
+        </section>
+
+        <section>
+            <label>Status</label>
+
+            <select id="order-status">
+                <option value="">Selecione o status</option>
+                <option value="pendente">Pendente</option>
+                <option value="aprovado">Aprovado</option>
+                <option value="recebido">Recebido</option>
+            </select>
+        </section>
+
+        <section>
+            <label>Observações</label>
+            <textarea id="order-notes"></textarea>
+        </section>
+
+        <br>
+
+        <button type="button">Cancelar</button>
+        <button type="submit">Criar pedido</button>
+
+    </form>
+
+</body>
+
+</html>
