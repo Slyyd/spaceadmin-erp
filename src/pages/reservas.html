@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reservas — ERP Locação de Salas</title>
+  <style>
+    /* Reset para os elementos nativos que substituíram as divs */
+    dialog.modal-backdrop {
+      position: static;
+      inset: auto;
+      display: block;
+      border: 0;
+      padding: 0;
+      margin: 0 0 32px;
+      background: transparent;
+      max-width: none;
+      width: auto;
+      height: auto;
+    }
+    fieldset.form-field {
+      border: 0;
+      padding: 0;
+      margin: 0 0 20px;
+      min-width: 0;
+    }
+    label.checkbox-inline {
+      display: block;
+      margin-bottom: 16px;
+      cursor: pointer;
+    }
+
+    /* Mensagens de erro vindas do back-end: só aparecem quando preenchidas */
+    #payment-modal-error,
+    #checkin-modal-error,
+    #checkout-modal-error {
+      display: block;
+      min-height: 1.2em;
+      margin-bottom: 12px;
+      padding: 10px 12px;
+      border-radius: 6px;
+      color: #b42318;
+      background: #fef3f2;
+      border: 1px solid #fda29b;
+      font-size: 0.9rem;
+    }
+    #payment-modal-error:empty,
+    #checkin-modal-error:empty,
+    #checkout-modal-error:empty {
+      display: none;
+    }
+
+    /* Espaçamento entre campos, selects e botões */
+    .form-field label {
+      display: block;
+      margin-bottom: 6px;
+    }
+    .modal-actions {
+      margin-top: 24px;
+      display: flex;
+      gap: 16px;
+    }
+  </style>
+</head>
+<body>
+  <main class="app-shell" id="app-shell-root"></main>
+
+  <dialog class="modal-backdrop" id="payment-modal-backdrop" open>
+    <form class="modal" id="payment-form">
+      <h2>Registrar pagamento</h2>
+      <p id="payment-modal-error" role="alert"></p>
+      <fieldset class="form-field">
+        <label>Valor (R$)</label>
+        <input type="number" step="0.01" id="pay-amount" required />
+      </fieldset>
+      <fieldset class="form-field">
+        <label>Forma de pagamento</label>
+        <select id="pay-method">
+          <option value="PIX">Pix</option>
+          <option value="CARTAO_CREDITO">Cartão de crédito</option>
+          <option value="CARTAO_DEBITO">Cartão de débito</option>
+          <option value="DINHEIRO">Dinheiro</option>
+          <option value="BOLETO">Boleto</option>
+        </select>
+      </fieldset>
+      <footer class="modal-actions">
+        <button type="button" class="btn btn--outline" id="payment-cancel-btn">Cancelar</button>
+        <button type="submit" class="btn btn--primary">Confirmar pagamento</button>
+      </footer>
+    </form>
+  </dialog>
+
+  <dialog class="modal-backdrop" id="checkin-modal-backdrop" open>
+    <form class="modal" id="checkin-form">
+      <h2>Confirmar check-in</h2>
+      <p id="checkin-modal-error" role="alert"></p>
+      <fieldset class="form-field">
+        <label>Observações (opcional)</label>
+        <input type="text" id="checkin-notes" />
+      </fieldset>
+      <footer class="modal-actions">
+        <button type="button" class="btn btn--outline" id="checkin-cancel-btn">Cancelar</button>
+        <button type="submit" class="btn btn--primary">Confirmar check-in</button>
+      </footer>
+    </form>
+  </dialog>
+
+  <dialog class="modal-backdrop" id="checkout-modal-backdrop" open>
+    <form class="modal" id="checkout-form">
+      <h2>Confirmar check-out</h2>
+      <p id="checkout-modal-error" role="alert"></p>
+      <fieldset class="form-field">
+        <label>Condição da sala</label>
+        <input type="text" id="checkout-condition" placeholder="Ex: limpa, sem danos" />
+      </fieldset>
+      <fieldset class="form-field">
+        <label>Ocorrências (opcional)</label>
+        <input type="text" id="checkout-occurrences" />
+      </fieldset>
+      <label class="checkbox-inline" for="checkout-needs-cleaning">
+        <input type="checkbox" id="checkout-needs-cleaning" checked /> Precisa de limpeza
+      </label>
+      <label class="checkbox-inline" for="checkout-needs-maintenance">
+        <input type="checkbox" id="checkout-needs-maintenance" /> Precisa de manutenção
+      </label>
+      <footer class="modal-actions">
+        <button type="button" class="btn btn--outline" id="checkout-cancel-btn">Cancelar</button>
+        <button type="submit" class="btn btn--primary">Confirmar check-out</button>
+      </footer>
+    </form>
+  </dialog>
+
+  <script>
+    // Validação simples: só mostra a mensagem de erro se algum campo obrigatório
+    // ficar vazio ao tentar confirmar. O back-end pode sobrescrever essa mensagem
+    // escrevendo diretamente no mesmo elemento (#payment-modal-error, etc.).
+    function validarFormulario(formId, errorId) {
+      const form = document.getElementById(formId);
+      const errorBox = document.getElementById(errorId);
+
+      form.addEventListener('submit', function (event) {
+        const camposObrigatorios = form.querySelectorAll('[required]');
+        let mensagens = [];
+
+        camposObrigatorios.forEach(function (campo) {
+          if (!campo.value || !campo.value.trim()) {
+            const label = campo.closest('.form-field')?.querySelector('label');
+            const nomeCampo = label ? label.textContent.trim() : 'Campo obrigatório';
+            mensagens.push(nomeCampo + ' precisa ser preenchido.');
+          }
+        });
+
+        if (mensagens.length > 0) {
+          event.preventDefault();
+          errorBox.textContent = mensagens.join(' ');
+        } else {
+          errorBox.textContent = '';
+        }
+      });
+    }
+
+    validarFormulario('payment-form', 'payment-modal-error');
+    validarFormulario('checkin-form', 'checkin-modal-error');
+    validarFormulario('checkout-form', 'checkout-modal-error');
+  </script>
+</body>
+</html>

@@ -51,6 +51,8 @@ A solução conecta a oferta de espaços à demanda crescente por serviços *pay
 ```text
 SpaceAdmin/
 │
+├── index.hml                         # Página principal do site
+│
 ├── docs/                             # Documentações do projeto e diagramas
 │   ├── SpaceAdmin.docx               # Documento descritivo completo
 │   ├── DER.pdf                       # Diagrama Entidade-Relacionamento
@@ -65,7 +67,7 @@ SpaceAdmin/
         ├── clientes.html
         ├── compras.html
         ├── configuracoes.html
-        ├── estoque.html               # (Pendente)
+        ├── estoque.html               
         ├── financeiro.html            # (Pendente)
         ├── funcionarios.html
         ├── imoveis.html               # (Pendente)
