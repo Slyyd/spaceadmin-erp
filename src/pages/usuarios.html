@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Usuários — ERP Locação de Salas</title>
+
+  <style>
+    fieldset.form-field {
+      border: 0;
+      padding: 0;
+      margin: 0 0 20px;
+      min-width: 0;
+    }
+
+    .form-field label {
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    #modal-error {
+      display: block;
+      min-height: 1.2em;
+      margin-bottom: 12px;
+      padding: 10px 12px;
+      border-radius: 6px;
+      color: #b42318;
+      background: #fef3f2;
+      border: 1px solid #fda29b;
+      font-size: 0.9rem;
+    }
+
+    #modal-error:empty {
+      display: none;
+    }
+
+    .modal-actions {
+      margin-top: 24px;
+      display: flex;
+      gap: 16px;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="app-shell" id="app-shell-root">
+
+    <section class="modal-backdrop" id="modal-backdrop">
+      <form class="modal" id="create-user-form">
+        <h2>Novo usuário</h2>
+
+        <p id="modal-error" role="alert"></p>
+
+        <fieldset class="form-field">
+          <label for="new-name">Nome</label>
+          <input type="text" id="new-name" required />
+        </fieldset>
+
+        <fieldset class="form-field">
+          <label for="new-email">E-mail</label>
+          <input type="email" id="new-email" required />
+        </fieldset>
+
+        <fieldset class="form-field">
+          <label for="new-password">Senha provisória</label>
+          <input
+            type="password"
+            id="new-password"
+            required
+            minlength="8"
+          />
+        </fieldset>
+
+        <footer class="modal-actions">
+          <button
+            type="button"
+            class="btn btn--outline"
+            id="cancel-btn"
+          >
+            Cancelar
+          </button>
+
+          <button type="submit" class="btn btn--primary">
+            Salvar
+          </button>
+        </footer>
+      </form>
+    </section>
+
+  </main>
+</body>
+</html>
