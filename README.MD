@@ -68,13 +68,13 @@ SpaceAdmin/
         ├── compras.html
         ├── configuracoes.html
         ├── estoque.html               
-        ├── financeiro.html            # (Pendente)
+        ├── financeiro.html            
         ├── funcionarios.html
-        ├── imoveis.html               # (Pendente)
+        ├── imoveis.html               
         ├── limpeza.html
         ├── locadores.html
         ├── manutencao.html
         ├── relatorios.html
         ├── reservas.html
-        ├── usuarios.html              # (Pendente)
+        ├── usuarios.html              
         └── portifolio.html
