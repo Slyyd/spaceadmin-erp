@@ -10,222 +10,242 @@
 
 <body>
 
-  <!-- Estrutura principal da aplicação. -->
-  <section class="app-shell" id="app-shell-root"></section>
+  <header>
+    <h1>SpaceAdmin - ERP</h1>
 
+    <nav>
+      <a href="./index.html">Início -
+      </a>
+      <a href="./src/pages/compras.html">Fazer Pedido de Compra -
+      </a>
+      <a href="./src/pages/limpeza.html">Criar Ordem de Limpeza -
+      </a>
+    </nav>
 
-  <!-- Modal responsável pelo cadastro de uma nova categoria. -->
-  <section class="modal-backdrop" id="category-modal-backdrop">
+  </header>
 
-    <!-- Formulário utilizado para criar uma nova categoria. -->
-    <form class="modal" id="category-form">
 
-      <!-- Título do formulário de cadastro da categoria. -->
-      <h2>Nova categoria</h2>
+  <main>
 
-      <!-- Campo destinado ao nome da categoria. -->
-      <section class="form-field">
+    <!-- Estrutura principal da aplicação. -->
+    <section class="app-shell" id="app-shell-root"></section>
 
-        <label for="cat-name">Nome</label>
 
-        <input type="text" id="cat-name" required />
+    <!-- Modal responsável pelo cadastro de uma nova categoria. -->
+    <section class="modal-backdrop" id="category-modal-backdrop">
 
-      </section>
+      <!-- Formulário utilizado para criar uma nova categoria. -->
+      <form class="modal" id="category-form">
 
-      <!-- Área destinada às ações do formulário. -->
-      <section class="modal-actions">
+        <!-- Título do formulário de cadastro da categoria. -->
+        <h2>Nova categoria</h2>
 
-        <!-- Botão responsável por cancelar o cadastro da categoria. -->
-        <button type="button" class="btn btn--outline" id="category-cancel-btn">
-          Cancelar
-        </button>
+        <!-- Campo destinado ao nome da categoria. -->
+        <section class="form-field">
 
-        <!-- Botão responsável por criar a categoria. -->
-        <button type="submit" class="btn btn--primary">
-          Criar
-        </button>
+          <label for="cat-name">Nome</label>
 
-      </section>
+          <input type="text" id="cat-name" required />
 
-    </form>
+        </section>
 
-  </section>
+        <!-- Área destinada às ações do formulário. -->
+        <section class="modal-actions">
 
+          <!-- Botão responsável por cancelar o cadastro da categoria. -->
+          <button type="button" class="btn btn--outline" id="category-cancel-btn">
+            Cancelar
+          </button>
 
-  <!-- Modal responsável pelo cadastro de um novo produto. -->
-  <section class="modal-backdrop" id="product-modal-backdrop">
+          <!-- Botão responsável por criar a categoria. -->
+          <button type="submit" class="btn btn--primary">
+            Criar
+          </button>
 
-    <!-- Formulário utilizado para cadastrar um novo produto. -->
-    <form class="modal" id="product-form">
+        </section>
 
-      <!-- Título do formulário de cadastro do produto. -->
-      <h2>Novo produto</h2>
+      </form>
 
-      <!-- Campo destinado à seleção da categoria do produto. -->
-      <section class="form-field">
+    </section>
 
-        <label for="prod-category">Categoria</label>
 
-        <select id="prod-category" required>
-        </select>
+    <!-- Modal responsável pelo cadastro de um novo produto. -->
+    <section class="modal-backdrop" id="product-modal-backdrop">
 
-      </section>
+      <!-- Formulário utilizado para cadastrar um novo produto. -->
+      <form class="modal" id="product-form">
 
-      <!-- Campo destinado ao nome do produto. -->
-      <section class="form-field">
+        <!-- Título do formulário de cadastro do produto. -->
+        <h2>Novo produto</h2>
 
-        <label for="prod-name">Nome</label>
+        <!-- Campo destinado à seleção da categoria do produto. -->
+        <section class="form-field">
 
-        <input type="text" id="prod-name" required />
+          <label for="prod-category">Categoria</label>
 
-      </section>
+          <select id="prod-category" required>
+          </select>
 
-      <!-- Campo destinado à unidade de medida do produto. -->
-      <section class="form-field">
+        </section>
 
-        <label for="prod-unit">Unidade de medida</label>
+        <!-- Campo destinado ao nome do produto. -->
+        <section class="form-field">
 
-        <input type="text" id="prod-unit" placeholder="L, un, kg..." required />
+          <label for="prod-name">Nome</label>
 
-      </section>
+          <input type="text" id="prod-name" required />
 
-      <!-- Campo destinado ao estoque mínimo. -->
-      <section class="form-field">
+        </section>
 
-        <label for="prod-min">Estoque mínimo</label>
+        <!-- Campo destinado à unidade de medida do produto. -->
+        <section class="form-field">
 
-        <input type="number" step="0.01" id="prod-min" value="0" />
+          <label for="prod-unit">Unidade de medida</label>
 
-      </section>
+          <input type="text" id="prod-unit" placeholder="L, un, kg..." required />
 
-      <!-- Campo destinado ao estoque inicial. -->
-      <section class="form-field">
+        </section>
 
-        <label for="prod-initial">Estoque inicial</label>
+        <!-- Campo destinado ao estoque mínimo. -->
+        <section class="form-field">
 
-        <input type="number" step="0.01" id="prod-initial" value="0" />
+          <label for="prod-min">Estoque mínimo</label>
 
-      </section>
+          <input type="number" step="0.01" id="prod-min" value="0" />
 
-      <!-- Área destinada às ações do formulário. -->
-      <section class="modal-actions">
+        </section>
 
-        <!-- Botão responsável por cancelar o cadastro do produto. -->
-        <button type="button" class="btn btn--outline" id="product-cancel-btn">
-          Cancelar
-        </button>
+        <!-- Campo destinado ao estoque inicial. -->
+        <section class="form-field">
 
-        <!-- Botão responsável por criar o produto. -->
-        <button type="submit" class="btn btn--primary">
-          Criar produto
-        </button>
+          <label for="prod-initial">Estoque inicial</label>
 
-      </section>
+          <input type="number" step="0.01" id="prod-initial" value="0" />
 
-    </form>
+        </section>
 
-  </section>
+        <!-- Área destinada às ações do formulário. -->
+        <section class="modal-actions">
 
+          <!-- Botão responsável por cancelar o cadastro do produto. -->
+          <button type="button" class="btn btn--outline" id="product-cancel-btn">
+            Cancelar
+          </button>
 
-  <!-- Modal responsável pelo registro de movimentações do estoque. -->
-  <section class="modal-backdrop" id="movement-modal-backdrop">
+          <!-- Botão responsável por criar o produto. -->
+          <button type="submit" class="btn btn--primary">
+            Criar produto
+          </button>
 
-    <!-- Formulário utilizado para registrar movimentações. -->
-    <form class="modal" id="movement-form">
+        </section>
 
-      <!-- Título do formulário de movimentação. -->
-      <h2>Registrar movimentação</h2>
+      </form>
 
-      <!-- Campo destinado à seleção do tipo de movimentação. -->
-      <section class="form-field">
+    </section>
 
-        <label for="mov-type">Tipo</label>
 
-        <select id="mov-type">
+    <!-- Modal responsável pelo registro de movimentações do estoque. -->
+    <section class="modal-backdrop" id="movement-modal-backdrop">
 
-          <option value="ENTRADA">
-            Entrada
-          </option>
+      <!-- Formulário utilizado para registrar movimentações. -->
+      <form class="modal" id="movement-form">
 
-          <option value="SAIDA">
-            Saída
-          </option>
+        <!-- Título do formulário de movimentação. -->
+        <h2>Registrar movimentação</h2>
 
-          <option value="AJUSTE">
-            Ajuste (valor absoluto)
-          </option>
+        <!-- Campo destinado à seleção do tipo de movimentação. -->
+        <section class="form-field">
 
-        </select>
+          <label for="mov-type">Tipo</label>
 
-      </section>
+          <select id="mov-type">
 
-      <!-- Campo destinado à quantidade movimentada. -->
-      <section class="form-field">
+            <option value="ENTRADA">
+              Entrada
+            </option>
 
-        <label for="mov-quantity">
-          Quantidade
-        </label>
+            <option value="SAIDA">
+              Saída
+            </option>
 
-        <input type="number" step="0.01" id="mov-quantity" required />
+            <option value="AJUSTE">
+              Ajuste (valor absoluto)
+            </option>
 
-      </section>
+          </select>
 
-      <!-- Campo destinado ao motivo da movimentação. -->
-      <section class="form-field">
+        </section>
 
-        <label for="mov-reason">
-          Motivo (opcional)
-        </label>
+        <!-- Campo destinado à quantidade movimentada. -->
+        <section class="form-field">
 
-        <input type="text" id="mov-reason" />
+          <label for="mov-quantity">
+            Quantidade
+          </label>
 
-      </section>
+          <input type="number" step="0.01" id="mov-quantity" required />
 
-      <!-- Área destinada às ações do formulário. -->
-      <section class="modal-actions">
+        </section>
 
-        <!-- Botão responsável por cancelar a movimentação. -->
-        <button type="button" class="btn btn--outline" id="movement-cancel-btn">
-          Cancelar
-        </button>
+        <!-- Campo destinado ao motivo da movimentação. -->
+        <section class="form-field">
 
-        <!-- Botão responsável por registrar a movimentação. -->
-        <button type="submit" class="btn btn--primary">
-          Registrar
-        </button>
+          <label for="mov-reason">
+            Motivo (opcional)
+          </label>
 
-      </section>
+          <input type="text" id="mov-reason" />
 
-    </form>
+        </section>
 
-  </section>
+        <!-- Área destinada às ações do formulário. -->
+        <section class="modal-actions">
 
+          <!-- Botão responsável por cancelar a movimentação. -->
+          <button type="button" class="btn btn--outline" id="movement-cancel-btn">
+            Cancelar
+          </button>
 
-  <!-- Modal responsável pela apresentação do histórico. -->
-  <section class="modal-backdrop" id="history-modal-backdrop">
+          <!-- Botão responsável por registrar a movimentação. -->
+          <button type="submit" class="btn btn--primary">
+            Registrar
+          </button>
 
-    <!-- Área principal do modal de histórico. -->
-    <section class="modal">
+        </section>
 
-      <!-- Título do histórico. -->
-      <h2>Histórico de movimentações</h2>
+      </form>
 
-      <!-- Área destinada à exibição do histórico. -->
-      <output id="history-content"></output>
+    </section>
 
-      <!-- Área destinada à ação de fechamento do modal. -->
-      <section class="modal-actions">
 
-        <!-- Botão responsável por fechar o histórico. -->
-        <button type="button" class="btn btn--outline" id="history-close-btn">
-          Fechar
-        </button>
+    <!-- Modal responsável pela apresentação do histórico. -->
+    <section class="modal-backdrop" id="history-modal-backdrop">
+
+      <!-- Área principal do modal de histórico. -->
+      <section class="modal">
+
+        <!-- Título do histórico. -->
+        <h2>Histórico de movimentações</h2>
+
+        <!-- Área destinada à exibição do histórico. -->
+        <output id="history-content"></output>
+
+        <!-- Área destinada à ação de fechamento do modal. -->
+        <section class="modal-actions">
+
+          <!-- Botão responsável por fechar o histórico. -->
+          <button type="button" class="btn btn--outline" id="history-close-btn">
+            Fechar
+          </button>
+
+        </section>
 
       </section>
 
     </section>
 
-  </section>
+
+  </main>
 
   <footer>
     <hr>
@@ -239,8 +259,8 @@
     <section>
       <nav>
 
-        <a href="index.html" type="_self">Início</a>
-        <a href="src/pages/portifolio.html" type="_self">Nosso portifólio</a>
+        <a href="index.html">Início</a>
+        <a href="src/pages/portifolio.html">Nosso portifólio</a>
 
       </nav>
     </section>

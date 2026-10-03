@@ -9,117 +9,136 @@
 
 <body>
 
-    <h2>Novo fornecedor</h2>
+    <header>
+        <h1>SpaceAdmin - ERP</h1>
 
-    <form id="supplier-form">
+        <nav>
+            <a href="./index.html">Início -
+            </a>
+            <a href="./src/pages/estoque.html">Controle de Estoque -
+            </a>
+            <a href="./src/pages/financeiro.html">Financeiro -
+            </a>
+        </nav>
 
-        <section>
-            <label>Razão social</label>
-            <input type="text" id="sup-name">
-        </section>
+    </header>
 
-        <section>
-            <label>Nome fantasia</label>
-            <input type="text" id="sup-fantasy-name">
-        </section>
+    <main>
 
-        <section>
-            <label>CPF/CNPJ</label>
-            <input type="text" id="sup-document">
-        </section>
+        <h2>Novo fornecedor</h2>
 
-        <section>
-            <label>Telefone</label>
-            <input type="text" id="sup-phone">
-        </section>
+        <form id="supplier-form">
 
-        <section>
-            <label>E-mail</label>
-            <input type="email" id="sup-email">
-        </section>
+            <section>
+                <label>Razão social</label>
+                <input type="text" id="sup-name">
+            </section>
 
-        <section>
-            <label>Endereço</label>
-            <input type="text" id="sup-address">
-        </section>
+            <section>
+                <label>Nome fantasia</label>
+                <input type="text" id="sup-fantasy-name">
+            </section>
 
-        <section>
-            <label>Número</label>
-            <input type="text" id="sup-number">
-        </section>
+            <section>
+                <label>CPF/CNPJ</label>
+                <input type="text" id="sup-document">
+            </section>
 
-        <section>
-            <label>Bairro</label>
-            <input type="text" id="sup-neighborhood">
-        </section>
+            <section>
+                <label>Telefone</label>
+                <input type="text" id="sup-phone">
+            </section>
 
-        <section>
-            <label>Cidade</label>
-            <input type="text" id="sup-city">
-        </section>
+            <section>
+                <label>E-mail</label>
+                <input type="email" id="sup-email">
+            </section>
 
-        <section>
-            <label>Estado</label>
-            <input type="text" id="sup-state">
-        </section>
+            <section>
+                <label>Endereço</label>
+                <input type="text" id="sup-address">
+            </section>
 
-        <section>
-            <label>CEP</label>
-            <input type="text" id="sup-cep">
-        </section>
+            <section>
+                <label>Número</label>
+                <input type="text" id="sup-number">
+            </section>
 
-        <br>
+            <section>
+                <label>Bairro</label>
+                <input type="text" id="sup-neighborhood">
+            </section>
 
-        <button type="button">Cancelar</button>
-        <button type="submit">Salvar</button>
+            <section>
+                <label>Cidade</label>
+                <input type="text" id="sup-city">
+            </section>
 
-    </form>
+            <section>
+                <label>Estado</label>
+                <input type="text" id="sup-state">
+            </section>
+
+            <section>
+                <label>CEP</label>
+                <input type="text" id="sup-cep">
+            </section>
+
+            <br>
+
+            <button type="button">Cancelar</button>
+            <button type="submit">Salvar</button>
+
+        </form>
 
 
-    <h2>Novo pedido de compra</h2>
+        <h2>Novo pedido de compra</h2>
 
-    <form id="order-form">
+        <form id="order-form">
 
-        <section>
-            <label>Fornecedor</label>
+            <section>
+                <label>Fornecedor</label>
 
-            <select id="order-supplier">
-                <option value="">Selecione um fornecedor</option>
-            </select>
-        </section>
+                <select id="order-supplier">
+                    <option value="">Selecione um fornecedor</option>
+                </select>
+            </section>
 
-        <section>
-            <label>Data do pedido</label>
-            <input type="date" id="order-date">
-        </section>
+            <section>
+                <label>Data do pedido</label>
+                <input type="date" id="order-date">
+            </section>
 
-        <section>
-            <label>Data prevista</label>
-            <input type="date" id="order-expected-date">
-        </section>
+            <section>
+                <label>Data prevista</label>
+                <input type="date" id="order-expected-date">
+            </section>
 
-        <section>
-            <label>Status</label>
+            <section>
+                <label>Status</label>
 
-            <select id="order-status">
-                <option value="">Selecione o status</option>
-                <option value="pendente">Pendente</option>
-                <option value="aprovado">Aprovado</option>
-                <option value="recebido">Recebido</option>
-            </select>
-        </section>
+                <select id="order-status">
+                    <option value="">Selecione o status</option>
+                    <option value="pendente">Pendente</option>
+                    <option value="aprovado">Aprovado</option>
+                    <option value="recebido">Recebido</option>
+                </select>
+            </section>
 
-        <section>
-            <label>Observações</label>
-            <textarea id="order-notes"></textarea>
-        </section>
+            <section>
+                <label>Observações</label>
+                <textarea id="order-notes"></textarea>
+            </section>
 
-        <br>
+            <br>
 
-        <button type="button">Cancelar</button>
-        <button type="submit">Criar pedido</button>
+            <button type="button">Cancelar</button>
+            <button type="submit">Criar pedido</button>
 
-    </form>
+        </form>
+
+
+    </main>
 
     <footer>
         <hr>
@@ -133,8 +152,8 @@
         <section>
             <nav>
 
-                <a href="index.html" type="_self">Início</a>
-                <a href="src/pages/portifolio.html" type="_self">Nosso portifólio</a>
+                <a href="index.html">Início</a>
+                <a href="src/pages/portifolio.html">Nosso portifólio</a>
 
             </nav>
         </section>

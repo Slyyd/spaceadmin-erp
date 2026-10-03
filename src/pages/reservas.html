@@ -70,72 +70,91 @@
 </head>
 
 <body>
-  <main class="app-shell" id="app-shell-root"></main>
 
-  <dialog class="modal-backdrop" id="payment-modal-backdrop" open>
-    <form class="modal" id="payment-form">
-      <h2>Registrar pagamento</h2>
-      <p id="payment-modal-error" role="alert"></p>
-      <fieldset class="form-field">
-        <label>Valor (R$)</label>
-        <input type="number" step="0.01" id="pay-amount" required />
-      </fieldset>
-      <fieldset class="form-field">
-        <label>Forma de pagamento</label>
-        <select id="pay-method">
-          <option value="PIX">Pix</option>
-          <option value="CARTAO_CREDITO">Cartão de crédito</option>
-          <option value="CARTAO_DEBITO">Cartão de débito</option>
-          <option value="DINHEIRO">Dinheiro</option>
-          <option value="BOLETO">Boleto</option>
-        </select>
-      </fieldset>
-      <footer class="modal-actions">
-        <button type="button" class="btn btn--outline" id="payment-cancel-btn">Cancelar</button>
-        <button type="submit" class="btn btn--primary">Confirmar pagamento</button>
-      </footer>
-    </form>
-  </dialog>
+  <header>
+    <h1>SpaceAdmin - ERP</h1>
 
-  <dialog class="modal-backdrop" id="checkin-modal-backdrop" open>
-    <form class="modal" id="checkin-form">
-      <h2>Confirmar check-in</h2>
-      <p id="checkin-modal-error" role="alert"></p>
-      <fieldset class="form-field">
-        <label>Observações (opcional)</label>
-        <input type="text" id="checkin-notes" />
-      </fieldset>
-      <footer class="modal-actions">
-        <button type="button" class="btn btn--outline" id="checkin-cancel-btn">Cancelar</button>
-        <button type="submit" class="btn btn--primary">Confirmar check-in</button>
-      </footer>
-    </form>
-  </dialog>
+    <nav>
+      <a href="./index.html">Início -
+      </a>
+      <a href="./src/pages/agenda.html">Reservar Sala -
+      </a>
+      <a href="./src/pages/financeiro.html">Financeiro -
+      </a>
+    </nav>
 
-  <dialog class="modal-backdrop" id="checkout-modal-backdrop" open>
-    <form class="modal" id="checkout-form">
-      <h2>Confirmar check-out</h2>
-      <p id="checkout-modal-error" role="alert"></p>
-      <fieldset class="form-field">
-        <label>Condição da sala</label>
-        <input type="text" id="checkout-condition" placeholder="Ex: limpa, sem danos" />
-      </fieldset>
-      <fieldset class="form-field">
-        <label>Ocorrências (opcional)</label>
-        <input type="text" id="checkout-occurrences" />
-      </fieldset>
-      <label class="checkbox-inline" for="checkout-needs-cleaning">
-        <input type="checkbox" id="checkout-needs-cleaning" checked /> Precisa de limpeza
-      </label>
-      <label class="checkbox-inline" for="checkout-needs-maintenance">
-        <input type="checkbox" id="checkout-needs-maintenance" /> Precisa de manutenção
-      </label>
-      <footer class="modal-actions">
-        <button type="button" class="btn btn--outline" id="checkout-cancel-btn">Cancelar</button>
-        <button type="submit" class="btn btn--primary">Confirmar check-out</button>
-      </footer>
-    </form>
-  </dialog>
+  </header>
+
+  <main class="app-shell" id="app-shell-root">
+
+
+    <dialog class="modal-backdrop" id="payment-modal-backdrop" open>
+      <form class="modal" id="payment-form">
+        <h2>Registrar pagamento</h2>
+        <p id="payment-modal-error" role="alert"></p>
+        <fieldset class="form-field">
+          <label>Valor (R$)</label>
+          <input type="number" step="0.01" id="pay-amount" required />
+        </fieldset>
+        <fieldset class="form-field">
+          <label>Forma de pagamento</label>
+          <select id="pay-method">
+            <option value="PIX">Pix</option>
+            <option value="CARTAO_CREDITO">Cartão de crédito</option>
+            <option value="CARTAO_DEBITO">Cartão de débito</option>
+            <option value="DINHEIRO">Dinheiro</option>
+            <option value="BOLETO">Boleto</option>
+          </select>
+        </fieldset>
+        <footer class="modal-actions">
+          <button type="button" class="btn btn--outline" id="payment-cancel-btn">Cancelar</button>
+          <button type="submit" class="btn btn--primary">Confirmar pagamento</button>
+        </footer>
+      </form>
+    </dialog>
+
+    <dialog class="modal-backdrop" id="checkin-modal-backdrop" open>
+      <form class="modal" id="checkin-form">
+        <h2>Confirmar check-in</h2>
+        <p id="checkin-modal-error" role="alert"></p>
+        <fieldset class="form-field">
+          <label>Observações (opcional)</label>
+          <input type="text" id="checkin-notes" />
+        </fieldset>
+        <footer class="modal-actions">
+          <button type="button" class="btn btn--outline" id="checkin-cancel-btn">Cancelar</button>
+          <button type="submit" class="btn btn--primary">Confirmar check-in</button>
+        </footer>
+      </form>
+    </dialog>
+
+    <dialog class="modal-backdrop" id="checkout-modal-backdrop" open>
+      <form class="modal" id="checkout-form">
+        <h2>Confirmar check-out</h2>
+        <p id="checkout-modal-error" role="alert"></p>
+        <fieldset class="form-field">
+          <label>Condição da sala</label>
+          <input type="text" id="checkout-condition" placeholder="Ex: limpa, sem danos" />
+        </fieldset>
+        <fieldset class="form-field">
+          <label>Ocorrências (opcional)</label>
+          <input type="text" id="checkout-occurrences" />
+        </fieldset>
+        <label class="checkbox-inline" for="checkout-needs-cleaning">
+          <input type="checkbox" id="checkout-needs-cleaning" checked /> Precisa de limpeza
+        </label>
+        <label class="checkbox-inline" for="checkout-needs-maintenance">
+          <input type="checkbox" id="checkout-needs-maintenance" /> Precisa de manutenção
+        </label>
+        <footer class="modal-actions">
+          <button type="button" class="btn btn--outline" id="checkout-cancel-btn">Cancelar</button>
+          <button type="submit" class="btn btn--primary">Confirmar check-out</button>
+        </footer>
+      </form>
+    </dialog>
+
+
+  </main>
 
   <footer>
     <hr>
@@ -149,8 +168,8 @@
     <section>
       <nav>
 
-        <a href="index.html" type="_self">Início</a>
-        <a href="src/pages/portifolio.html" type="_self">Nosso portifólio</a>
+        <a href="index.html">Início</a>
+        <a href="src/pages/portifolio.html">Nosso portifólio</a>
 
       </nav>
     </section>

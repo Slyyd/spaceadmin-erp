@@ -9,26 +9,44 @@
 </head>
 
 <body>
-  <!--
+
+  <header>
+    <h1>SpaceAdmin - ERP</h1>
+
+    <nav>
+      <a href="./index.html">Início -
+      </a>
+      <a href="./src/pages/usuarios.html">Usuários -
+      </a>
+      <a href="./src/pages/manutencao.html">Criar Ordem de Manutenção -
+      </a>
+    </nav>
+
+  </header>
+
+  <main>
+
+
+    <!--
   Título principal do formulário.
   Informa ao usuário que ele está realizando
   o cadastro de um novo funcionário.
 -->
-  <h2>Novo funcionário</h2>
+    <h2>Novo funcionário</h2>
 
 
-  <!--
+    <!--
   Texto explicativo apresentado abaixo do título.
   Informa que o funcionário terá acesso ao sistema
   para executar suas atividades.
 -->
-  <p class="page-subtitle">
-    Todo funcionário recebe acesso ao sistema
-    para operar suas tarefas.
-  </p>
+    <p class="page-subtitle">
+      Todo funcionário recebe acesso ao sistema
+      para operar suas tarefas.
+    </p>
 
 
-  <!--
+    <!--
   Área destinada à apresentação de mensagens
   de erro durante o preenchimento ou envio
   do formulário.
@@ -36,95 +54,96 @@
   O JavaScript poderá inserir mensagens
   neste elemento.
 -->
-  <section id="modal-error" role="alert" aria-live="polite"></section>
+    <section id="modal-error" role="alert" aria-live="polite"></section>
 
+    <form>
 
-  <!--
+      <!--
   Seção responsável pelo preenchimento
   do nome do funcionário.
 -->
-  <section class="form-field">
+      <section class="form-field">
 
-    <!--
+        <!--
     Identificação do campo de nome.
     O atributo "for" relaciona o label
     diretamente ao input correspondente.
   -->
-    <label for="f-name">
-      Nome
-    </label>
+        <label for="f-name">
+          Nome
+        </label>
 
-    <!--
+        <!--
     Campo utilizado para informar o nome
     completo do funcionário.
 
     O atributo "required" determina que
     o preenchimento deste campo é obrigatório.
   -->
-    <input type="text" id="f-name" name="name" autocomplete="name" required />
+        <input type="text" id="f-name" name="name" autocomplete="name" required />
 
-  </section>
+      </section>
 
 
-  <!--
+      <!--
   Seção responsável pelo preenchimento
   do cargo do funcionário.
 -->
-  <section class="form-field">
+      <section class="form-field">
 
-    <!-- Identificação do campo de cargo. -->
-    <label for="f-position">
-      Cargo
-    </label>
+        <!-- Identificação do campo de cargo. -->
+        <label for="f-position">
+          Cargo
+        </label>
 
-    <!--
+        <!--
     Campo utilizado para informar a função
     ou cargo exercido pelo funcionário.
 
     O atributo "placeholder" apresenta um
     exemplo para orientar o preenchimento.
   -->
-    <input type="text" id="f-position" name="position" autocomplete="organization-title"
-      placeholder="Ex.: Recepcionista, Zelador..." required />
+        <input type="text" id="f-position" name="position" autocomplete="organization-title"
+          placeholder="Ex.: Recepcionista, Zelador..." required />
 
-  </section>
+      </section>
 
 
-  <!--
+      <!--
   Seção responsável pelo cadastro do e-mail
   que será utilizado como login do funcionário.
 -->
-  <section class="form-field">
+      <section class="form-field">
 
-    <!-- Identificação do campo de e-mail. -->
-    <label for="f-email">
-      E-mail (login)
-    </label>
+        <!-- Identificação do campo de e-mail. -->
+        <label for="f-email">
+          E-mail (login)
+        </label>
 
-    <!--
+        <!--
     Campo utilizado para informar o endereço
     de e-mail do funcionário.
 
     O tipo "email" permite que o navegador
     faça uma validação básica do endereço.
   -->
-    <input type="email" id="f-email" name="email" autocomplete="email" required />
+        <input type="email" id="f-email" name="email" autocomplete="email" required />
 
-  </section>
+      </section>
 
 
-  <!--
+      <!--
   Seção responsável pelo cadastro da senha
   provisória do funcionário.
 -->
-  <section class="form-field">
+      <section class="form-field">
 
-    <!-- Identificação do campo de senha. -->
-    <label for="f-password">
-      Senha provisória
-    </label>
+        <!-- Identificação do campo de senha. -->
+        <label for="f-password">
+          Senha provisória
+        </label>
 
-    <!--
+        <!--
     Campo utilizado para informar a senha
     inicial do funcionário.
 
@@ -134,18 +153,18 @@
     O atributo "minlength" exige pelo menos
     8 caracteres.
   -->
-    <input type="password" id="f-password" name="password" autocomplete="new-password" minlength="8" required />
+        <input type="password" id="f-password" name="password" autocomplete="new-password" minlength="8" required />
 
-  </section>
+      </section>
 
 
-  <!--
+      <!--
   Seção responsável pelos botões de ação
   disponíveis no formulário.
 -->
-  <section class="modal-actions">
+      <section class="modal-actions">
 
-    <!--
+        <!--
     Botão utilizado para cancelar o cadastro.
 
     O tipo "button" impede que o botão envie
@@ -154,12 +173,12 @@
     O JavaScript pode utilizar o ID
     "cancel-btn" para fechar o modal.
   -->
-    <button type="button" class="btn btn--outline" id="cancel-btn">
-      Cancelar
-    </button>
+        <button type="button" class="btn btn--outline" id="cancel-btn">
+          Cancelar
+        </button>
 
 
-    <!--
+        <!--
     Botão responsável pelo envio do formulário.
 
     O tipo "submit" faz com que o evento
@@ -167,11 +186,16 @@
     permitindo que o JavaScript processe
     o cadastro do funcionário.
   -->
-    <button type="submit" class="btn btn--primary">
-      Salvar
-    </button>
+        <button type="submit" class="btn btn--primary">
+          Salvar
+        </button>
 
-  </section>
+      </section>
+
+    </form>
+
+
+  </main>
 
   <footer>
     <hr>
@@ -185,8 +209,8 @@
     <section>
       <nav>
 
-        <a href="index.html" type="_self">Início</a>
-        <a href="src/pages/portifolio.html" type="_self">Nosso portifólio</a>
+        <a href="index.html">Início</a>
+        <a href="src/pages/portifolio.html">Nosso portifólio</a>
 
       </nav>
     </section>

@@ -10,33 +10,49 @@
 
 <body>
 
-  <!-- =========================================================
+  <header>
+    <h1>SpaceAdmin - ERP</h1>
+
+    <nav>
+      <a href="./index.html">Início -
+      </a>
+      <a href="./src/pages/estoque.html">Controle de Estoque -
+      </a>
+      <a href="./src/pages/manutencao.html">Criar Ordem de Manutenção -
+      </a>
+    </nav>
+
+  </header>
+
+  <main>
+
+    <!-- =========================================================
      ÁREA PRINCIPAL DA APLICAÇÃO
      ========================================================= -->
 
-  <section class="app-shell" id="app-shell-root">
-    <!--
+    <section class="app-shell" id="app-shell-root">
+      <!--
     Área principal onde o sistema será carregado.
     O JavaScript pode utilizar este ID para inserir
     o conteúdo da página.
   -->
-  </section>
+    </section>
 
 
-  <!-- =========================================================
+    <!-- =========================================================
      MODAL DE NOVA ORDEM DE LIMPEZA
      ========================================================= -->
 
-  <section class="modal-backdrop" id="modal-backdrop-cleaning">
-    <!--
+    <section class="modal-backdrop" id="modal-backdrop-cleaning">
+      <!--
     Section responsável por representar o fundo do modal.
     A classe "modal-backdrop" é utilizada pelo CSS
     para posicionar e estilizar a janela de cadastro.
   -->
 
 
-    <form class="modal" id="create-cleaning-form">
-      <!--
+      <form class="modal" id="create-cleaning-form">
+        <!--
       Formulário utilizado para abrir uma nova ordem de limpeza
       para uma sala após o check-out do cliente.
 
@@ -45,25 +61,25 @@
     -->
 
 
-      <!-- =====================================================
+        <!-- =====================================================
          TÍTULO DO FORMULÁRIO
          ===================================================== -->
 
-      <header>
-        <!-- Cabeçalho do formulário -->
+        <header>
+          <!-- Cabeçalho do formulário -->
 
-        <h2>Nova ordem de limpeza</h2>
-        <!-- Título apresentado ao usuário -->
+          <h2>Nova ordem de limpeza</h2>
+          <!-- Título apresentado ao usuário -->
 
-      </header>
+        </header>
 
 
-      <!-- =====================================================
+        <!-- =====================================================
          ÁREA DE MENSAGENS DE ERRO
          ===================================================== -->
 
-      <section id="cleaning-modal-error">
-        <!--
+        <section id="cleaning-modal-error">
+          <!--
         Área reservada para mensagens de erro.
 
         O JavaScript pode inserir aqui mensagens como:
@@ -71,285 +87,288 @@
         "Informe a data da limpeza"
         "Preencha todos os campos obrigatórios"
       -->
-      </section>
+        </section>
 
 
-      <!-- =====================================================
+        <!-- =====================================================
          SALA
          ===================================================== -->
 
-      <section class="form-field">
-        <!-- Campo utilizado para informar a sala a ser limpa -->
+        <section class="form-field">
+          <!-- Campo utilizado para informar a sala a ser limpa -->
 
-        <label for="c-room">Sala</label>
-        <!-- Identifica o campo de seleção -->
+          <label for="c-room">Sala</label>
+          <!-- Identifica o campo de seleção -->
 
-        <select id="c-room" required>
-          <!--
+          <select id="c-room" required>
+            <!--
           Lista as salas liberadas após o check-out
           e que aguardam limpeza.
         -->
 
-          <option value="">Selecione uma sala</option>
+            <option value="">Selecione uma sala</option>
 
-        </select>
-      </section>
+          </select>
+        </section>
 
 
-      <!-- =====================================================
+        <!-- =====================================================
          FUNCIONÁRIO RESPONSÁVEL
          ===================================================== -->
 
-      <section class="form-field">
-        <!--
+        <section class="form-field">
+          <!--
         Campo destinado ao funcionário que ficará
         responsável pela execução da limpeza.
       -->
 
-        <label for="c-employee">Funcionário responsável</label>
+          <label for="c-employee">Funcionário responsável</label>
 
-        <select id="c-employee">
-          <!--
+          <select id="c-employee">
+            <!--
           O preenchimento pode ser feito depois,
           no momento em que alguém assumir a ordem.
         -->
 
-          <option value="">Selecione um funcionário</option>
+            <option value="">Selecione um funcionário</option>
 
-        </select>
-      </section>
+          </select>
+        </section>
 
 
-      <!-- =====================================================
+        <!-- =====================================================
          DATA E HORÁRIO PREVISTO
          ===================================================== -->
 
-      <section class="form-field">
-        <!-- Campo destinado à data em que a limpeza deve ocorrer -->
+        <section class="form-field">
+          <!-- Campo destinado à data em que a limpeza deve ocorrer -->
 
-        <label for="c-date">Data</label>
+          <label for="c-date">Data</label>
 
-        <input type="date" id="c-date" required />
-        <!-- "required" torna o preenchimento obrigatório. -->
+          <input type="date" id="c-date" required />
+          <!-- "required" torna o preenchimento obrigatório. -->
 
-      </section>
+        </section>
 
-      <section class="form-field">
-        <!-- Campo destinado ao horário previsto da limpeza -->
+        <section class="form-field">
+          <!-- Campo destinado ao horário previsto da limpeza -->
 
-        <label for="c-time">Horário previsto</label>
+          <label for="c-time">Horário previsto</label>
 
-        <input type="time" id="c-time" />
+          <input type="time" id="c-time" />
 
-      </section>
+        </section>
 
 
-      <!-- =====================================================
+        <!-- =====================================================
          STATUS DA ORDEM
          ===================================================== -->
 
-      <section class="form-field">
-        <!-- Campo utilizado para indicar o andamento da limpeza -->
+        <section class="form-field">
+          <!-- Campo utilizado para indicar o andamento da limpeza -->
 
-        <label for="c-status">Status</label>
+          <label for="c-status">Status</label>
 
-        <select id="c-status">
+          <select id="c-status">
 
-          <option value="pendente">Pendente</option>
-          <option value="andamento">Em andamento</option>
-          <option value="concluida">Concluída</option>
+            <option value="pendente">Pendente</option>
+            <option value="andamento">Em andamento</option>
+            <option value="concluida">Concluída</option>
 
-        </select>
-      </section>
+          </select>
+        </section>
 
 
-      <!-- =====================================================
+        <!-- =====================================================
          PROBLEMA OU DANO IDENTIFICADO
          ===================================================== -->
 
-      <section class="checkbox-field">
-        <!--
+        <section class="checkbox-field">
+          <!--
         Área responsável pela opção de sinalizar que
         foi identificado um problema ou dano na sala
         durante a limpeza.
       -->
 
-        <input type="checkbox" id="c-issue-found" />
-        <!--
+          <input type="checkbox" id="c-issue-found" />
+          <!--
         Quando marcada, indica que deverá ser aberta
         também uma ordem de manutenção para a sala.
       -->
 
-        <label for="c-issue-found">
-          Foi identificado problema ou dano na sala
-        </label>
+          <label for="c-issue-found">
+            Foi identificado problema ou dano na sala
+          </label>
 
-      </section>
+        </section>
 
-      <section class="form-field" id="issue-notes-field">
-        <!--
+        <section class="form-field" id="issue-notes-field">
+          <!--
         Campo destinado à descrição do problema.
 
         O JavaScript pode ocultar este campo enquanto
         a caixa acima não estiver marcada.
       -->
 
-        <label for="c-issue-notes">
-          Descrição do problema
-        </label>
+          <label for="c-issue-notes">
+            Descrição do problema
+          </label>
 
-        <textarea id="c-issue-notes"></textarea>
+          <textarea id="c-issue-notes"></textarea>
 
-      </section>
+        </section>
 
 
-      <!-- =====================================================
+        <!-- =====================================================
          OBSERVAÇÕES GERAIS
          ===================================================== -->
 
-      <section class="form-field">
-        <!-- Campo livre para observações sobre a limpeza -->
+        <section class="form-field">
+          <!-- Campo livre para observações sobre a limpeza -->
 
-        <label for="c-notes">Observações</label>
+          <label for="c-notes">Observações</label>
 
-        <textarea id="c-notes"></textarea>
+          <textarea id="c-notes"></textarea>
 
-      </section>
+        </section>
 
 
-      <!-- =====================================================
+        <!-- =====================================================
          BOTÕES DE AÇÃO
          ===================================================== -->
 
-      <footer class="modal-actions">
+        <footer class="modal-actions">
 
-        <button type="button" class="btn btn--outline" id="cleaning-cancel-btn">
-          Cancelar
-        </button>
-        <!--
+          <button type="button" class="btn btn--outline" id="cleaning-cancel-btn">
+            Cancelar
+          </button>
+          <!--
         type="button" impede que o formulário
         seja enviado ao clicar neste botão.
       -->
 
 
-        <button type="submit" class="btn btn--primary" id="cleaning-submit-btn">
-          Salvar
-        </button>
-        <!--
+          <button type="submit" class="btn btn--primary" id="cleaning-submit-btn">
+            Salvar
+          </button>
+          <!--
         O JavaScript pode alterar este texto para
         "Salvar e abrir chamado de manutenção" quando
         a caixa de problema/dano estiver marcada.
       -->
 
-      </footer>
+        </footer>
 
-    </form>
+      </form>
 
-  </section>
+    </section>
 
 
-  <!-- =========================================================
+    <!-- =========================================================
      MODAL DE USO DE MATERIAL DE LIMPEZA
      ========================================================= -->
 
-  <section class="modal-backdrop" id="modal-backdrop-material">
-    <!--
+    <section class="modal-backdrop" id="modal-backdrop-material">
+      <!--
     Section responsável por representar o fundo do modal
     de registro de materiais utilizados numa ordem de limpeza.
   -->
 
 
-    <form class="modal" id="create-material-usage-form">
-      <!--
+      <form class="modal" id="create-material-usage-form">
+        <!--
       Formulário utilizado para registrar quais produtos
       de limpeza foram usados numa ordem, gerando a baixa
       correspondente no estoque.
     -->
 
 
-      <header>
-        <h2>Registrar uso de material de limpeza</h2>
-      </header>
+        <header>
+          <h2>Registrar uso de material de limpeza</h2>
+        </header>
 
 
-      <section id="material-modal-error">
-        <!--
+        <section id="material-modal-error">
+          <!--
         Área reservada para mensagens de erro, como:
         "Selecione uma ordem de limpeza"
         "Quantidade indisponível em estoque"
       -->
-      </section>
+        </section>
 
 
-      <!-- =====================================================
+        <!-- =====================================================
          ORDEM DE LIMPEZA
          ===================================================== -->
 
-      <section class="form-field">
-        <label for="m-order">Ordem de limpeza</label>
+        <section class="form-field">
+          <label for="m-order">Ordem de limpeza</label>
 
-        <select id="m-order" required>
-          <option value="">Selecione uma ordem de limpeza</option>
-        </select>
-      </section>
+          <select id="m-order" required>
+            <option value="">Selecione uma ordem de limpeza</option>
+          </select>
+        </section>
 
 
-      <!-- =====================================================
+        <!-- =====================================================
          PRODUTO UTILIZADO
          ===================================================== -->
 
-      <section class="form-field">
-        <label for="m-product">Produto utilizado</label>
+        <section class="form-field">
+          <label for="m-product">Produto utilizado</label>
 
-        <select id="m-product" required>
-          <option value="">Selecione um produto</option>
-        </select>
-      </section>
+          <select id="m-product" required>
+            <option value="">Selecione um produto</option>
+          </select>
+        </section>
 
 
-      <!-- =====================================================
+        <!-- =====================================================
          QUANTIDADE UTILIZADA
          ===================================================== -->
 
-      <section class="form-field">
-        <label for="m-quantity">Quantidade utilizada</label>
+        <section class="form-field">
+          <label for="m-quantity">Quantidade utilizada</label>
 
-        <input type="number" id="m-quantity" min="0" step="1" required />
-        <!-- A baixa no estoque usa esta quantidade. -->
+          <input type="number" id="m-quantity" min="0" step="1" required />
+          <!-- A baixa no estoque usa esta quantidade. -->
 
-      </section>
+        </section>
 
 
-      <!-- =====================================================
+        <!-- =====================================================
          OBSERVAÇÕES
          ===================================================== -->
 
-      <section class="form-field">
-        <label for="m-notes">Observações</label>
+        <section class="form-field">
+          <label for="m-notes">Observações</label>
 
-        <textarea id="m-notes"></textarea>
-      </section>
+          <textarea id="m-notes"></textarea>
+        </section>
 
 
-      <!-- =====================================================
+        <!-- =====================================================
          BOTÕES DE AÇÃO
          ===================================================== -->
 
-      <footer class="modal-actions">
+        <footer class="modal-actions">
 
-        <button type="button" class="btn btn--outline" id="material-cancel-btn">
-          Cancelar
-        </button>
+          <button type="button" class="btn btn--outline" id="material-cancel-btn">
+            Cancelar
+          </button>
 
-        <button type="submit" class="btn btn--primary">
-          Registrar uso
-        </button>
+          <button type="submit" class="btn btn--primary">
+            Registrar uso
+          </button>
 
-      </footer>
+        </footer>
 
-    </form>
+      </form>
 
-  </section>
+    </section>
+
+
+  </main>
 
   <footer>
     <hr>
@@ -363,8 +382,8 @@
     <section>
       <nav>
 
-        <a href="index.html" type="_self">Início</a>
-        <a href="src/pages/portifolio.html" type="_self">Nosso portifólio</a>
+        <a href="index.html">Início</a>
+        <a href="src/pages/portifolio.html">Nosso portifólio</a>
 
       </nav>
     </section>
