@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+  <base href="../../">
   <title>Estoque — ERP Locação de Salas</title>
 </head>
 
@@ -28,11 +28,7 @@
 
         <label for="cat-name">Nome</label>
 
-        <input
-          type="text"
-          id="cat-name"
-          required
-        />
+        <input type="text" id="cat-name" required />
 
       </section>
 
@@ -40,17 +36,12 @@
       <section class="modal-actions">
 
         <!-- Botão responsável por cancelar o cadastro da categoria. -->
-        <button
-          type="button"
-          class="btn btn--outline"
-          id="category-cancel-btn">
+        <button type="button" class="btn btn--outline" id="category-cancel-btn">
           Cancelar
         </button>
 
         <!-- Botão responsável por criar a categoria. -->
-        <button
-          type="submit"
-          class="btn btn--primary">
+        <button type="submit" class="btn btn--primary">
           Criar
         </button>
 
@@ -75,9 +66,7 @@
 
         <label for="prod-category">Categoria</label>
 
-        <select
-          id="prod-category"
-          required>
+        <select id="prod-category" required>
         </select>
 
       </section>
@@ -87,11 +76,7 @@
 
         <label for="prod-name">Nome</label>
 
-        <input
-          type="text"
-          id="prod-name"
-          required
-        />
+        <input type="text" id="prod-name" required />
 
       </section>
 
@@ -100,12 +85,7 @@
 
         <label for="prod-unit">Unidade de medida</label>
 
-        <input
-          type="text"
-          id="prod-unit"
-          placeholder="L, un, kg..."
-          required
-        />
+        <input type="text" id="prod-unit" placeholder="L, un, kg..." required />
 
       </section>
 
@@ -114,12 +94,7 @@
 
         <label for="prod-min">Estoque mínimo</label>
 
-        <input
-          type="number"
-          step="0.01"
-          id="prod-min"
-          value="0"
-        />
+        <input type="number" step="0.01" id="prod-min" value="0" />
 
       </section>
 
@@ -128,12 +103,7 @@
 
         <label for="prod-initial">Estoque inicial</label>
 
-        <input
-          type="number"
-          step="0.01"
-          id="prod-initial"
-          value="0"
-        />
+        <input type="number" step="0.01" id="prod-initial" value="0" />
 
       </section>
 
@@ -141,17 +111,12 @@
       <section class="modal-actions">
 
         <!-- Botão responsável por cancelar o cadastro do produto. -->
-        <button
-          type="button"
-          class="btn btn--outline"
-          id="product-cancel-btn">
+        <button type="button" class="btn btn--outline" id="product-cancel-btn">
           Cancelar
         </button>
 
         <!-- Botão responsável por criar o produto. -->
-        <button
-          type="submit"
-          class="btn btn--primary">
+        <button type="submit" class="btn btn--primary">
           Criar produto
         </button>
 
@@ -201,12 +166,7 @@
           Quantidade
         </label>
 
-        <input
-          type="number"
-          step="0.01"
-          id="mov-quantity"
-          required
-        />
+        <input type="number" step="0.01" id="mov-quantity" required />
 
       </section>
 
@@ -217,10 +177,7 @@
           Motivo (opcional)
         </label>
 
-        <input
-          type="text"
-          id="mov-reason"
-        />
+        <input type="text" id="mov-reason" />
 
       </section>
 
@@ -228,17 +185,12 @@
       <section class="modal-actions">
 
         <!-- Botão responsável por cancelar a movimentação. -->
-        <button
-          type="button"
-          class="btn btn--outline"
-          id="movement-cancel-btn">
+        <button type="button" class="btn btn--outline" id="movement-cancel-btn">
           Cancelar
         </button>
 
         <!-- Botão responsável por registrar a movimentação. -->
-        <button
-          type="submit"
-          class="btn btn--primary">
+        <button type="submit" class="btn btn--primary">
           Registrar
         </button>
 
@@ -250,9 +202,7 @@
 
 
   <!-- Modal responsável pela apresentação do histórico. -->
-  <section
-    class="modal-backdrop"
-    id="history-modal-backdrop">
+  <section class="modal-backdrop" id="history-modal-backdrop">
 
     <!-- Área principal do modal de histórico. -->
     <section class="modal">
@@ -267,10 +217,7 @@
       <section class="modal-actions">
 
         <!-- Botão responsável por fechar o histórico. -->
-        <button
-          type="button"
-          class="btn btn--outline"
-          id="history-close-btn">
+        <button type="button" class="btn btn--outline" id="history-close-btn">
           Fechar
         </button>
 
@@ -279,6 +226,26 @@
     </section>
 
   </section>
+
+  <footer>
+    <hr>
+    <section>
+      <h3>SpaceAdmin©</h3>
+      <small>
+        <p>Copyright 2026 - 2026</p>
+      </small>
+    </section>
+
+    <section>
+      <nav>
+
+        <a href="index.html" type="_self">Início</a>
+        <a href="/src/pages/portifolio.html" type="_self">Nosso portifólio</a>
+
+      </nav>
+    </section>
+
+  </footer>
 
 </body>
 

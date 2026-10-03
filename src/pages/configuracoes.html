@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <base href="../../">
   <title>Configurações — SpaceAdmin</title>
 </head>
 
@@ -18,30 +20,30 @@
       <h2>Dados da empresa</h2>
       <form>
 
-          <p>
+        <p>
           <label>Nome</label>
           <input type="text" id="nome_locatario" placeholder="Espaço Centro Coworking" required />
-          </p>
+        </p>
 
-          <p>
+        <p>
           <label>Documento</label>
-          <input type="text" id="documento_locatario" placeholder="12.345.678/0001-90" required  />
-          </p>
+          <input type="text" id="documento_locatario" placeholder="12.345.678/0001-90" required />
+        </p>
 
-          <p>
+        <p>
           <label>Telefone</label>
           <input type="tel" id="telefone_locatario" placeholder="(11) 3456-7890" required />
-          </p>
+        </p>
 
-          <p>
+        <p>
           <label>E-mail</label>
           <input type="email" id="email_locatario" placeholder="contato@espacocentro.com.br" required />
-          </p>
+        </p>
 
-          <p>
+        <p>
           <label for="c-address">Endereço</label>
           <input type="text" id="c-address" placeholder="Av. Paulista, 1000 - Bela Vista, São Paulo - SP" required />
-          </p>
+        </p>
         <button type="submit">Salvar dados da empresa</button>
       </form>
     </section>
@@ -58,21 +60,21 @@
       </ul>
 
       <form>
-          <p>
-          <label>N° da sala  </label>
+        <p>
+          <label>N° da sala </label>
           <input type="number" id="regra_sala" required />
-          </p>
+        </p>
 
-          <p>
+        <p>
           <label>Horas mínimas</label>
           <input type="number" id="r-hours" value="24" required />
-          </p>
+        </p>
 
-          <p>
+        <p>
           <label>Multa (%)</label>
           <!-- step define a quantidade de casas decimais que o input aceita -->
           <input type="number" step="0.01" id="r-penalty" value="0" required />
-          </p>
+        </p>
 
         <button type="submit">Adicionar</button>
       </form>
@@ -91,7 +93,7 @@
       </ul>
 
       <form>
-          <p>
+        <p>
           <label>Taxa a ser adicionada ao valor final</label>
           <select id="selecao_de_taxa" required>
             <option value="">Selecione uma taxa</option>
@@ -100,23 +102,45 @@
             <option value="equipamento">Taxa de equipamento</option>
             <option value="conveniencia">Taxa de conveniência</option>
           </select>
-          </p>
+        </p>
 
-          <p>
+        <p>
           <label>Tipo</label>
           <select id="tipo_taxa" required>
             <option value="PERCENTUAL">Percentual</option>
             <option value="FIXO">Fixo</option>
           </select>
-          </p>
+        </p>
 
 
-          <label for="f-value">Valor</label>
-          <input type="number" step="0.01" id="f-value" required />
+        <label for="f-value">Valor</label>
+        <input type="number" step="0.01" id="f-value" required />
 
         <button type="submit">Adicionar</button>
       </form>
     </section>
   </main>
+
+  <footer>
+    <hr>
+    <section>
+      <h3>SpaceAdmin©</h3>
+      <small>
+        <p>Copyright 2026 - 2026</p>
+      </small>
+    </section>
+
+    <section>
+      <nav>
+
+        <a href="index.html" type="_self">Início</a>
+        <a href="/src/pages/portifolio.html" type="_self">Nosso portifólio</a>
+
+      </nav>
+    </section>
+
+  </footer>
+  
 </body>
+
 </html>

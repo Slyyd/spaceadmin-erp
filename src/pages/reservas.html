@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <base href="../../">
   <title>Reservas — ERP Locação de Salas</title>
   <style>
     /* Reset para os elementos nativos que substituíram as divs */
@@ -18,12 +20,14 @@
       width: auto;
       height: auto;
     }
+
     fieldset.form-field {
       border: 0;
       padding: 0;
       margin: 0 0 20px;
       min-width: 0;
     }
+
     label.checkbox-inline {
       display: block;
       margin-bottom: 16px;
@@ -44,6 +48,7 @@
       border: 1px solid #fda29b;
       font-size: 0.9rem;
     }
+
     #payment-modal-error:empty,
     #checkin-modal-error:empty,
     #checkout-modal-error:empty {
@@ -55,6 +60,7 @@
       display: block;
       margin-bottom: 6px;
     }
+
     .modal-actions {
       margin-top: 24px;
       display: flex;
@@ -62,6 +68,7 @@
     }
   </style>
 </head>
+
 <body>
   <main class="app-shell" id="app-shell-root"></main>
 
@@ -130,6 +137,26 @@
     </form>
   </dialog>
 
+  <footer>
+    <hr>
+    <section>
+      <h3>SpaceAdmin©</h3>
+      <small>
+        <p>Copyright 2026 - 2026</p>
+      </small>
+    </section>
+
+    <section>
+      <nav>
+
+        <a href="index.html" type="_self">Início</a>
+        <a href="/src/pages/portifolio.html" type="_self">Nosso portifólio</a>
+
+      </nav>
+    </section>
+
+  </footer>
+
   <script>
     // Validação simples: só mostra a mensagem de erro se algum campo obrigatório
     // ficar vazio ao tentar confirmar. O back-end pode sobrescrever essa mensagem
@@ -164,4 +191,5 @@
     validarFormulario('checkout-form', 'checkout-modal-error');
   </script>
 </body>
+
 </html>

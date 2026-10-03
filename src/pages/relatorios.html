@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <base href="../../">
   <title>Relatórios — SpaceAdmin</title>
 </head>
 
@@ -48,22 +50,37 @@
 
     <!-- Faturamento por período -->
     <section id="faturamento_periodo">
-          <!-- cellpadding define o espaço em pixels entre o conteúdo de uma célula de tabela -->
+      <!-- cellpadding define o espaço em pixels entre o conteúdo de uma célula de tabela -->
       <table border="1" cellpadding="6">
         <thead>
-        <th colspan="2">Faturamento por período</th>        
-        <thead>
+          <th colspan="2">Faturamento por período</th>
+          <thead>
 
-        <tbody>
-          <tr>
-          <th>Data</th>
-          <th>Total (R$)</th>
-          <tr><td>25/09/2026</td><td>1.850,00</td></tr>
-          <tr><td>26/09/2026</td><td>2.320,00</td></tr>
-          <tr><td>27/09/2026</td><td>980,00</td></tr>
-          <tr><td>28/09/2026</td><td>2.740,00</td></tr>
-          <tr><td>29/09/2026</td><td>1.510,00</td></tr>
-        </tbody>
+          <tbody>
+            <tr>
+              <th>Data</th>
+              <th>Total (R$)</th>
+            <tr>
+              <td>25/09/2026</td>
+              <td>1.850,00</td>
+            </tr>
+            <tr>
+              <td>26/09/2026</td>
+              <td>2.320,00</td>
+            </tr>
+            <tr>
+              <td>27/09/2026</td>
+              <td>980,00</td>
+            </tr>
+            <tr>
+              <td>28/09/2026</td>
+              <td>2.740,00</td>
+            </tr>
+            <tr>
+              <td>29/09/2026</td>
+              <td>1.510,00</td>
+            </tr>
+          </tbody>
       </table>
     </section>
 
@@ -74,15 +91,27 @@
 
       <table border="1" cellpadding="6">
         <thead>
-        <th colspan="3">Faturamento por imóvel</th>        
+          <th colspan="3">Faturamento por imóvel</th>
         <tbody>
-            <th>Imóvel</th>
-            <th>Reservas</th>
-            <th>Total (R$)</th>
-        </thead>
-          <tr><td>Imóvel 1</td><td>48</td><td>18.400,00</td></tr>
-          <tr><td>Imóvel 2</td><td>35</td><td>15.750,00</td></tr>
-          <tr><td>Imóvel 3</td><td>22</td><td>9.900,00</td></tr>
+          <th>Imóvel</th>
+          <th>Reservas</th>
+          <th>Total (R$)</th>
+          </thead>
+          <tr>
+            <td>Imóvel 1</td>
+            <td>48</td>
+            <td>18.400,00</td>
+          </tr>
+          <tr>
+            <td>Imóvel 2</td>
+            <td>35</td>
+            <td>15.750,00</td>
+          </tr>
+          <tr>
+            <td>Imóvel 3</td>
+            <td>22</td>
+            <td>9.900,00</td>
+          </tr>
         </tbody>
       </table>
     </section>
@@ -94,15 +123,27 @@
 
       <table border="1" cellpadding="6">
         <thead>
-        <th colspan="3">Ocupação</th>        
+          <th colspan="3">Ocupação</th>
         </thead>
         <tbody>
-            <th>Sala</th>
-            <th>Horas reservadas</th>
-            <th>Ocupação (%)</th>
-          <tr><td>Sala 1</td><td>112</td><td>62,2</td></tr>
-          <tr><td>Sala 2</td><td>96</td><td>53,3</td></tr>
-          <tr><td>Sala 3</td><td>64</td><td>35,6</td></tr>
+          <th>Sala</th>
+          <th>Horas reservadas</th>
+          <th>Ocupação (%)</th>
+          <tr>
+            <td>Sala 1</td>
+            <td>112</td>
+            <td>62,2</td>
+          </tr>
+          <tr>
+            <td>Sala 2</td>
+            <td>96</td>
+            <td>53,3</td>
+          </tr>
+          <tr>
+            <td>Sala 3</td>
+            <td>64</td>
+            <td>35,6</td>
+          </tr>
         </tbody>
       </table>
     </section>
@@ -114,14 +155,23 @@
       <table border="1" cellpadding="6">
 
         <thead>
-        <th colspan="2">Cancelamentos</th>        
+          <th colspan="2">Cancelamentos</th>
         </thead>
         <tbody>
-            <th>Sala</th>
-            <th>Cancelamentos</th>
-          <tr><td>Sala 1</td><td>3</td></tr>
-          <tr><td>Sala 2</td><td>1</td></tr>
-          <tr><td>Sala 3</td><td>5</td></tr>
+          <th>Sala</th>
+          <th>Cancelamentos</th>
+          <tr>
+            <td>Sala 1</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>Sala 2</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>Sala 3</td>
+            <td>5</td>
+          </tr>
         </tbody>
       </table>
     </section>
@@ -132,15 +182,27 @@
     <section id="custos_manutencao">
       <table border="1" cellpadding="6">
         <thead>
-        <th colspan="3">Custos de manutenção</th>        
+          <th colspan="3">Custos de manutenção</th>
         </thead>
         <tbody>
-            <th>Sala</th>
-            <th>Ocorrências</th>
-            <th>Custo total (R$)</th>
-          <tr><td>Sala 1</td><td>2</td><td>450,00</td></tr>
-          <tr><td>Sala 2</td><td>1</td><td>320,00</td></tr>
-          <tr><td>Sala 3</td><td>4</td><td>1.980,00</td></tr>
+          <th>Sala</th>
+          <th>Ocorrências</th>
+          <th>Custo total (R$)</th>
+          <tr>
+            <td>Sala 1</td>
+            <td>2</td>
+            <td>450,00</td>
+          </tr>
+          <tr>
+            <td>Sala 2</td>
+            <td>1</td>
+            <td>320,00</td>
+          </tr>
+          <tr>
+            <td>Sala 3</td>
+            <td>4</td>
+            <td>1.980,00</td>
+          </tr>
         </tbody>
       </table>
     </section>
@@ -152,18 +214,52 @@
 
       <table border="1" cellpadding="6">
         <thead>
-        <th colspan="3">Compras</th>        
+          <th colspan="3">Compras</th>
         </thead>
         <tbody>
-            <th>Fornecedor</th>
-            <th>Pedidos</th>
-            <th>Valor total (R$)</th>
-          <tr><td>Papelaria Central</td><td>6</td><td>1.240,00</td></tr>
-          <tr><td>Limpa Mais Suprimentos</td><td>4</td><td>2.150,00</td></tr>
-          <tr><td>TechStore Equipamentos</td><td>2</td><td>5.780,00</td></tr>
+          <th>Fornecedor</th>
+          <th>Pedidos</th>
+          <th>Valor total (R$)</th>
+          <tr>
+            <td>Papelaria Central</td>
+            <td>6</td>
+            <td>1.240,00</td>
+          </tr>
+          <tr>
+            <td>Limpa Mais Suprimentos</td>
+            <td>4</td>
+            <td>2.150,00</td>
+          </tr>
+          <tr>
+            <td>TechStore Equipamentos</td>
+            <td>2</td>
+            <td>5.780,00</td>
+          </tr>
         </tbody>
       </table>
     </section>
   </main>
+
+  <footer>
+    <hr>
+    <section>
+      <h3>SpaceAdmin©</h3>
+      <small>
+        <p>Copyright 2026 - 2026</p>
+      </small>
+    </section>
+
+    <section>
+      <nav>
+
+        <a href="index.html" type="_self">Início</a>
+        <a href="/src/pages/portifolio.html" type="_self">Nosso portifólio</a>
+
+      </nav>
+    </section>
+
+  </footer>
+
 </body>
+
 </html>

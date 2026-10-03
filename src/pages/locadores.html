@@ -1,39 +1,42 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <base href="../../">
   <title>Locadores — ERP Locação de Salas</title>
 </head>
+
 <body>
 
-<!-- =========================================================
+  <!-- =========================================================
      ÁREA PRINCIPAL DA APLICAÇÃO
      ========================================================= -->
 
-<section class="app-shell" id="app-shell-root">
-  <!--
+  <section class="app-shell" id="app-shell-root">
+    <!--
     Área principal onde o sistema será carregado.
     O JavaScript pode utilizar este ID para inserir
     o conteúdo da página.
   -->
-</section>
+  </section>
 
 
-<!-- =========================================================
+  <!-- =========================================================
      MODAL DE CADASTRO DE NOVO LOCADOR
      ========================================================= -->
 
-<section class="modal-backdrop" id="modal-backdrop">
-  <!--
+  <section class="modal-backdrop" id="modal-backdrop">
+    <!--
     Section responsável por representar o fundo do modal.
     A classe "modal-backdrop" é utilizada pelo CSS
     para posicionar e estilizar a janela de cadastro.
   -->
 
 
-  <form class="modal" id="create-form">
-    <!--
+    <form class="modal" id="create-form">
+      <!--
       Formulário utilizado para cadastrar um novo locador.
 
       O ID "create-form" permite que o JavaScript
@@ -41,25 +44,25 @@
     -->
 
 
-    <!-- =====================================================
+      <!-- =====================================================
          TÍTULO DO FORMULÁRIO
          ===================================================== -->
 
-    <header>
-      <!-- Cabeçalho do formulário -->
+      <header>
+        <!-- Cabeçalho do formulário -->
 
-      <h2>Novo locador</h2>
-      <!-- Título apresentado ao usuário -->
+        <h2>Novo locador</h2>
+        <!-- Título apresentado ao usuário -->
 
-    </header>
+      </header>
 
 
-    <!-- =====================================================
+      <!-- =====================================================
          ÁREA DE MENSAGENS DE ERRO
          ===================================================== -->
 
-    <section id="modal-error">
-      <!--
+      <section id="modal-error">
+        <!--
         Área reservada para mensagens de erro.
 
         O JavaScript pode inserir aqui mensagens como:
@@ -67,123 +70,108 @@
         "E-mail já cadastrado"
         "Preencha todos os campos obrigatórios"
       -->
-    </section>
+      </section>
 
 
-    <!-- =====================================================
+      <!-- =====================================================
          TIPO DE LOCADOR
          ===================================================== -->
 
-    <section class="form-field">
-      <!-- Agrupa o campo responsável pelo tipo de pessoa -->
+      <section class="form-field">
+        <!-- Agrupa o campo responsável pelo tipo de pessoa -->
 
-      <label for="f-type">Tipo</label>
-      <!-- Identifica o campo de seleção -->
+        <label for="f-type">Tipo</label>
+        <!-- Identifica o campo de seleção -->
 
-      <select id="f-type">
-        <!--
+        <select id="f-type">
+          <!--
           Permite selecionar se o locador é
           pessoa física ou pessoa jurídica.
         -->
 
-        <option value="PESSOA_FISICA">
-          Pessoa física
-        </option>
+          <option value="PESSOA_FISICA">
+            Pessoa física
+          </option>
 
-        <option value="PESSOA_JURIDICA">
-          Pessoa jurídica
-        </option>
+          <option value="PESSOA_JURIDICA">
+            Pessoa jurídica
+          </option>
 
-      </select>
-    </section>
+        </select>
+      </section>
 
 
-    <!-- =====================================================
+      <!-- =====================================================
          NOME OU RAZÃO SOCIAL
          ===================================================== -->
 
-    <section class="form-field">
-      <!-- Campo utilizado para informar o nome do locador -->
+      <section class="form-field">
+        <!-- Campo utilizado para informar o nome do locador -->
 
-      <label for="f-name" id="f-name-label">
-        Nome
-      </label>
-      <!--
+        <label for="f-name" id="f-name-label">
+          Nome
+        </label>
+        <!--
         O JavaScript pode alterar este texto para
         "Razão social" quando for selecionada
         uma pessoa jurídica.
       -->
 
-      <input
-        type="text"
-        id="f-name"
-        required
-      />
-      <!--
+        <input type="text" id="f-name" required />
+        <!--
         Campo destinado ao nome da pessoa física
         ou à razão social da pessoa jurídica.
 
         "required" torna o preenchimento obrigatório.
       -->
 
-    </section>
+      </section>
 
 
-    <!-- =====================================================
+      <!-- =====================================================
          NOME FANTASIA
          ===================================================== -->
 
-    <section class="form-field" id="trade-name-field">
-      <!--
+      <section class="form-field" id="trade-name-field">
+        <!--
         Campo destinado ao nome fantasia da empresa.
 
         O JavaScript pode ocultar este campo
         quando o locador for pessoa física.
       -->
 
-      <label for="f-trade-name">
-        Nome fantasia
-      </label>
+        <label for="f-trade-name">
+          Nome fantasia
+        </label>
 
-      <input
-        type="text"
-        id="f-trade-name"
-      />
-      <!-- Campo para informar o nome comercial da empresa -->
+        <input type="text" id="f-trade-name" />
+        <!-- Campo para informar o nome comercial da empresa -->
 
-    </section>
+      </section>
 
 
-    <!-- =====================================================
+      <!-- =====================================================
          CPF OU CNPJ
          ===================================================== -->
 
-    <section class="form-field">
-      <!--
+      <section class="form-field">
+        <!--
         Campo utilizado para informar o documento
         de identificação do locador.
       -->
 
-      <label
-        for="f-document"
-        id="f-document-label"
-      >
-        CPF
-      </label>
-      <!--
+        <label for="f-document" id="f-document-label">
+          CPF
+        </label>
+        <!--
         Inicialmente apresenta "CPF".
 
         Quando o usuário selecionar "Pessoa jurídica",
         o JavaScript poderá alterar para "CNPJ".
       -->
 
-      <input
-        type="text"
-        id="f-document"
-        required
-        placeholder="Somente números"
-      />
-      <!--
+        <input type="text" id="f-document" required placeholder="Somente números" />
+        <!--
         Campo para digitação do CPF ou CNPJ.
 
         "required" torna o preenchimento obrigatório.
@@ -192,110 +180,96 @@
         somente os números do documento.
       -->
 
-    </section>
+      </section>
 
 
-    <!-- =====================================================
+      <!-- =====================================================
          E-MAIL
          ===================================================== -->
 
-    <section class="form-field">
-      <!-- Campo destinado ao e-mail do locador -->
+      <section class="form-field">
+        <!-- Campo destinado ao e-mail do locador -->
 
-      <label for="f-email">
-        E-mail
-      </label>
+        <label for="f-email">
+          E-mail
+        </label>
 
-      <input
-        type="email"
-        id="f-email"
-        required
-      />
-      <!--
+        <input type="email" id="f-email" required />
+        <!--
         Campo para informar o endereço de e-mail.
 
         type="email" permite ao navegador realizar
         uma validação básica do formato do e-mail.
       -->
 
-    </section>
+      </section>
 
 
-    <!-- =====================================================
+      <!-- =====================================================
          TELEFONE
          ===================================================== -->
 
-    <section class="form-field">
-      <!-- Campo destinado ao telefone do locador -->
+      <section class="form-field">
+        <!-- Campo destinado ao telefone do locador -->
 
-      <label for="f-phone">
-        Telefone
-      </label>
+        <label for="f-phone">
+          Telefone
+        </label>
 
-      <input
-        type="text"
-        id="f-phone"
-      />
-      <!--
+        <input type="text" id="f-phone" />
+        <!--
         Campo utilizado para informar o telefone.
 
         O preenchimento não é obrigatório.
       -->
 
-    </section>
+      </section>
 
 
-    <!-- =====================================================
+      <!-- =====================================================
          CRIAÇÃO DE ACESSO AO SISTEMA
          ===================================================== -->
 
-    <section class="checkbox-field">
-      <!--
+      <section class="checkbox-field">
+        <!--
         Área responsável pela opção de criar
         um usuário para o locador acessar o sistema.
       -->
 
-      <input
-        type="checkbox"
-        id="f-create-login"
-      />
-      <!--
+        <input type="checkbox" id="f-create-login" />
+        <!--
         Caixa de seleção.
 
         Quando marcada, indica que deverá ser
         criado um acesso ao sistema.
       -->
 
-      <label for="f-create-login">
-        Criar acesso ao sistema para este locador
-      </label>
-      <!-- Descrição da opção de criação do acesso -->
+        <label for="f-create-login">
+          Criar acesso ao sistema para este locador
+        </label>
+        <!-- Descrição da opção de criação do acesso -->
 
-    </section>
+      </section>
 
 
-    <!-- =====================================================
+      <!-- =====================================================
          SENHA PROVISÓRIA
          ===================================================== -->
 
-    <section class="form-field" id="password-field">
-      <!--
+      <section class="form-field" id="password-field">
+        <!--
         Área destinada à senha provisória.
 
         O JavaScript pode controlar a exibição deste
         campo de acordo com a opção de criação de acesso.
       -->
 
-      <label for="f-password">
-        Senha provisória
-      </label>
+        <label for="f-password">
+          Senha provisória
+        </label>
 
-      <input
-        type="password"
-        id="f-password"
-        minlength="8"
-      />
-      <!--
+        <input type="password" id="f-password" minlength="8" />
+        <!--
         Campo para criação da senha provisória.
 
         type="password" oculta os caracteres digitados.
@@ -303,27 +277,23 @@
         minlength="8" exige pelo menos 8 caracteres.
       -->
 
-    </section>
+      </section>
 
 
-    <!-- =====================================================
+      <!-- =====================================================
          BOTÕES DE AÇÃO
          ===================================================== -->
 
-    <footer class="modal-actions">
-      <!--
+      <footer class="modal-actions">
+        <!--
         Área inferior do formulário onde ficam
         os botões de ação.
       -->
 
-      <button
-        type="button"
-        class="btn btn--outline"
-        id="cancel-btn"
-      >
-        Cancelar
-      </button>
-      <!--
+        <button type="button" class="btn btn--outline" id="cancel-btn">
+          Cancelar
+        </button>
+        <!--
         Cancela o cadastro.
 
         type="button" impede que o formulário
@@ -331,13 +301,10 @@
       -->
 
 
-      <button
-        type="submit"
-        class="btn btn--primary"
-      >
-        Salvar
-      </button>
-      <!--
+        <button type="submit" class="btn btn--primary">
+          Salvar
+        </button>
+        <!--
         Envia o formulário para realizar
         o cadastro do locador.
 
@@ -345,77 +312,98 @@
         o evento de envio do formulário.
       -->
 
-    </footer>
+      </footer>
 
-  </form>
+    </form>
 
-</section>
+  </section>
+
+  <footer>
+    <hr>
+    <section>
+      <h3>SpaceAdmin©</h3>
+      <small>
+        <p>Copyright 2026 - 2026</p>
+      </small>
+    </section>
+
+    <section>
+      <nav>
+
+        <a href="index.html" type="_self">Início</a>
+        <a href="/src/pages/portifolio.html" type="_self">Nosso portifólio</a>
+
+      </nav>
+    </section>
+
+  </footer>
 
 
   <script>
-  // Campo que define se o locador é pessoa física ou jurídica
-  const typeField = document.getElementById("f-type");
+    // Campo que define se o locador é pessoa física ou jurídica
+    const typeField = document.getElementById("f-type");
 
-  // Label do documento
-  const documentLabel = document.getElementById("f-document-label");
+    // Label do documento
+    const documentLabel = document.getElementById("f-document-label");
 
-  // Campo onde será digitado CPF ou CNPJ
-  const documentInput = document.getElementById("f-document");
+    // Campo onde será digitado CPF ou CNPJ
+    const documentInput = document.getElementById("f-document");
 
-  // Label do nome
-  const nameLabel = document.getElementById("f-name-label");
+    // Label do nome
+    const nameLabel = document.getElementById("f-name-label");
 
-  // Campo de nome fantasia
-  const tradeNameField = document.getElementById("trade-name-field");
+    // Campo de nome fantasia
+    const tradeNameField = document.getElementById("trade-name-field");
 
 
-  // Função responsável por alterar os campos
-  function atualizarTipoPessoa() {
+    // Função responsável por alterar os campos
+    function atualizarTipoPessoa() {
 
-    // Verifica se foi selecionada Pessoa Jurídica
-    if (typeField.value === "PESSOA_JURIDICA") {
+      // Verifica se foi selecionada Pessoa Jurídica
+      if (typeField.value === "PESSOA_JURIDICA") {
 
-      // Altera "Nome" para "Razão social"
-      nameLabel.textContent = "Razão social";
+        // Altera "Nome" para "Razão social"
+        nameLabel.textContent = "Razão social";
 
-      // Altera CPF para CNPJ
-      documentLabel.textContent = "CNPJ";
+        // Altera CPF para CNPJ
+        documentLabel.textContent = "CNPJ";
 
-      // Altera o texto de orientação do campo
-      documentInput.placeholder = "Somente números";
+        // Altera o texto de orientação do campo
+        documentInput.placeholder = "Somente números";
 
-      // Nome fantasia aparece para pessoa jurídica
-      tradeNameField.style.display = "block";
+        // Nome fantasia aparece para pessoa jurídica
+        tradeNameField.style.display = "block";
 
-    } else {
+      } else {
 
-      // Volta para Pessoa Física
-      nameLabel.textContent = "Nome";
+        // Volta para Pessoa Física
+        nameLabel.textContent = "Nome";
 
-      // Volta de CNPJ para CPF
-      documentLabel.textContent = "CPF";
+        // Volta de CNPJ para CPF
+        documentLabel.textContent = "CPF";
 
-      // Mantém a orientação do campo
-      documentInput.placeholder = "Somente números";
+        // Mantém a orientação do campo
+        documentInput.placeholder = "Somente números";
 
-      // Esconde o nome fantasia
-      tradeNameField.style.display = "none";
+        // Esconde o nome fantasia
+        tradeNameField.style.display = "none";
+      }
+
+      // Limpa o documento quando o tipo é alterado
+      documentInput.value = "";
     }
 
-    // Limpa o documento quando o tipo é alterado
-    documentInput.value = "";
-  }
+
+    // Executa a função quando o usuário troca
+    // entre Pessoa Física e Pessoa Jurídica
+    typeField.addEventListener("change", atualizarTipoPessoa);
 
 
-  // Executa a função quando o usuário troca
-  // entre Pessoa Física e Pessoa Jurídica
-  typeField.addEventListener("change", atualizarTipoPessoa);
+    // Executa a função assim que a página é carregada
+    atualizarTipoPessoa();
+  </script>
 
 
-  // Executa a função assim que a página é carregada
-  atualizarTipoPessoa();
-</script>
-
-  
 </body>
+
 </html>
