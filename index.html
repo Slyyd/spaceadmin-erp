@@ -11,56 +11,378 @@
 
 <body>
 
-    <header>
-        <h1>SpaceAdmin - ERP</h1>
-        <nav>
-            <a href="./src/pages/reservas.html">Gerenciar Reservas - </a>
-            <a href="./src/pages/financeiro.html">Financeiro - </a>
-            <a href="./src/pages/relatorios.html">Relatórios - </a>
-        </nav>
-    </header>
+    <div class="app-layout">
 
-    <hr>
+        <aside class="sidebar">
 
-    <main>
+            <header>
+                <h2>SpaceAdmin</h2>
+                <p>GESTÃO DE ESPAÇOS</p>
+            </header>
 
-        <section> <!--Sobre-->
+            <div class="unidade-selector">
 
-            <table style="width: 100%;">
+                <small>UNIDADE</small>
+                <p>Edifício Central</p>
 
-                <tr>
+            </div>
 
-                    <td style="width: 50%;">
-                        <h3>Smart. Scalable. Profitable.</h3>
-                        <h1>Gestão inteligente para fazer cada espaço render o seu máximo.</h1>
+            <nav aria-label="Menu Principal">
+                <ul>
+                    <li class="active"><a href="./index.html">Visão geral</a></li>
+                    <li><a href="./src/pages/agenda.html">Agenda</a></li>
+                    <li><a href="./src/pages/reservas.html">Reservas e check-in</a></li>
+                    <li><a href="./src/pages/imoveis.html">Imóveis e salas</a></li>
+                    <li><a href="./src/pages/clientes.html">Clientes</a></li>
+                    <li><a href="./src/pages/locadores.html">Locadores</a></li>
+                    <li><a href="./src/pages/usuarios.html">Usuários</a></li>
+                    <li><a href="./src/pages/funcionarios.html">Funcinários</a></li>
+                    <li><a href="./src/pages/financeiro.html">Financeiro</a></li>
+                    <li><a href="./src/pages/relatorios.html">Relatórios</a></li>
+                    <li><a href="./src/pages/limpeza.html">Limpeza</a></li>
+                    <li><a href="./src/pages/manutencao.html">Manutenção</a></li>
+                    <li><a href="./src/pages/estoque.html">Estoque</a></li>
+                    <li><a href="./src/pages/compras.html">Compras</a></li>
+                </ul>
+            </nav>
 
-                        <a href=""></a>
+        </aside>
 
-                        <a href=""></a>
+        <div class="main-wrapper">
 
+            <header class="top-bar">
 
-                    </td>
-                    <td>
-                        <figure style="width: 35rem; height: 35rem;"><img src="./docs/logo.png" alt="Logo SpaceAdmin"
-                                style="object-fit: contain; width: 100%; height: 100%;"></figure>
-                    </td>
+                <nav aria-label="breadcrumbs">
 
-                </tr>
-
-
-            </table>
-
-        </section>
+                    <ol class="breadcrumbs">
+                        <li><a href="./index.html#">Área administrativa</a></li>
+                        <li aria-current="page">Visão Geral</li>
+                    </ol>
 
 
-        <section>
+                </nav>
+
+                <div class="user-profile">
+                    <span class="user-avatar">AD</span>
+                    <span class="user-name">Administrador</span>
+                </div>
+
+            </header>
+
+            <main class="dashboard-content">
+
+                <header class="page-header">
+
+                    <div>
+                        <small>SPACEADMIN ERP</small>
+                        <h1>Visão Geral</h1>
+                        <p>Uma visão clara das suas salas e da rotina operacional</p>
+                    </div>
+
+                    <button type="button">Voltar ao painel</button>
+
+                </header>
+
+                <section class="cards-grid">
+
+                    <article class="card-item">
+
+                        <h3>Registros de reservas</h3>
+                        <p class="metric-value">0</p>
+                        <small>Cadastros desta demonstração</small>
+
+                    </article>
+
+                    <article class="card-item">
+
+                        <h3>Clientes cadastrados</h3>
+                        <p class="metric-value">0</p>
+                        <small>Base local de clientes</small>
+
+                    </article>
+
+                    <article class="card-item">
+
+                        <h3>Ordens de Limpeza</h3>
+                        <p class="metric-value">0</p>
+                        <small>Atividades registradas</small>
+
+                    </article>
+
+                    <article class="card-item">
+
+                        <h3>Manutenções</h3>
+                        <p class="metric-value">0</p>
+                        <small>Ocorrências registradas</small>
+
+                    </article>
 
 
+                </section>
 
-        </section>
+                <section class="panels-row">
 
-    </main>
+                    <article class="panel-main">
+                        <header>
 
+                            <h2>Organize a próxima reserva</h2>
+                            <small>Do cadastro da sala ao encerramento do uso, acompanhe cada etapa em um único
+                                ambiente.</small>
+
+                        </header>
+
+                        <ol class="steps-grid">
+                            <li class="step-card">
+
+                                <a href="./src/pages/imoveis.html">
+                                    <p class="steps-value">01</p>
+                                    <h3>Cadastre o espaço</h3>
+                                    <p>imóveis, salas e equipamentos</p>
+                                </a>
+
+                            </li>
+
+                            <li class="step-card">
+
+                                <a href="./src/pages/agenda.html">
+                                    <p class="steps-value">02</p>
+                                    <h3>Consulte a agenda</h3>
+                                    <p>Horários, bloqueios e reservas</p>
+                                </a>
+
+                            </li>
+
+                            <li class="step-card">
+
+                                <a href="./src/pages/reservas.html">
+                                    <p class="steps-value">03</p>
+                                    <h3>Gerencie a utilização</h3>
+                                    <p>Pagamento, check-in e check-out</p>
+                                </a>
+
+                            </li>
+
+                        </ol>
+
+                    </article>
+
+                    <article class="panel-side">
+
+                        <header>
+
+                            <h2>Acesso rápido</h2>
+
+                        </header>
+
+                        <nav>
+                            <ul>
+                                <li><a href="./src/pages/financeiro.html">Financeiro</a></li>
+                                <li><a href="./src/pages/limpeza.html">Limpeza</a></li>
+                                <li><a href="./src/pages/manutencao.html">Manutenção</a></li>
+                                <li><a href="./src/pages/relatorios.html">Relatórios</a></li>
+                            </ul>
+                        </nav>
+
+                    </article>
+
+                </section>
+
+                <section class="panel-full">
+
+                    <article class="module-item">
+
+                        <header>
+                            <h3>Módulos Integrados</h3>
+                            <small>Cadastros, gestão dos espaços e operação em páginas HTML com um padrão visual
+                                comum.</small>
+                        </header>
+
+                        <ol class="steps-grid">
+
+                            <li class="step-card">
+
+                                <a href="./src/pages/agenda.html">
+
+                                    <h2>Agenda</h2>
+                                    <small>Abrir moóulo</small>
+
+                                </a>
+
+                            </li>
+
+                            <li class="step-card">
+
+                                <a href="./src/pages/reservas.html">
+
+                                    <h2>Reservas e check-in</h2>
+                                    <small>Abrir moóulo</small>
+
+                                </a>
+
+                            </li>
+
+                            <li class="step-card">
+
+                                <a href="./src/pages/imoveis.html">
+
+                                    <h2>Imóveis e salas</h2>
+                                    <small>Abrir moóulo</small>
+
+                                </a>
+
+                            </li>
+
+                            <li class="step-card">
+
+                                <a href="./src/pages/clientes.html">
+
+                                    <h2>Clientes</h2>
+                                    <small>Abrir moóulo</small>
+
+                                </a>
+
+                            </li>
+
+                            <li class="step-card">
+
+                                <a href="./src/pages/locadores.html">
+
+                                    <h2>Locadores</h2>
+                                    <small>Abrir moóulo</small>
+
+                                </a>
+
+                            </li>
+
+                            <li class="step-card">
+
+                                <a href="./src/pages/usuarios.html">
+
+                                    <h2>Usuários</h2>
+                                    <small>Abrir moóulo</small>
+
+                                </a>
+
+                            </li>
+
+                            <li class="step-card">
+
+                                <a href="./src/pages/funcionarios.html">
+
+                                    <h2>Funcionários</h2>
+                                    <small>Abrir moóulo</small>
+
+                                </a>
+
+                            </li>
+
+                            <li class="step-card">
+
+                                <a href="./src/pages/financeiro.html">
+
+                                    <h2>Financeiro</h2>
+                                    <small>Abrir moóulo</small>
+
+                                </a>
+
+                            </li>
+
+                            <li class="step-card">
+
+                                <a href="./src/pages/relatorios.html">
+
+                                    <h2>Relatórios</h2>
+                                    <small>Abrir moóulo</small>
+
+                                </a>
+
+                            </li>
+
+                            <li class="step-card">
+
+                                <a href="./src/pages/limpeza.html">
+
+                                    <h2>Limpeza</h2>
+                                    <small>Abrir moóulo</small>
+
+                                </a>
+
+                            </li>
+
+                            <li class="step-card">
+
+                                <a href="./src/pages/manutencao.html">
+
+                                    <h2>Manutenção</h2>
+                                    <small>Abrir moóulo</small>
+
+                                </a>
+
+                            </li>
+
+                            <li class="step-card">
+
+                                <a href="./src/pages/estoque.html">
+
+                                    <h2>Estoque</h2>
+                                    <small>Abrir moóulo</small>
+
+                                </a>
+
+                            </li>
+
+                            <li class="step-card">
+
+                                <a href="./src/pages/compras.html">
+
+                                    <h2>Compras</h2>
+                                    <small>Abrir moóulo</small>
+
+                                </a>
+
+                            </li>
+
+                            <li class="step-card">
+
+                                <a href="./src/pages/configuracoes.html">
+
+                                    <h2>Configurações</h2>
+                                    <small>Abrir moóulo</small>
+
+                                </a>
+
+                            </li>
+
+                            <li class="step-card">
+
+                                <a href="./src/pages/portifolio.html">
+
+                                    <h2>Poritfólio</h2>
+                                    <small>Abrir moóulo</small>
+
+                                </a>
+
+                            </li>
+
+                        </ol>
+
+                    </article>
+
+                </section>
+
+            </main>
+
+            <footer class="bottom-bar">
+
+                <h1>SpaceAdmin</h1>
+                <small>Projeto escolar</small>
+
+            </footer>
+        </div>
+
+    </div>
+
+    <!--
     <footer>
         <hr>
         <section>
@@ -80,7 +402,7 @@
         </section>
 
     </footer>
-
+    -->
 </body>
 
 </html>

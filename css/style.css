@@ -1,0 +1,110 @@
+.app-layout {
+    display: flex;
+    flex-direction: row;
+}
+
+.main-wrapper {
+    width: 100%;
+}
+
+.sidebar {
+    position: sticky;
+    top: 0;
+    padding: 0.5rem;
+    height: 100%;
+    align-self: start;
+}
+
+.top-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    border: 1px solid;
+}
+
+.page-header {
+    border: 1px solid;
+    padding: 0.5rem;
+}
+
+.bottom-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+.bottom-bar h1 {
+    font-size: 1rem;
+}
+
+.cards-grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin: 1rem 0 0 0;
+    border: 1px solid;
+    padding: 0.5rem;
+}
+
+.card-item {
+    margin: 0 1rem 0 0;
+    border: solid 1px;
+    width: 25%;
+    padding: 0.3rem;
+}
+
+.panels-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin: 1rem 0 0 0;
+}
+
+.panel-main {
+    border: 1px solid;
+    margin: 0 1rem 0 0;
+    width: 70%;
+    padding: 0.5rem;
+}
+
+.panel-side {
+    border: 1px solid;
+    width: 30%;
+    padding: 0.5rem;
+}
+
+.panel-full {
+    border: 1px solid;
+    margin: 1rem 0 0 0;
+    width: 100%;
+    padding: 0.5rem;
+}
+
+.module-item {
+    flex: 1;
+}
+
+.steps-grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding: 0.5rem;
+}
+
+.step-card {
+    flex: 1 1 15em;
+    border: solid 1px;
+    padding: 0.2rem;
+}
+
+.breadcrumbs li::after {
+    content: "/";
+}
+
+ol, ul {
+    list-style: none;
+    padding: 0;
+}
