@@ -51,30 +51,45 @@ A solução conecta a oferta de espaços à demanda crescente por serviços *pay
 ```text
 SpaceAdmin/
 │
-├── index.hml                         # Página principal do site
+├── index.html                        # Página principal do site
+├── README.MD                         # Descrição do projeto
+│
+├── css/
+│   └── style.css                     # Estilos globais do sistema
+│
+├── js/
+│   └── app.js                        # Scripts do protótipo
 │
 ├── docs/                             # Documentações do projeto e diagramas
 │   ├── SpaceAdmin.docx               # Documento descritivo completo
 │   ├── DER.pdf                       # Diagrama Entidade-Relacionamento
-│   └── fluxograma.png               # Fluxogramas dos processos de negócio
+│   ├── fluxograma.pdf                # Fluxogramas dos processos de negócio
+│   └── Orcamento_Servidor_Web_e_Dominio.pdf  # Orçamento de servidor web e domínio
+│
+├── img/                              # Imagens utilizadas nas páginas HTML
+│   ├── logo.png                      # Logo do sistema
+│   ├── no_image.jpeg                 # Imagem padrão (sem foto)
+│   ├── placeholder.png               # Imagem de espaço reservado
+│   ├── port_joao.jpeg                # Foto do portfólio (João)
+│   ├── port_kaue.jpeg                # Foto do portfólio (Kaue)
+│   ├── port_pablo.jpeg               # Foto do portfólio (Pablo)
+│   ├── port_pedro.jpg                # Foto do portfólio (Pedro)
+│   └── port_victor.jpg               # Foto do portfólio (Victor)
 │
 └── src/
-    ├── assets/                       # Recursos estáticos do sistema
-    │   └── images/                   # Imagens utilizadas nas páginas HTML (Logos, Ícones, Banners)
-    │
     └── pages/                        # Interfaces HTML do protótipo web
         ├── agenda.html
         ├── clientes.html
         ├── compras.html
         ├── configuracoes.html
-        ├── estoque.html               
-        ├── financeiro.html            
+        ├── estoque.html
+        ├── financeiro.html
         ├── funcionarios.html
-        ├── imoveis.html               
+        ├── imoveis.html
         ├── limpeza.html
         ├── locadores.html
         ├── manutencao.html
+        ├── portifolio.html
         ├── relatorios.html
         ├── reservas.html
-        ├── usuarios.html              
-        └── portifolio.html
+        └── usuarios.html

@@ -1,4 +1,6 @@
-.app-layout {
+body {margin: 0;}
+
+.app-layout, .top-bar, .page-header, .bottom-bar, .cards-grid, .panels-row, .steps-grid, .breadcrumbs {
     display: flex;
     flex-direction: row;
 }
@@ -7,31 +9,79 @@
     width: 100%;
 }
 
+.sidebar, .top-bar, .page-header, .cards-grid, .panel-main, .panel-side, .panel-full, .steps-grid {
+    padding: 0.5rem;
+}
+
 .sidebar {
     position: sticky;
     top: 0;
-    padding: 0.5rem;
     height: 100%;
     align-self: start;
 }
 
-.top-bar {
-    display: flex;
-    flex-direction: row;
+/*
+.active {
+    border: 1px solid;
+}
+*/
+
+.sidebar-header {
+    padding: 0.3rem;
+}
+
+.sidebar-header h2, p {
+    margin: 0;
+}
+
+.sidebar-header h2 {
+    font-size: 1.4rem;
+}
+
+.sidebar-header p {
+    font-size: 0.8rem;
+}
+
+.unidade-selector {
+    margin: 0.5rem 0 0 0;
+    padding: 0.3rem ;
+    border: 1px solid;  
+}
+
+.unidade-selector small, p {
+    margin: 0;
+}
+
+
+
+.top-bar, .page-header, .bottom-bar {
     align-items: center;
-    justify-content: space-evenly;
+}
+
+.top-bar, .page-header {
+    justify-content: space-between;
+}
+
+.top-bar, .page-header, .cards-grid, .card-item, .panel-main, .panel-side, .panel-full, .step-card {
     border: 1px solid;
 }
 
-.page-header {
+.top-bar {
+    height: 4vh;
+}
+
+.user-avatar {
+    padding: 0.2rem;
     border: 1px solid;
-    padding: 0.5rem;
+    border-radius: 50%;
+}
+
+.page-header a {
+    border: 1px solid;
+    padding: 0.3rem;
 }
 
 .bottom-bar {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
     gap: 1rem;
 }
 
@@ -39,46 +89,29 @@
     font-size: 1rem;
 }
 
-.cards-grid {
-    display: flex;
-    flex-direction: row;
+.cards-grid, .panels-row {
     flex-wrap: nowrap;
+}
+
+.cards-grid, .panels-row, .panel-full {
     margin: 1rem 0 0 0;
-    border: 1px solid;
-    padding: 0.5rem;
+}
+
+.card-item, .panel-main {
+    margin: 0 1rem 0 0;
 }
 
 .card-item {
-    margin: 0 1rem 0 0;
-    border: solid 1px;
     width: 25%;
     padding: 0.3rem;
 }
 
-.panels-row {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    margin: 1rem 0 0 0;
-}
-
 .panel-main {
-    border: 1px solid;
-    margin: 0 1rem 0 0;
     width: 70%;
-    padding: 0.5rem;
 }
 
 .panel-side {
-    border: 1px solid;
     width: 30%;
-    padding: 0.5rem;
-}
-
-.panel-full {
-    border: 1px solid;
-    margin: 1rem 0 0 0;
-    padding: 0.5rem;
 }
 
 .module-item {
@@ -86,16 +119,12 @@
 }
 
 .steps-grid {
-    display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     gap: 1.5rem;
-    padding: 0.5rem;
 }
 
 .step-card {
     flex: 1 1 15em;
-    border: solid 1px;
     padding: 0.2rem;
 }
 
