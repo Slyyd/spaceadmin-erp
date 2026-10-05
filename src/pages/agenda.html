@@ -2,180 +2,225 @@
 <html lang="pt-BR">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <base href="../../">
-  <link rel="stylesheet" href="css/style.css">
-  <title>Agenda — SpaceAdmin</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/style.css">
+    <title>Agenda - ERP Locação de Salas</title>
 </head>
 
 <body>
 
-  <!-- tag header para delimetar o cabeçalho da página, nesse caso ja está passando informações sobre a sala mais a ideia que usuario role a pagina e selecione 
- a sala desejada -->
-  <header>
-    <h1>SpaceAdmin - ERP</h1>
+    <div class="app-layout">
 
-    <nav>
-      <a href="./index.html">Início -
-      </a>
-      <a href="./src/pages/reservas.html">Gerenciar Reservas -
-      </a>
-      <a href="./src/pages/imoveis.html">Imóveis -
-      </a>
-    </nav>
+        <!-- BARRA LATERAL (MENU FIXO) -->
+        <aside class="sidebar">
 
-    <h2>Agenda da sala</h2>
-    <p>Imóveis / Agenda</p>
+            <header>
+                <h2>SpaceAdmin</h2>
+                <p>GESTÃO DE ESPAÇOS</p>
+            </header>
 
-    <!-- Seleção do imovel -->
-    <label for="imovel">Escolha uma imovel:</label>
-    <select id="imovel" name="imovel" required>
-      <option value="" disabled selected>Selecione uma opção</option>
-      <option value="imovel1">Imóvel 1</option>
-      <option value="imovel2">Imóvel 2</option>
-      <option value="imovel3">Imóvel 3</option>
-    </select>
+            <div class="unidade-selector">
+                <small>UNIDADE</small>
+                <p>Edifício Central</p>
+            </div>
 
-    <!-- <p> está aqui para quebrar a linha porems será trado no CSS -->
-    <!-- Seleção da sala -->
-    <p>
-      <label for="sala">Escolha uma sala:</label>
-      <select id="sala" name="sala" required>
-        <option value="" disabled selected>Selecione uma opção</option>
-        <option value="sala1">Sala 1</option>
-        <option value="sala2">Sala 2</option>
-        <option value="sala3">Sala 3</option>
-      </select>
-    </p>
+            <nav aria-label="Menu Principal">
+                <ul>
+                    <li><a href="../../index.html">Visão geral</a></li>
+                    <li><a href="../../src/pages/agenda.html">Agenda</a></li>
+                    <li><a href="../../src/pages/reservas.html">Reservas e check-in</a></li>
+                    <li><a href="../../src/pages/imoveis.html">Imóveis e salas</a></li>
+                    <li><a href="../../src/pages/clientes.html">Clientes</a></li>
+                    <li><a href="../../src/pages/locadores.html">Locadores</a></li>
+                    <li><a href="../../src/pages/usuarios.html">Usuários</a></li>
+                    <li><a href="../../src/pages/funcionarios.html">Funcionários</a></li>
+                    <li><a href="../../src/pages/financeiro.html">Financeiro</a></li>
+                    <li><a href="../../src/pages/relatorios.html">Relatórios</a></li>
+                    <li><a href="../../src/pages/limpeza.html">Limpeza</a></li>
+                    <li><a href="../../src/pages/manutencao.html">Manutenção</a></li>
+                    <li><a href="../../src/pages/estoque.html">Estoque</a></li>
+                    <li><a href="../../src/pages/compras.html">Compras</a></li>
+                    <li><a href="../../src/pages/configuracoes.html">Configurações</a></li>
+                </ul>
+            </nav>
 
-    <p><strong>Capacidade:</strong> 12 pessoas</p>
-  </header>
+        </aside>
 
-  <!-- <hr> está aqui para fezer essa linha da divisão -->
-  <hr>
+        <!-- ÁREA PRINCIPAL (DIREITA) -->
+        <div class="main-wrapper">
 
-  <main>
+            <!-- CABEÇALHO DO TOPO -->
+            <header class="top-bar">
 
-    <section>
-      <h2>Horário de funcionamento</h2>
+                <nav aria-label="breadcrumbs">
+                    <ol class="breadcrumbs">
+                        <li><a href="../../index.html">Área administrativa</a></li>
+                        <li aria-current="page">Agenda</li>
+                    </ol>
+                </nav>
 
-      <p>Defina os dias e horários em que a sala poderá receber reservas.</p>
-      <form>
-        <h3>Dias de Funcionamento</h3>
-        <!-- Seleção dos Dias -->
-        <div>
-          <label><input type="checkbox" name="dias[]" value="seg"> Seg</label>
-          <label><input type="checkbox" name="dias[]" value="ter"> Ter</label>
-          <label><input type="checkbox" name="dias[]" value="qua"> Qua</label>
-          <label><input type="checkbox" name="dias[]" value="qui"> Qui</label>
-          <label><input type="checkbox" name="dias[]" value="sex"> Sex</label>
-          <label><input type="checkbox" name="dias[]" value="sab"> Sáb</label>
-          <label><input type="checkbox" name="dias[]" value="dom"> Dom</label>
+                <div class="user-profile">
+                    <span class="user-avatar">AD</span>
+                    <span class="user-name">Administrador</span>
+                </div>
+
+            </header>
+
+            <!-- CONTEÚDO DINÂMICO DA PÁGINA -->
+            <main class="dashboard-content">
+
+                <header class="page-header">
+
+                    <div>
+                        <small>SPACEADMIN ERP</small>
+                        <h1>Agenda</h1>
+                        <p>Gerencie os dados e acompanhe as atividades da sua unidade.</p>
+                    </div>
+
+                    <a href="../../index.html">Voltar ao painel</a>
+
+                </header>
+                <form>
+                    <section class="panel-full">
+
+                        <h2>Escolha o imóvel</h2>
+
+                        <!-- Seleção do imovel -->
+                        <label for="imovel">Escolha uma imovel:</label>
+                        <select id="imovel" name="imovel" required>
+                            <option value="" disabled selected>Selecione uma opção</option>
+                            <option value="imovel1">Imóvel 1</option>
+                            <option value="imovel2">Imóvel 2</option>
+                            <option value="imovel3">Imóvel 3</option>
+                        </select>
+
+                        <!-- <p> está aqui para quebrar a linha porems será trado no CSS -->
+                        <!-- Seleção da sala -->
+                        <p>
+                            <label for="sala">Escolha uma sala:</label>
+                            <select id="sala" name="sala" required>
+                                <option value="" disabled selected>Selecione uma opção</option>
+                                <option value="sala1">Sala 1</option>
+                                <option value="sala2">Sala 2</option>
+                                <option value="sala3">Sala 3</option>
+                            </select>
+                        </p>
+
+                        <p><strong>Capacidade:</strong> 12 pessoas</p>
+
+                    </section>
+
+                    <section class="panel-full">
+
+                        <h2>Horário de funcionamento</h2>
+
+                        <p>Defina os dias e horários em que a sala poderá receber reservas.</p>
+                        <h3>Dias de Funcionamento</h3>
+                        <!-- Seleção dos Dias -->
+                        <div>
+                            <label><input type="checkbox" name="dias[]" value="seg"> Seg</label>
+                            <label><input type="checkbox" name="dias[]" value="ter"> Ter</label>
+                            <label><input type="checkbox" name="dias[]" value="qua"> Qua</label>
+                            <label><input type="checkbox" name="dias[]" value="qui"> Qui</label>
+                            <label><input type="checkbox" name="dias[]" value="sex"> Sex</label>
+                            <label><input type="checkbox" name="dias[]" value="sab"> Sáb</label>
+                            <label><input type="checkbox" name="dias[]" value="dom"> Dom</label>
+                        </div>
+
+                        <h3>Horário de Funcionamento</h3>
+                        <!-- Seleção das Horas do Funcionamento da sala -->
+                        <label for="hora_abertura">Abertura:</label>
+                        <input type="time" id="hora_abertura" name="hora_abertura" required>
+                        <label for="hora_fechamento">Fechamento:</label>
+                        <input type="time" id="hora_fechamento" name="hora_fechamento" required>
+
+                        <!-- botão para enviar resposta -->
+                        <button type="submit">Salvar Horários</button>
+
+                    </section>
+                </form>
+
+                <form>
+                    <section class="panel-full">
+
+                        <h2>Consultar disponibilidade</h2>
+                        <p>
+                            <label>Data</label><br>
+                            <input type="date" id="verificar_data" required>
+                            <button type="submit">Verificar</button>
+
+                        <p>Sala 1 disponível das 08:00 às 18:00 na data selecionada.</p>
+
+                        </p>
+
+                    </section>
+                </form>
+
+                <form>
+                    <section class="panel-full">
+
+                        <h2>Nova reserva</h2>
+                        <p>
+                            <label for="dta_res_começo">Início</label><br>
+                            <input type="datetime-local" id="dta_res_começo" required>
+                        </p>
+                        <p>
+                            <label for="dta_res_fim">Fim</label><br>
+                            <input type="datetime-local" id="dta_res_fim" required>
+                        </p>
+                        <p>
+                            <label for="tipo">Tipo</label><br>
+                            <select id="tipo">
+                                <option value="HORA">Por hora</option>
+                                <option value="DIARIA">Diária</option>
+                            </select>
+                        </p>
+                        <p>
+                            <label for="id_reserva_cliente">Cliente</label><br>
+                            <input type="number" id="id_reserva_cliente" placeholder="id do cliente" required>
+                        </p>
+                        <button type="submit">Criar reserva</button>
+
+                    </section>
+                </form>
+
+                <form>
+                    <section class="panel-full">
+                        <h2>Bloqueios manuais</h2>
+                        <p>Cadastre períodos em que a sala não estará disponível.</p>
+
+                        <p>
+                            <label for="dta_começo">Início</label><br>
+                            <input type="datetime-local" id="dta_começo" required>
+                        </p>
+
+                        <p>
+                            <label for="dta_fim">Fim</label><br>
+                            <input type="datetime-local" id="dta_fim" required>
+                        </p>
+                        <p>
+                            <label for="motivo">Motivo</label><br>
+
+                            <!-- maxlength maximo de 240 caracteres e placeholder texto dentro do campo enquanto não está sendo preenchido -->
+                            <textarea id="motivo" required maxlength="240"
+                                placeholder="Explique brevemente o motivo"></textarea>
+                        </p>
+                        <button type="submit">Bloquear horário</button>
+                    </section>
+                </form>
+            </main>
+
+            <!-- RODAPÉ UNIVERSAL -->
+            <footer class="bottom-bar">
+                <h1>SpaceAdmin</h1>
+                <small>Projeto escolar</small>
+            </footer>
+
         </div>
 
-        <h3>Horário de Funcionamento</h3>
-        <!-- Seleção das Horas do Funcionamento da sala -->
-        <label for="hora_abertura">Abertura:</label>
-        <input type="time" id="hora_abertura" name="hora_abertura" required>
-        <label for="hora_fechamento">Fechamento:</label>
-        <input type="time" id="hora_fechamento" name="hora_fechamento" required>
+    </div>
 
-        <!-- botão para enviar resposta -->
-        <button type="submit">Salvar Horários</button>
-      </form>
-    </section>
-
-    <hr>
-
-    <section>
-      <h2>Bloqueios manuais</h2>
-      <p>Cadastre períodos em que a sala não estará disponível.</p>
-      <h3>Novo bloqueio</h3>
-
-      <form>
-        <p>
-          <label for="dta_começo">Início</label><br>
-          <input type="datetime-local" id="dta_começo" required>
-        </p>
-
-        <p>
-          <label for="dta_fim">Fim</label><br>
-          <input type="datetime-local" id="dta_fim" required>
-        </p>
-        <p>
-          <label for="motivo">Motivo</label><br>
-
-          <!-- maxlength maximo de 240 caracteres e placeholder texto dentro do campo enquanto não está sendo preenchido -->
-          <textarea id="motivo" required maxlength="240" placeholder="Explique brevemente o motivo"></textarea>
-        </p>
-        <button type="submit">Bloquear horário</button>
-      </form>
-    </section>
-
-    <hr>
-    <form>
-      <section>
-        <h2>Consultar disponibilidade</h2>
-        <p>
-          <label>Data</label><br>
-          <input type="date" id="verificar_data" required>
-          <button type="submit">Verificar</button>
-
-        <p>Sala 1 disponível das 08:00 às 18:00 na data selecionada.</p>
-
-        </p>
-      </section>
-    </form>
-
-    <hr>
-
-    <section>
-      <h2>Nova reserva</h2>
-      <form>
-        <p>
-          <label for="dta_res_começo">Início</label><br>
-          <input type="datetime-local" id="dta_res_começo" required>
-        </p>
-        <p>
-          <label for="dta_res_fim">Fim</label><br>
-          <input type="datetime-local" id="dta_res_fim" required>
-        </p>
-        <p>
-          <label for="tipo">Tipo</label><br>
-          <select id="tipo">
-            <option value="HORA">Por hora</option>
-            <option value="DIARIA">Diária</option>
-          </select>
-        </p>
-        <p>
-          <label for="id_reserva_cliente">Cliente</label><br>
-          <input type="number" id="id_reserva_cliente" placeholder="id do cliente" required>
-        </p>
-        <button type="submit">Criar reserva</button>
-      </form>
-    </section>
-  </main>
-
-  <footer>
-    <hr>
-    <section>
-      <h3>SpaceAdmin©</h3>
-      <small>
-        <p>Copyright 2026 - 2026</p>
-      </small>
-    </section>
-
-    <section>
-      <nav>
-
-        <a href="index.html">Início</a>
-        <a href="src/pages/portifolio.html">Nosso portifólio</a>
-
-      </nav>
-    </section>
-
-  </footer>
 </body>
 
 </html>

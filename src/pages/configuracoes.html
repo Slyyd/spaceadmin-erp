@@ -2,157 +2,197 @@
 <html lang="pt-BR">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <base href="../../">
-  <link rel="stylesheet" href="css/style.css">
-  <title>Configurações — SpaceAdmin</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/style.css">
+    <title>Configurações - ERP Locação de Salas</title>
 </head>
 
 <body>
 
-  <header>
-    <h1>SpaceAdmin - ERP</h1>
+    <div class="app-layout">
 
-    <nav>
-      <a href="./index.html">Início -
-      </a>
-      <a href="./src/pages/imoveis.html">Imóveis -
-      </a>
-      <a href="./src/pages/usuarios.html">Usuários -
-      </a>
-    </nav>
+        <!-- BARRA LATERAL (MENU FIXO) -->
+        <aside class="sidebar">
 
-    <h2>Configurações</h2>
-    <p>Dados da empresa, regras de cancelamento e taxas.</p>
-  </header>
+            <header>
+                <h2>SpaceAdmin</h2>
+                <p>GESTÃO DE ESPAÇOS</p>
+            </header>
 
-  <main>
-    <!-- Dados da empresa -->
-    <section>
-      <h2>Dados da empresa</h2>
-      <form>
+            <div class="unidade-selector">
+                <small>UNIDADE</small>
+                <p>Edifício Central</p>
+            </div>
 
-        <p>
-          <label>Nome</label>
-          <input type="text" id="nome_locatario" placeholder="Espaço Centro Coworking" required />
-        </p>
+            <nav aria-label="Menu Principal">
+                <ul>
+                    <li><a href="../../index.html">Visão geral</a></li>
+                    <li><a href="../../src/pages/agenda.html">Agenda</a></li>
+                    <li><a href="../../src/pages/reservas.html">Reservas e check-in</a></li>
+                    <li><a href="../../src/pages/imoveis.html">Imóveis e salas</a></li>
+                    <li><a href="../../src/pages/clientes.html">Clientes</a></li>
+                    <li><a href="../../src/pages/locadores.html">Locadores</a></li>
+                    <li><a href="../../src/pages/usuarios.html">Usuários</a></li>
+                    <li><a href="../../src/pages/funcionarios.html">Funcionários</a></li>
+                    <li><a href="../../src/pages/financeiro.html">Financeiro</a></li>
+                    <li><a href="../../src/pages/relatorios.html">Relatórios</a></li>
+                    <li><a href="../../src/pages/limpeza.html">Limpeza</a></li>
+                    <li><a href="../../src/pages/manutencao.html">Manutenção</a></li>
+                    <li><a href="../../src/pages/estoque.html">Estoque</a></li>
+                    <li><a href="../../src/pages/compras.html">Compras</a></li>
+                    <li><a href="../../src/pages/configuracoes.html">Configurações</a></li>
+                </ul>
+            </nav>
 
-        <p>
-          <label>Documento</label>
-          <input type="text" id="documento_locatario" placeholder="12.345.678/0001-90" required />
-        </p>
+        </aside>
 
-        <p>
-          <label>Telefone</label>
-          <input type="tel" id="telefone_locatario" placeholder="(11) 3456-7890" required />
-        </p>
+        <!-- ÁREA PRINCIPAL (DIREITA) -->
+        <div class="main-wrapper">
 
-        <p>
-          <label>E-mail</label>
-          <input type="email" id="email_locatario" placeholder="contato@espacocentro.com.br" required />
-        </p>
+            <!-- CABEÇALHO DO TOPO -->
+            <header class="top-bar">
 
-        <p>
-          <label for="c-address">Endereço</label>
-          <input type="text" id="c-address" placeholder="Av. Paulista, 1000 - Bela Vista, São Paulo - SP" required />
-        </p>
-        <button type="submit">Salvar dados da empresa</button>
-      </form>
-    </section>
+                <nav aria-label="breadcrumbs">
+                    <ol class="breadcrumbs">
+                        <li><a href="../../index.html">Área administrativa</a></li>
+                        <li aria-current="page">Configurações</li>
+                    </ol>
+                </nav>
 
-    <hr />
+                <div class="user-profile">
+                    <span class="user-avatar">AD</span>
+                    <span class="user-name">Administrador</span>
+                </div>
 
-    <!-- Regras de cancelamento -->
-    <section>
-      <h2>Regras de cancelamento</h2>
-      <ul id="rules-list">
-        <li>Flexível — mínimo 24h antes, multa 0%</li>
-        <li>Moderada — mínimo 12h antes, multa 25%</li>
-        <li>Rígida — mínimo 2h antes, multa 50%</li>
-      </ul>
+            </header>
 
-      <form>
-        <p>
-          <label>N° da sala </label>
-          <input type="number" id="regra_sala" required />
-        </p>
+            <!-- CONTEÚDO DINÂMICO DA PÁGINA -->
+            <main class="dashboard-content">
 
-        <p>
-          <label>Horas mínimas</label>
-          <input type="number" id="r-hours" value="24" required />
-        </p>
+                <header class="page-header">
 
-        <p>
-          <label>Multa (%)</label>
-          <!-- step define a quantidade de casas decimais que o input aceita -->
-          <input type="number" step="0.01" id="r-penalty" value="0" required />
-        </p>
+                    <div>
+                        <small>SPACEADMIN ERP</small>
+                        <h1>Configurações</h1>
+                        <p>Gerencie os dados e acompanhe as atividades da sua unidade.</p>
+                    </div>
 
-        <button type="submit">Adicionar</button>
-      </form>
-    </section>
+                    <a href="../../index.html">Voltar ao painel</a>
 
-    <hr />
+                </header>
 
-    <!-- Taxas -->
-    <section>
-      <h2>Taxas</h2>
-      <ul>
-        <li>Taxa de limpeza — R$ 50,00</li>
-        <li>Taxa de serviço — 5%</li>
-        <li>Taxa de equipamento (projetor) — R$ 30,00</li>
-        <li>Taxa de conveniência — 2,5%</li>
-      </ul>
+                <section class="panel-full">
+                    <h2>Dados da empresa</h2>
+                    <form>
 
-      <form>
-        <p>
-          <label>Taxa a ser adicionada ao valor final</label>
-          <select id="selecao_de_taxa" required>
-            <option value="">Selecione uma taxa</option>
-            <option value="limpeza">Taxa de limpeza</option>
-            <option value="servico">Taxa de serviço</option>
-            <option value="equipamento">Taxa de equipamento</option>
-            <option value="conveniencia">Taxa de conveniência</option>
-          </select>
-        </p>
+                        <p>
+                            <label>Nome</label>
+                            <input type="text" id="nome_locatario" placeholder="Espaço Centro Coworking" required />
+                        </p>
 
-        <p>
-          <label>Tipo</label>
-          <select id="tipo_taxa" required>
-            <option value="PERCENTUAL">Percentual</option>
-            <option value="FIXO">Fixo</option>
-          </select>
-        </p>
+                        <p>
+                            <label>Documento</label>
+                            <input type="text" id="documento_locatario" placeholder="12.345.678/0001-90" required />
+                        </p>
+
+                        <p>
+                            <label>Telefone</label>
+                            <input type="tel" id="telefone_locatario" placeholder="(11) 3456-7890" required />
+                        </p>
+
+                        <p>
+                            <label>E-mail</label>
+                            <input type="email" id="email_locatario" placeholder="contato@espacocentro.com.br"
+                                required />
+                        </p>
+
+                        <p>
+                            <label for="c-address">Endereço</label>
+                            <input type="text" id="c-address"
+                                placeholder="Av. Paulista, 1000 - Bela Vista, São Paulo - SP" required />
+                        </p>
+                        <button type="submit">Salvar dados da empresa</button>
+                    </form>
+                </section>
+
+                <section class="panel-full">
+                    <h2>Regras de cancelamento</h2>
+                    <ul id="rules-list">
+                        <li>Flexível — mínimo 24h antes, multa 0%</li>
+                        <li>Moderada — mínimo 12h antes, multa 25%</li>
+                        <li>Rígida — mínimo 2h antes, multa 50%</li>
+                    </ul>
+
+                    <form>
+                        <p>
+                            <label>N° da sala </label>
+                            <input type="number" id="regra_sala" required />
+                        </p>
+
+                        <p>
+                            <label>Horas mínimas</label>
+                            <input type="number" id="r-hours" value="24" required />
+                        </p>
+
+                        <p>
+                            <label>Multa (%)</label>
+                            <!-- step define a quantidade de casas decimais que o input aceita -->
+                            <input type="number" step="0.01" id="r-penalty" value="0" required />
+                        </p>
+
+                        <button type="submit">Adicionar</button>
+                    </form>
+                </section>
+
+                <section class="panel-full">
+                    <h2>Taxas</h2>
+                    <ul>
+                        <li>Taxa de limpeza — R$ 50,00</li>
+                        <li>Taxa de serviço — 5%</li>
+                        <li>Taxa de equipamento (projetor) — R$ 30,00</li>
+                        <li>Taxa de conveniência — 2,5%</li>
+                    </ul>
+
+                    <form>
+                        <p>
+                            <label>Taxa a ser adicionada ao valor final</label>
+                            <select id="selecao_de_taxa" required>
+                                <option value="">Selecione uma taxa</option>
+                                <option value="limpeza">Taxa de limpeza</option>
+                                <option value="servico">Taxa de serviço</option>
+                                <option value="equipamento">Taxa de equipamento</option>
+                                <option value="conveniencia">Taxa de conveniência</option>
+                            </select>
+                        </p>
+
+                        <p>
+                            <label>Tipo</label>
+                            <select id="tipo_taxa" required>
+                                <option value="PERCENTUAL">Percentual</option>
+                                <option value="FIXO">Fixo</option>
+                            </select>
+                        </p>
 
 
-        <label for="f-value">Valor</label>
-        <input type="number" step="0.01" id="f-value" required />
+                        <label for="f-value">Valor</label>
+                        <input type="number" step="0.01" id="f-value" required />
 
-        <button type="submit">Adicionar</button>
-      </form>
-    </section>
-  </main>
+                        <button type="submit">Adicionar</button>
+                    </form>
+                </section>
 
-  <footer>
-    <hr>
-    <section>
-      <h3>SpaceAdmin©</h3>
-      <small>
-        <p>Copyright 2026 - 2026</p>
-      </small>
-    </section>
+            </main>
 
-    <section>
-      <nav>
+            <!-- RODAPÉ UNIVERSAL -->
+            <footer class="bottom-bar">
+                <h1>SpaceAdmin</h1>
+                <small>Projeto escolar</small>
+            </footer>
 
-        <a href="index.html">Início</a>
-        <a href="src/pages/portifolio.html">Nosso portifólio</a>
+        </div>
 
-      </nav>
-    </section>
-
-  </footer>
+    </div>
 
 </body>
 

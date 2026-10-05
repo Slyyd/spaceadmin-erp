@@ -2,221 +2,137 @@
 <html lang="pt-BR">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <base href="../../">
-  <link rel="stylesheet" href="css/style.css">
-  <title>Funcionários — ERP Locação de Salas</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/style.css">
+    <title>Funcionários - ERP Locação de Salas</title>
 </head>
 
 <body>
 
-  <header>
-    <h1>SpaceAdmin - ERP</h1>
+    <div class="app-layout">
 
-    <nav>
-      <a href="./index.html">Início -
-      </a>
-      <a href="./src/pages/usuarios.html">Usuários -
-      </a>
-      <a href="./src/pages/manutencao.html">Criar Ordem de Manutenção -
-      </a>
-    </nav>
+        <!-- BARRA LATERAL (MENU FIXO) -->
+        <aside class="sidebar">
 
-  </header>
+            <header>
+                <h2>SpaceAdmin</h2>
+                <p>GESTÃO DE ESPAÇOS</p>
+            </header>
 
-  <main>
+            <div class="unidade-selector">
+                <small>UNIDADE</small>
+                <p>Edifício Central</p>
+            </div>
 
+            <nav aria-label="Menu Principal">
+                <ul>
+                    <li><a href="../../index.html">Visão geral</a></li>
+                    <li><a href="../../src/pages/agenda.html">Agenda</a></li>
+                    <li><a href="../../src/pages/reservas.html">Reservas e check-in</a></li>
+                    <li><a href="../../src/pages/imoveis.html">Imóveis e salas</a></li>
+                    <li><a href="../../src/pages/clientes.html">Clientes</a></li>
+                    <li><a href="../../src/pages/locadores.html">Locadores</a></li>
+                    <li><a href="../../src/pages/usuarios.html">Usuários</a></li>
+                    <li><a href="../../src/pages/funcionarios.html">Funcionários</a></li>
+                    <li><a href="../../src/pages/financeiro.html">Financeiro</a></li>
+                    <li><a href="../../src/pages/relatorios.html">Relatórios</a></li>
+                    <li><a href="../../src/pages/limpeza.html">Limpeza</a></li>
+                    <li><a href="../../src/pages/manutencao.html">Manutenção</a></li>
+                    <li><a href="../../src/pages/estoque.html">Estoque</a></li>
+                    <li><a href="../../src/pages/compras.html">Compras</a></li>
+                    <li><a href="../../src/pages/configuracoes.html">Configurações</a></li>
+                </ul>
+            </nav>
 
-    <!--
-  Título principal do formulário.
-  Informa ao usuário que ele está realizando
-  o cadastro de um novo funcionário.
--->
-    <h2>Novo funcionário</h2>
+        </aside>
 
+        <!-- ÁREA PRINCIPAL (DIREITA) -->
+        <div class="main-wrapper">
 
-    <!--
-  Texto explicativo apresentado abaixo do título.
-  Informa que o funcionário terá acesso ao sistema
-  para executar suas atividades.
--->
-    <p class="page-subtitle">
-      Todo funcionário recebe acesso ao sistema
-      para operar suas tarefas.
-    </p>
+            <!-- CABEÇALHO DO TOPO -->
+            <header class="top-bar">
 
+                <nav aria-label="breadcrumbs">
+                    <ol class="breadcrumbs">
+                        <li><a href="../../index.html">Área administrativa</a></li>
+                        <li aria-current="page">Funcionários</li>
+                    </ol>
+                </nav>
 
-    <!--
-  Área destinada à apresentação de mensagens
-  de erro durante o preenchimento ou envio
-  do formulário.
+                <div class="user-profile">
+                    <span class="user-avatar">AD</span>
+                    <span class="user-name">Administrador</span>
+                </div>
 
-  O JavaScript poderá inserir mensagens
-  neste elemento.
--->
-    <section id="modal-error" role="alert" aria-live="polite"></section>
+            </header>
 
-    <form>
+            <!-- CONTEÚDO DINÂMICO DA PÁGINA -->
+            <main class="dashboard-content">
 
-      <!--
-  Seção responsável pelo preenchimento
-  do nome do funcionário.
--->
-      <section class="form-field">
+                <header class="page-header">
 
-        <!--
-    Identificação do campo de nome.
-    O atributo "for" relaciona o label
-    diretamente ao input correspondente.
-  -->
-        <label for="f-name">
-          Nome
-        </label>
+                    <div>
+                        <small>SPACEADMIN ERP</small>
+                        <h1>Funcionários</h1>
+                        <p>Gerencie os dados e acompanhe as atividades da sua unidade.</p>
+                    </div>
 
-        <!--
-    Campo utilizado para informar o nome
-    completo do funcionário.
+                    <a href="../../index.html">Voltar ao painel</a>
 
-    O atributo "required" determina que
-    o preenchimento deste campo é obrigatório.
-  -->
-        <input type="text" id="f-name" name="name" autocomplete="name" required />
+                </header>
 
-      </section>
+                <section class="panel-full">
 
+                    <h2>Novo funcionário</h2>
 
-      <!--
-  Seção responsável pelo preenchimento
-  do cargo do funcionário.
--->
-      <section class="form-field">
+                    <p>
+                        Todo funcionário recebe acesso ao sistema para operar suas tarefas.
+                    </p>
 
-        <!-- Identificação do campo de cargo. -->
-        <label for="f-position">
-          Cargo
-        </label>
+                    <form>
 
-        <!--
-    Campo utilizado para informar a função
-    ou cargo exercido pelo funcionário.
+                        <section>
+                            <label for="f-name">Nome</label>
+                            <input type="text" id="f-name" name="name" autocomplete="name" required />
+                        </section>
 
-    O atributo "placeholder" apresenta um
-    exemplo para orientar o preenchimento.
-  -->
-        <input type="text" id="f-position" name="position" autocomplete="organization-title"
-          placeholder="Ex.: Recepcionista, Zelador..." required />
+                        <section>
+                            <label for="f-position">Cargo</label>
+                            <input type="text" id="f-position" name="position" autocomplete="organization-title"
+                                placeholder="Ex.: Recepcionista, Zelador..." required />
+                        </section>
 
-      </section>
+                        <section>
+                            <label for="f-email">E-mail (login)</label>
+                            <input type="email" id="f-email" name="email" autocomplete="email" required />
+                        </section>
 
+                        <section>
+                            <label for="f-password">Senha provisória</label>
+                            <input type="password" id="f-password" name="password" autocomplete="new-password"
+                                minlength="8" required />
+                        </section>
 
-      <!--
-  Seção responsável pelo cadastro do e-mail
-  que será utilizado como login do funcionário.
--->
-      <section class="form-field">
+                        <section>
+                            <button type="button" class="btn btn--outline" id="cancel-btn">Cancelar</button>
+                            <button type="submit" class="btn btn--primary">Salvar</button>
+                        </section>
 
-        <!-- Identificação do campo de e-mail. -->
-        <label for="f-email">
-          E-mail (login)
-        </label>
-
-        <!--
-    Campo utilizado para informar o endereço
-    de e-mail do funcionário.
-
-    O tipo "email" permite que o navegador
-    faça uma validação básica do endereço.
-  -->
-        <input type="email" id="f-email" name="email" autocomplete="email" required />
-
-      </section>
+                </section>
 
 
-      <!--
-  Seção responsável pelo cadastro da senha
-  provisória do funcionário.
--->
-      <section class="form-field">
+            </main>
 
-        <!-- Identificação do campo de senha. -->
-        <label for="f-password">
-          Senha provisória
-        </label>
+            <!-- RODAPÉ UNIVERSAL -->
+            <footer class="bottom-bar">
+                <h1>SpaceAdmin</h1>
+                <small>Projeto escolar</small>
+            </footer>
 
-        <!--
-    Campo utilizado para informar a senha
-    inicial do funcionário.
+        </div>
 
-    O tipo "password" impede que os caracteres
-    digitados sejam exibidos diretamente.
-
-    O atributo "minlength" exige pelo menos
-    8 caracteres.
-  -->
-        <input type="password" id="f-password" name="password" autocomplete="new-password" minlength="8" required />
-
-      </section>
-
-
-      <!--
-  Seção responsável pelos botões de ação
-  disponíveis no formulário.
--->
-      <section class="modal-actions">
-
-        <!--
-    Botão utilizado para cancelar o cadastro.
-
-    O tipo "button" impede que o botão envie
-    o formulário.
-
-    O JavaScript pode utilizar o ID
-    "cancel-btn" para fechar o modal.
-  -->
-        <button type="button" class="btn btn--outline" id="cancel-btn">
-          Cancelar
-        </button>
-
-
-        <!--
-    Botão responsável pelo envio do formulário.
-
-    O tipo "submit" faz com que o evento
-    de envio do formulário seja acionado,
-    permitindo que o JavaScript processe
-    o cadastro do funcionário.
-  -->
-        <button type="submit" class="btn btn--primary">
-          Salvar
-        </button>
-
-      </section>
-
-    </form>
-
-
-  </main>
-
-  <footer>
-    <hr>
-    <section>
-      <h3>SpaceAdmin©</h3>
-      <small>
-        <p>Copyright 2026 - 2026</p>
-      </small>
-    </section>
-
-    <section>
-      <nav>
-
-        <a href="index.html">Início</a>
-        <a href="src/pages/portifolio.html">Nosso portifólio</a>
-
-      </nav>
-    </section>
-
-  </footer>
+    </div>
 
 </body>
 

@@ -3,133 +3,175 @@
 
 <head>
     <meta charset="UTF-8">
-    <base href="../../">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Manutenção</title>
-    <style>
-        form {
-            display: flex;
-            flex-direction: column;
-            width: 300px;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/style.css">
+    <title>Manutenção - ERP Locação de Salas</title>
 </head>
 
 <body>
 
-    <header>
-        <h1>SpaceAdmin - ERP</h1>
+    <div class="app-layout">
 
-        <nav>
-            <a href="./index.html">Início -
-            </a>
-            <a href="./src/pages/imoveis.html">Imóveis -
-            </a>
-            <a href="./src/pages/financeiro.html">Financeiro -
-            </a>
-        </nav>
+        <!-- BARRA LATERAL (MENU FIXO) -->
+        <aside class="sidebar">
 
-    </header>
+            <header>
+                <h2>SpaceAdmin</h2>
+                <p>GESTÃO DE ESPAÇOS</p>
+            </header>
 
+            <div class="unidade-selector">
+                <small>UNIDADE</small>
+                <p>Edifício Central</p>
+            </div>
 
-
-    <main>
-
-        <h2>Ordem de Serviço</h2>
-
-        <form id="formManutencao">
-
-            <label>ID da Sala:</label>
-            <input type="number" name="sala">
-
-            <label>ID do Imóvel:</label>
-            <input type="number" name="imovel">
-
-            <label>ID do Funcionário:</label>
-            <input type="number" name="funcionario">
-
-            <label>ID da Reserva:</label>
-            <input type="number" name="reserva">
-
-            <label>Descrição:</label>
-            <input type="text" name="descricao">
-
-            <label>Prioridade:</label>
-            <select name="prioridade">
-                <option value="">Selecione</option>
-                <option value="Baixa">Baixa</option>
-                <option value="Média">Média</option>
-                <option value="Alta">Alta</option>
-            </select>
-
-            <label>Status:</label>
-            <select name="status">
-                <option value="">Selecione</option>
-                <option value="Pendente">Pendente</option>
-                <option value="Em andamento">Em andamento</option>
-                <option value="Concluída">Concluída</option>
-            </select>
-
-            <label>Diagnóstico:</label>
-            <input type="text" name="diagnostico">
-
-            <label>Solução:</label>
-            <input type="text" name="solucao">
-
-            <label>Custo:</label>
-            <input type="number" name="custo" step="0.01">
-
-            <label>Data de início:</label>
-            <input type="datetime-local" name="inicio">
-
-            <label>Data de conclusão:</label>
-            <input type="datetime-local" name="conclusao">
-
-            <input type="submit" value="Cadastrar">
-            <input type="reset" value="Limpar">
-
-        </form>
-
-        <h2>Manutenções Cadastradas</h2>
-
-        <table border="1">
-
-            <tr>
-                <th>Sala</th>
-                <th>Imóvel</th>
-                <th>Descrição</th>
-                <th>Prioridade</th>
-                <th>Status</th>
-                <th>Custo</th>
-            </tr>
-
-            <tbody id="tabelaManutencao">
-            </tbody>
-
-        </table>
-
-
-    </main>
-
-    <footer>
-        <hr>
-        <section>
-            <h3>SpaceAdmin©</h3>
-            <small>
-                <p>Copyright 2026 - 2026</p>
-            </small>
-        </section>
-
-        <section>
-            <nav>
-
-                <a href="index.html">Início</a>
-                <a href="src/pages/portifolio.html">Nosso portifólio</a>
-
+            <nav aria-label="Menu Principal">
+                <ul>
+                    <li><a href="../../index.html">Visão geral</a></li>
+                    <li><a href="../../src/pages/agenda.html">Agenda</a></li>
+                    <li><a href="../../src/pages/reservas.html">Reservas e check-in</a></li>
+                    <li><a href="../../src/pages/imoveis.html">Imóveis e salas</a></li>
+                    <li><a href="../../src/pages/clientes.html">Clientes</a></li>
+                    <li><a href="../../src/pages/locadores.html">Locadores</a></li>
+                    <li><a href="../../src/pages/usuarios.html">Usuários</a></li>
+                    <li><a href="../../src/pages/funcionarios.html">Funcionários</a></li>
+                    <li><a href="../../src/pages/financeiro.html">Financeiro</a></li>
+                    <li><a href="../../src/pages/relatorios.html">Relatórios</a></li>
+                    <li><a href="../../src/pages/limpeza.html">Limpeza</a></li>
+                    <li><a href="../../src/pages/manutencao.html">Manutenção</a></li>
+                    <li><a href="../../src/pages/estoque.html">Estoque</a></li>
+                    <li><a href="../../src/pages/compras.html">Compras</a></li>
+                    <li><a href="../../src/pages/configuracoes.html">Configurações</a></li>
+                </ul>
             </nav>
-        </section>
 
-    </footer>
+        </aside>
+
+        <!-- ÁREA PRINCIPAL (DIREITA) -->
+        <div class="main-wrapper">
+
+            <!-- CABEÇALHO DO TOPO -->
+            <header class="top-bar">
+
+                <nav aria-label="breadcrumbs">
+                    <ol class="breadcrumbs">
+                        <li><a href="../../index.html">Área administrativa</a></li>
+                        <li aria-current="page">Manutenção</li>
+                    </ol>
+                </nav>
+
+                <div class="user-profile">
+                    <span class="user-avatar">AD</span>
+                    <span class="user-name">Administrador</span>
+                </div>
+
+            </header>
+
+            <!-- CONTEÚDO DINÂMICO DA PÁGINA -->
+            <main class="dashboard-content">
+
+                <header class="page-header">
+
+                    <div>
+                        <small>SPACEADMIN ERP</small>
+                        <h1>Manutenção</h1>
+                        <p>Gerencie os dados e acompanhe as atividades da sua unidade.</p>
+                    </div>
+
+                    <a href="../../index.html">Voltar ao painel</a>
+
+                </header>
+
+                <section class="panel-full">
+                    <h2>Ordem de Serviço</h2>
+
+                    <form id="formManutencao">
+
+                        <label>ID da Sala:</label>
+                        <input type="number" name="sala">
+
+                        <label>ID do Imóvel:</label>
+                        <input type="number" name="imovel">
+
+                        <label>ID do Funcionário:</label>
+                        <input type="number" name="funcionario">
+
+                        <label>ID da Reserva:</label>
+                        <input type="number" name="reserva">
+
+                        <label>Descrição:</label>
+                        <input type="text" name="descricao">
+
+                        <label>Prioridade:</label>
+                        <select name="prioridade">
+                            <option value="">Selecione</option>
+                            <option value="Baixa">Baixa</option>
+                            <option value="Média">Média</option>
+                            <option value="Alta">Alta</option>
+                        </select>
+
+                        <label>Status:</label>
+                        <select name="status">
+                            <option value="">Selecione</option>
+                            <option value="Pendente">Pendente</option>
+                            <option value="Em andamento">Em andamento</option>
+                            <option value="Concluída">Concluída</option>
+                        </select>
+
+                        <label>Diagnóstico:</label>
+                        <input type="text" name="diagnostico">
+
+                        <label>Solução:</label>
+                        <input type="text" name="solucao">
+
+                        <label>Custo:</label>
+                        <input type="number" name="custo" step="0.01">
+
+                        <label>Data de início:</label>
+                        <input type="datetime-local" name="inicio">
+
+                        <label>Data de conclusão:</label>
+                        <input type="datetime-local" name="conclusao">
+
+                        <input type="submit" value="Cadastrar">
+                        <input type="reset" value="Limpar">
+
+                    </form>
+                </section>
+
+                <section class="panel-full">
+                    <h2>Manutenções Cadastradas</h2>
+
+                    <table border="1">
+
+                        <tr>
+                            <th>Sala</th>
+                            <th>Imóvel</th>
+                            <th>Descrição</th>
+                            <th>Prioridade</th>
+                            <th>Status</th>
+                            <th>Custo</th>
+                        </tr>
+
+                        <tbody id="tabelaManutencao">
+                        </tbody>
+
+                    </table>
+
+                </section>
+
+
+            </main>
+
+            <!-- RODAPÉ UNIVERSAL -->
+            <footer class="bottom-bar">
+                <h1>SpaceAdmin</h1>
+                <small>Projeto escolar</small>
+            </footer>
+
+        </div>
+
+    </div>
 
     <script>
 

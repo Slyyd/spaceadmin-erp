@@ -1,96 +1,146 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
-    <base href="../../">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Imóveis</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/style.css">
+    <title>Imóveis - ERP Locação de Salas</title>
 </head>
 
 <body>
 
-    <header>
-        <h1>SpaceAdmin - ERP</h1>
+    <div class="app-layout">
 
-        <nav>
-            <a href="./index.html">Início -
-            </a>
-            <a href="./src/pages/locadores.html">Cadastrar Locadores -
-            </a>
-            <a href="./src/pages/configuracoes.html">Configurar dados da empresa -
-            </a>
-        </nav>
+        <!-- BARRA LATERAL (MENU FIXO) -->
+        <aside class="sidebar">
 
-    </header>
+            <header>
+                <h2>SpaceAdmin</h2>
+                <p>GESTÃO DE ESPAÇOS</p>
+            </header>
 
-    <main>
+            <div class="unidade-selector">
+                <small>UNIDADE</small>
+                <p>Edifício Central</p>
+            </div>
 
-        <h1>Novo imóvel</h1>
-
-        <form>
-            <label>Nome</label><input type="text">
-            <br>
-            <label>Endereço</label><input type="text">
-            <br>
-            <label>Cidade</label><input type="text">
-            <br>
-            <label>UF</label><input type="text">
-            <br>
-            <label>Abertura</label><input type="time">
-            <br>
-            <label>Fechamento</label><input type="time">
-            <br>
-            <label>Descrição</label><input type="text">
-            <br>
-            <button type="button">Cancelar</button>
-            <button type="submit">Salvar</button>
-        </form>
-
-        <h1>Nova sala</h1>
-
-        <form>
-            <label>Nome</label><input type="text">
-            <br>
-            <label>Capacidade</label><input type="number">
-            <br>
-            <label>Valor/hora (R$)</label><input type="number">
-            <br>
-            <label>Valor diária (R$) — opcional</label><input type="number">
-            <br>
-            <label>Descrição</label><input type="text">
-            <br>
-            <label>Equipamentos</label>
-            <br>
-            <button type="button">Cancelar</button>
-            <button type="submit">Salvar</button>
-        </form>
-
-
-    </main>
-
-
-
-
-    <footer>
-        <hr>
-        <section>
-            <h3>SpaceAdmin©</h3>
-            <small>
-                <p>Copyright 2026 - 2026</p>
-            </small>
-        </section>
-
-        <section>
-            <nav>
-
-                <a href="index.html">Início</a>
-                <a href="src/pages/portifolio.html">Nosso portifólio</a>
-
+            <nav aria-label="Menu Principal">
+                <ul>
+                    <li><a href="../../index.html">Visão geral</a></li>
+                    <li><a href="../../src/pages/agenda.html">Agenda</a></li>
+                    <li><a href="../../src/pages/reservas.html">Reservas e check-in</a></li>
+                    <li><a href="../../src/pages/imoveis.html">Imóveis e salas</a></li>
+                    <li><a href="../../src/pages/clientes.html">Clientes</a></li>
+                    <li><a href="../../src/pages/locadores.html">Locadores</a></li>
+                    <li><a href="../../src/pages/usuarios.html">Usuários</a></li>
+                    <li><a href="../../src/pages/funcionarios.html">Funcionários</a></li>
+                    <li><a href="../../src/pages/financeiro.html">Financeiro</a></li>
+                    <li><a href="../../src/pages/relatorios.html">Relatórios</a></li>
+                    <li><a href="../../src/pages/limpeza.html">Limpeza</a></li>
+                    <li><a href="../../src/pages/manutencao.html">Manutenção</a></li>
+                    <li><a href="../../src/pages/estoque.html">Estoque</a></li>
+                    <li><a href="../../src/pages/compras.html">Compras</a></li>
+                    <li><a href="../../src/pages/configuracoes.html">Configurações</a></li>
+                </ul>
             </nav>
-        </section>
 
-    </footer>
+        </aside>
+
+        <!-- ÁREA PRINCIPAL (DIREITA) -->
+        <div class="main-wrapper">
+
+            <!-- CABEÇALHO DO TOPO -->
+            <header class="top-bar">
+
+                <nav aria-label="breadcrumbs">
+                    <ol class="breadcrumbs">
+                        <li><a href="../../index.html">Área administrativa</a></li>
+                        <li aria-current="page">Imóveis</li>
+                    </ol>
+                </nav>
+
+                <div class="user-profile">
+                    <span class="user-avatar">AD</span>
+                    <span class="user-name">Administrador</span>
+                </div>
+
+            </header>
+
+            <!-- CONTEÚDO DINÂMICO DA PÁGINA -->
+            <main class="dashboard-content">
+
+                <header class="page-header">
+
+                    <div>
+                        <small>SPACEADMIN ERP</small>
+                        <h1>Imóveis</h1>
+                        <p>Gerencie os dados e acompanhe as atividades da sua unidade.</p>
+                    </div>
+
+                    <a href="../../index.html">Voltar ao painel</a>
+
+                </header>
+
+                <section class="panel-full">
+                    <h2>Novo imóvel</h2>
+
+                    <form>
+                        <label>Nome</label><input type="text">
+                        <br>
+                        <label>Endereço</label><input type="text">
+                        <br>
+                        <label>Cidade</label><input type="text">
+                        <br>
+                        <label>UF</label><input type="text">
+                        <br>
+                        <label>Abertura</label><input type="time">
+                        <br>
+                        <label>Fechamento</label><input type="time">
+                        <br>
+                        <label>Descrição</label><input type="text">
+                        <br>
+                        <button type="button">Cancelar</button>
+                        <button type="submit">Salvar</button>
+                    </form>
+
+                </section>
+
+
+                <section class="panel-full">
+                    <h2>Nova sala</h2>
+
+                    <form>
+                        <label>Nome</label><input type="text">
+                        <br>
+                        <label>Capacidade</label><input type="number">
+                        <br>
+                        <label>Valor/hora (R$)</label><input type="number">
+                        <br>
+                        <label>Valor diária (R$) — opcional</label><input type="number">
+                        <br>
+                        <label>Descrição</label><input type="text">
+                        <br>
+                        <label>Equipamentos</label>
+                        <br>
+                        <button type="button">Cancelar</button>
+                        <button type="submit">Salvar</button>
+                    </form>
+
+                </section>
+
+
+            </main>
+
+            <!-- RODAPÉ UNIVERSAL -->
+            <footer class="bottom-bar">
+                <h1>SpaceAdmin</h1>
+                <small>Projeto escolar</small>
+            </footer>
+
+        </div>
+
+    </div>
 
 </body>
 

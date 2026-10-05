@@ -2,220 +2,257 @@
 <html lang="pt-BR">
 
 <head>
-    <!-- Informações básicas da página -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <base href="../../">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Financeiro - Locação de Salas</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <title>Financeiro - ERP Locação de Salas</title>
 </head>
 
 <body>
-    
-    <!-- Cabeçalho com o nome do sistema -->
-    <header>
-        <h1>SpaceAdmin - ERP</h1>
 
-        <!-- Menu para acessar as páginas do sistema -->
-        <nav aria-label="Menu principal">
-            <a href="./index.html">Início -
-            </a>
-            <a href="./src/pages/relatorios.html">Relatórios -
-            </a>
-            <a href="./src/pages/reservas.html">Gerenciar Reservas -
-            </a>
-        </nav>
-    </header>
+    <div class="app-layout">
 
-    <!-- Conteúdo principal do módulo financeiro -->
-    <main>
-        <h2>Módulo Financeiro</h2>
+        <!-- BARRA LATERAL (MENU FIXO) -->
+        <aside class="sidebar">
 
-        <!-- Mostra os principais valores do mês -->
-        <section>
-            <h3>Resumo financeiro do mês</h3>
-            <p>Total recebido: R$ 8.500,00</p>
-            <p>Total a receber: R$ 3.000,00</p>
-            <p>Pagamentos atrasados: R$ 500,00</p>
-            <p>Total a pagar: R$ 2.000,00</p>
-        </section>
+            <header>
+                <h2>SpaceAdmin</h2>
+                <p>GESTÃO DE ESPAÇOS</p>
+            </header>
 
-        <!-- Permite buscar movimentações por período e situação -->
-        <section>
-            <h3>Filtrar movimentações</h3>
+            <div class="unidade-selector">
+                <small>UNIDADE</small>
+                <p>Edifício Central</p>
+            </div>
 
-            <form action="financeiro.html" method="get">
-                <p>
-                    <label for="data-inicial">Data inicial:</label>
-                    <input type="date" id="data-inicial" name="data-inicial">
-                </p>
-
-                <p>
-                    <label for="data-final">Data final:</label>
-                    <input type="date" id="data-final" name="data-final">
-                </p>
-
-                <p>
-                    <label for="situacao">Situação:</label>
-                    <select id="situacao" name="situacao">
-                        <option value="">Todas</option>
-                        <option value="aberto">Em aberto</option>
-                        <option value="pago">Pago</option>
-                        <option value="vencido">Vencido</option>
-                    </select>
-                </p>
-
-                <button type="submit">Filtrar</button>
-            </form>
-        </section>
-
-        <!-- Lista as cobranças das locações de salas -->
-        <section>
-            <h3>Contas a receber</h3>
-
-            <table>
-                <caption>Cobranças das locações</caption>
-
-                <thead>
-                    <tr>
-                        <th scope="col">Cliente</th>
-                        <th scope="col">Sala</th>
-                        <th scope="col">Reserva</th>
-                        <th scope="col">Vencimento</th>
-                        <th scope="col">Valor</th>
-                        <th scope="col">Situação</th>
-                    </tr>
-                </thead>
-
-                <tbody>
-                    <tr>
-                        <td>Empresa Alfa</td>
-                        <td>Sala 01</td>
-                        <td>101</td>
-                        <td>10/10/2026</td>
-                        <td>R$ 1.500,00</td>
-                        <td>Em aberto</td>
-                    </tr>
-
-                    <tr>
-                        <td>Empresa Beta</td>
-                        <td>Sala 02</td>
-                        <td>102</td>
-                        <td>15/09/2026</td>
-                        <td>R$ 500,00</td>
-                        <td>Vencido</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-
-        <!-- Lista as despesas que a empresa precisa pagar -->
-        <section>
-            <h3>Contas a pagar</h3>
-
-            <table>
-                <caption>Despesas da empresa</caption>
-
-                <thead>
-                    <tr>
-                        <th scope="col">Descrição</th>
-                        <th scope="col">Categoria</th>
-                        <th scope="col">Vencimento</th>
-                        <th scope="col">Valor</th>
-                        <th scope="col">Situação</th>
-                    </tr>
-                </thead>
-
-                <tbody>
-                    <tr>
-                        <td>Internet</td>
-                        <td>Serviços</td>
-                        <td>05/10/2026</td>
-                        <td>R$ 200,00</td>
-                        <td>Em aberto</td>
-                    </tr>
-
-                    <tr>
-                        <td>Limpeza das salas</td>
-                        <td>Limpeza</td>
-                        <td>08/10/2026</td>
-                        <td>R$ 350,00</td>
-                        <td>Em aberto</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-
-        <!-- Formulário para cadastrar uma receita ou despesa -->
-        <section>
-            <h3>Cadastrar movimentação</h3>
-
-            <form action="/movimentacoes" method="post">
-                <p>
-                    <label for="tipo">Tipo:</label>
-                    <select id="tipo" name="tipo" required>
-                        <option value="">Selecione</option>
-                        <option value="receita">Receita</option>
-                        <option value="despesa">Despesa</option>
-                    </select>
-                </p>
-
-                <p>
-                    <label for="descricao">Descrição:</label>
-                    <input type="text" id="descricao" name="descricao" required>
-                </p>
-
-                <p>
-                    <label for="cliente-fornecedor">Cliente ou fornecedor:</label>
-                    <input type="text" id="cliente-fornecedor" name="cliente-fornecedor" required>
-                </p>
-
-                <p>
-                    <label for="reserva">Número da reserva, se houver:</label>
-                    <input type="text" id="reserva" name="reserva">
-                </p>
-
-                <p>
-                    <label for="valor">Valor em reais:</label>
-                    <input type="number" id="valor" name="valor" min="0.01" step="0.01" required>
-                </p>
-
-                <p>
-                    <label for="vencimento">Data de vencimento:</label>
-                    <input type="date" id="vencimento" name="vencimento" required>
-                </p>
-
-                <p>
-                    <label for="observacoes">Observações:</label>
-                    <textarea id="observacoes" name="observacoes" rows="4"></textarea>
-                </p>
-
-                <button type="submit">Cadastrar</button>
-                <button type="reset">Limpar</button>
-            </form>
-        </section>
-    </main>
-
-    <!-- Rodapé com o nome do sistema e o ano -->
-    <footer>
-        <hr>
-        <section>
-            <h3>SpaceAdmin©</h3>
-            <small>
-                <p>Copyright 2026 - 2026</p>
-            </small>
-        </section>
-
-        <section>
-            <nav>
-
-                <a href="index.html">Início</a>
-                <a href="src/pages/portifolio.html">Nosso portifólio</a>
-
+            <nav aria-label="Menu Principal">
+                <ul>
+                    <li><a href="../../index.html">Visão geral</a></li>
+                    <li><a href="../../src/pages/agenda.html">Agenda</a></li>
+                    <li><a href="../../src/pages/reservas.html">Reservas e check-in</a></li>
+                    <li><a href="../../src/pages/imoveis.html">Imóveis e salas</a></li>
+                    <li><a href="../../src/pages/clientes.html">Clientes</a></li>
+                    <li><a href="../../src/pages/locadores.html">Locadores</a></li>
+                    <li><a href="../../src/pages/usuarios.html">Usuários</a></li>
+                    <li><a href="../../src/pages/funcionarios.html">Funcionários</a></li>
+                    <li><a href="../../src/pages/financeiro.html">Financeiro</a></li>
+                    <li><a href="../../src/pages/relatorios.html">Relatórios</a></li>
+                    <li><a href="../../src/pages/limpeza.html">Limpeza</a></li>
+                    <li><a href="../../src/pages/manutencao.html">Manutenção</a></li>
+                    <li><a href="../../src/pages/estoque.html">Estoque</a></li>
+                    <li><a href="../../src/pages/compras.html">Compras</a></li>
+                    <li><a href="../../src/pages/configuracoes.html">Configurações</a></li>
+                </ul>
             </nav>
-        </section>
 
-    </footer>
+        </aside>
+
+        <!-- ÁREA PRINCIPAL (DIREITA) -->
+        <div class="main-wrapper">
+
+            <!-- CABEÇALHO DO TOPO -->
+            <header class="top-bar">
+
+                <nav aria-label="breadcrumbs">
+                    <ol class="breadcrumbs">
+                        <li><a href="../../index.html">Área administrativa</a></li>
+                        <li aria-current="page">Financeiro</li>
+                    </ol>
+                </nav>
+
+                <div class="user-profile">
+                    <span class="user-avatar">AD</span>
+                    <span class="user-name">Administrador</span>
+                </div>
+
+            </header>
+
+            <!-- CONTEÚDO DINÂMICO DA PÁGINA -->
+            <main class="dashboard-content">
+
+                <header class="page-header">
+
+                    <div>
+                        <small>SPACEADMIN ERP</small>
+                        <h1>Financeiro</h1>
+                        <p>Gerencie os dados e acompanhe as atividades da sua unidade.</p>
+                    </div>
+
+                    <a href="../../index.html">Voltar ao painel</a>
+
+                </header>
+
+                <section class="panel-full">
+                    <h2>Resumo financeiro do mês</h2>
+                    <p>Total recebido: R$ 8.500,00</p>
+                    <p>Total a receber: R$ 3.000,00</p>
+                    <p>Pagamentos atrasados: R$ 500,00</p>
+                    <p>Total a pagar: R$ 2.000,00</p>
+                </section>
+
+                <section class="panel-full">
+                    <h2>Filtrar movimentações</h2>
+
+                    <form action="financeiro.html" method="get">
+                        <p>
+                            <label for="data-inicial">Data inicial:</label>
+                            <input type="date" id="data-inicial" name="data-inicial">
+                        </p>
+
+                        <p>
+                            <label for="data-final">Data final:</label>
+                            <input type="date" id="data-final" name="data-final">
+                        </p>
+
+                        <p>
+                            <label for="situacao">Situação:</label>
+                            <select id="situacao" name="situacao">
+                                <option value="">Todas</option>
+                                <option value="aberto">Em aberto</option>
+                                <option value="pago">Pago</option>
+                                <option value="vencido">Vencido</option>
+                            </select>
+                        </p>
+
+                        <button type="submit">Filtrar</button>
+                    </form>
+                </section>
+
+                <section class="panel-full">
+                    <h2>Contas a receber</h2>
+
+                    <table>
+                        <caption>Cobranças das locações</caption>
+
+                        <thead>
+                            <tr>
+                                <th scope="col">Cliente</th>
+                                <th scope="col">Sala</th>
+                                <th scope="col">Reserva</th>
+                                <th scope="col">Vencimento</th>
+                                <th scope="col">Valor</th>
+                                <th scope="col">Situação</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>Empresa Alfa</td>
+                                <td>Sala 01</td>
+                                <td>101</td>
+                                <td>10/10/2026</td>
+                                <td>R$ 1.500,00</td>
+                                <td>Em aberto</td>
+                            </tr>
+
+                            <tr>
+                                <td>Empresa Beta</td>
+                                <td>Sala 02</td>
+                                <td>102</td>
+                                <td>15/09/2026</td>
+                                <td>R$ 500,00</td>
+                                <td>Vencido</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <section class="panel-full">
+                    <h2>Contas a pagar</h2>
+
+                    <table>
+                        <caption>Despesas da empresa</caption>
+
+                        <thead>
+                            <tr>
+                                <th scope="col">Descrição</th>
+                                <th scope="col">Categoria</th>
+                                <th scope="col">Vencimento</th>
+                                <th scope="col">Valor</th>
+                                <th scope="col">Situação</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>Internet</td>
+                                <td>Serviços</td>
+                                <td>05/10/2026</td>
+                                <td>R$ 200,00</td>
+                                <td>Em aberto</td>
+                            </tr>
+
+                            <tr>
+                                <td>Limpeza das salas</td>
+                                <td>Limpeza</td>
+                                <td>08/10/2026</td>
+                                <td>R$ 350,00</td>
+                                <td>Em aberto</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <section class="panel-full">
+                    <h2>Cadastrar movimentação</h2>
+
+                    <form action="/movimentacoes" method="post">
+                        <p>
+                            <label for="tipo">Tipo:</label>
+                            <select id="tipo" name="tipo" required>
+                                <option value="">Selecione</option>
+                                <option value="receita">Receita</option>
+                                <option value="despesa">Despesa</option>
+                            </select>
+                        </p>
+
+                        <p>
+                            <label for="descricao">Descrição:</label>
+                            <input type="text" id="descricao" name="descricao" required>
+                        </p>
+
+                        <p>
+                            <label for="cliente-fornecedor">Cliente ou fornecedor:</label>
+                            <input type="text" id="cliente-fornecedor" name="cliente-fornecedor" required>
+                        </p>
+
+                        <p>
+                            <label for="reserva">Número da reserva, se houver:</label>
+                            <input type="text" id="reserva" name="reserva">
+                        </p>
+
+                        <p>
+                            <label for="valor">Valor em reais:</label>
+                            <input type="number" id="valor" name="valor" min="0.01" step="0.01" required>
+                        </p>
+
+                        <p>
+                            <label for="vencimento">Data de vencimento:</label>
+                            <input type="date" id="vencimento" name="vencimento" required>
+                        </p>
+
+                        <p>
+                            <label for="observacoes">Observações:</label>
+                            <textarea id="observacoes" name="observacoes" rows="4"></textarea>
+                        </p>
+
+                        <button type="submit">Cadastrar</button>
+                        <button type="reset">Limpar</button>
+                    </form>
+                </section>
+
+            </main>
+
+            <!-- RODAPÉ UNIVERSAL -->
+            <footer class="bottom-bar">
+                <h1>SpaceAdmin</h1>
+                <small>Projeto escolar</small>
+            </footer>
+
+        </div>
+
+    </div>
+
 </body>
 
 </html>
