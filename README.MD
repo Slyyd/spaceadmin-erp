@@ -1,6 +1,6 @@
 # 🏢 SpaceAdmin ERP — Gestão Inteligente de Espaços e Locação
 
-![SpaceAdmin Logo](https://raw.githubusercontent.com/Slyyd/spaceadmin-erp/main/docs/logo.png)
+![SpaceAdmin Logo](https://raw.githubusercontent.com/Slyyd/spaceadmin-erp/main/img/logo.png)
 
 > **Projeto Acadêmico** — UNICID (Universidade Cidade de São Paulo)  
 > **Curso:** Engenharia de Software

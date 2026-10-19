@@ -7,6 +7,7 @@ body {margin: 0;}
 
 .main-wrapper {
     width: 100%;
+    background-color: #FFFFFF;
 }
 
 .sidebar, .top-bar, .page-header, .cards-grid, .panel-main, .panel-side, .panel-full, .steps-grid {
@@ -15,16 +16,19 @@ body {margin: 0;}
 
 .sidebar {
     position: sticky;
+    display: flex;
+    flex-direction: column;
     top: 0;
-    height: 100%;
+    height: 100vh;
+    max-height: 100vh;
     align-self: start;
+    background-color: #133C55;
+    color: white;
+
+    box-sizing: border-box;
 }
 
-/*
-.active {
-    border: 1px solid;
-}
-*/
+
 
 .sidebar-header {
     padding: 0.3rem;
@@ -52,7 +56,71 @@ body {margin: 0;}
     margin: 0;
 }
 
+.unidade-selector small {
 
+    font-size: 0.6rem;
+    color: #888381;
+
+}
+
+.sidebar nav {
+
+    display: inherit;
+
+}
+
+.sidebar a {
+    
+    color: inherit;
+    font-size: 0.9rem;
+    text-decoration: none;
+
+}
+
+.sidebar a:visited {
+
+    color: inherit;
+
+}
+
+.sidebar .active a {
+
+    color: inherit;
+
+}
+
+.sidebar ul {
+
+    flex: 1;
+    overflow-y: scroll;
+    margin: 0.3rem 0 0 0; 
+    padding: 0;
+
+}
+
+.sidebar li {
+
+    border-radius: 1rem;
+
+    padding: 0.1rem 0 0.1rem 0.1rem;
+    margin: 0.3rem 0 0 0;
+    color: #FFFFFF;
+
+}
+
+.sidebar li:hover {
+
+    background-color: #FFFFFF;
+    color: #000000;
+
+}
+
+.sidebar .active {
+
+    background-color: #FFFFFF;
+    color: #000000;
+
+}
 
 .top-bar, .page-header, .bottom-bar {
     align-items: center;
