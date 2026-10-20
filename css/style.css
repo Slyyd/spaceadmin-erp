@@ -1,4 +1,28 @@
+:root {
+  /* Cores de Fundo (Backgrounds) */
+  --bg-main: #FFFFFF;
+  --bg-sidebar: #133C55;
+
+  /* Cores de Texto (Typography) */
+  --text-primary: #FFFFFF;
+  --text-dark: #000000;
+  --text-muted: #888381;
+
+  /* Estado Interativo (Hover / Ativo) */
+  --bg-interactive: #FFFFFF;
+  --text-interactive: #000000;
+}
+
 body {margin: 0;}
+
+a {text-decoration: none;}
+a:visited {color: inherit;}
+
+.dashboard-content a,
+.sidebar a 
+{
+    display: block;
+}
 
 .app-layout, .top-bar, .page-header, .bottom-bar, .cards-grid, .panels-row, .steps-grid, .breadcrumbs {
     display: flex;
@@ -7,7 +31,7 @@ body {margin: 0;}
 
 .main-wrapper {
     width: 100%;
-    background-color: #FFFFFF;
+    background-color: var(--bg-main);
 }
 
 .sidebar, .top-bar, .page-header, .cards-grid, .panel-main, .panel-side, .panel-full, .steps-grid {
@@ -22,7 +46,7 @@ body {margin: 0;}
     height: 100vh;
     max-height: 100vh;
     align-self: start;
-    background-color: #133C55;
+    background-color: var(--bg-sidebar);
     color: white;
 
     box-sizing: border-box;
@@ -59,7 +83,7 @@ body {margin: 0;}
 .unidade-selector small {
 
     font-size: 0.6rem;
-    color: #888381;
+    color: var(--text-muted);
 
 }
 
@@ -71,15 +95,9 @@ body {margin: 0;}
 
 .sidebar a {
     
+
     color: inherit;
     font-size: 0.9rem;
-    text-decoration: none;
-
-}
-
-.sidebar a:visited {
-
-    color: inherit;
 
 }
 
@@ -104,21 +122,21 @@ body {margin: 0;}
 
     padding: 0.1rem 0 0.1rem 0.1rem;
     margin: 0.3rem 0 0 0;
-    color: #FFFFFF;
+    color: var(--text-primary);
 
 }
 
 .sidebar li:hover {
 
-    background-color: #FFFFFF;
-    color: #000000;
+    background-color: var(--bg-interactive);
+    color: var(--text-interactive);
 
 }
 
 .sidebar .active {
 
     background-color: #FFFFFF;
-    color: #000000;
+    color: var(--text-dark);
 
 }
 
