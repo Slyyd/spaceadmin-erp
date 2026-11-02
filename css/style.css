@@ -1,224 +1,257 @@
 :root {
   /* Cores de Fundo (Backgrounds) */
-  --bg-main: #FFFFFF;
-  --bg-sidebar: #133C55;
+  --bg-main: #F4F7FA;
+  --bg-card: #FFFFFF;
+  --bg-sidebar: #10416A;
+
+  /* Cores Principais e Destaques */
+  --primary: #10416A;
+  --primary-interactive: #1F6390;
+  --accent: #E47D2A;
+  --border: #DCE5EC;
 
   /* Cores de Texto (Typography) */
-  --text-primary: #FFFFFF;
+  --text-primary: #1E293B;
+  --text-secondary: #64748B;
   --text-dark: #000000;
-  --text-muted: #888381;
-
-  /* Estado Interativo (Hover / Ativo) */
-  --bg-interactive: #FFFFFF;
-  --text-interactive: #000000;
+  --text-muted: #64748B;
+  --text-on-dark: #FFFFFF;
 }
 
-body {margin: 0;}
+body {
+  margin: 0;
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+}
 
-a {text-decoration: none;}
-a:visited {color: inherit;}
+a {
+  text-decoration: none;
+  color: var(--primary);
+}
+
+a:visited {
+  color: inherit;
+}
 
 .dashboard-content a,
-.sidebar a 
-{
-    display: block;
+.sidebar a {
+  display: block;
 }
 
 .app-layout, .top-bar, .page-header, .bottom-bar, .cards-grid, .panels-row, .steps-grid, .breadcrumbs {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 .main-wrapper {
-    width: 100%;
-    background-color: var(--bg-main);
+  width: 100%;
+  background-color: var(--bg-main);
 }
 
 .sidebar, .top-bar, .page-header, .cards-grid, .panel-main, .panel-side, .panel-full, .steps-grid {
-    padding: 0.5rem;
+  padding: 0.5rem;
 }
 
+/* Sidebar */
 .sidebar {
-    position: sticky;
-    display: flex;
-    flex-direction: column;
-    top: 0;
-    height: 100vh;
-    max-height: 100vh;
-    align-self: start;
-    background-color: var(--bg-sidebar);
-    color: white;
-
-    box-sizing: border-box;
+  position: sticky;
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  height: 100vh;
+  max-height: 100vh;
+  align-self: start;
+  background-color: var(--bg-sidebar);
+  color: var(--text-on-dark);
+  box-sizing: border-box;
 }
-
-
 
 .sidebar-header {
-    padding: 0.3rem;
+  padding: 0.3rem;
 }
 
-.sidebar-header h2, p {
-    margin: 0;
+.sidebar-header h2, .sidebar-header p {
+  margin: 0;
 }
 
 .sidebar-header h2 {
-    font-size: 1.4rem;
+  font-size: 1.4rem;
+  color: var(--text-on-dark);
 }
 
 .sidebar-header p {
-    font-size: 0.8rem;
+  font-size: 0.8rem;
+  color: var(--border);
 }
 
 .unidade-selector {
-    margin: 0.5rem 0 0 0;
-    padding: 0.3rem ;
-    border: 1px solid;  
+  margin: 0.5rem 0 0 0;
+  padding: 0.3rem;
+  border: 1px solid var(--primary-interactive);
 }
 
 .unidade-selector small, p {
-    margin: 0;
+  margin: 0;
 }
 
 .unidade-selector small {
-
-    font-size: 0.6rem;
-    color: var(--text-muted);
-
+  font-size: 0.6rem;
+  color: var(--border);
 }
 
 .sidebar nav {
-
-    display: inherit;
-
+  display: inherit;
 }
 
 .sidebar a {
-    
-
-    color: inherit;
-    font-size: 0.9rem;
-
-}
-
-.sidebar .active a {
-
-    color: inherit;
-
+  color: var(--text-on-dark);
+  font-size: 0.9rem;
 }
 
 .sidebar ul {
-
-    flex: 1;
-    overflow-y: scroll;
-    margin: 0.3rem 0 0 0; 
-    padding: 0;
-
+  flex: 1;
+  overflow-y: auto;
+  margin: 0.3rem 0 0 0; 
+  padding: 0;
 }
 
 .sidebar li {
-
-    border-radius: 1rem;
-
-    padding: 0.1rem 0 0.1rem 0.1rem;
-    margin: 0.3rem 0 0 0;
-    color: var(--text-primary);
-
+  border-radius: 0.5rem;
+  padding: 0.4rem 0.6rem;
+  margin: 0.3rem 0 0 0;
+  color: var(--text-on-dark);
 }
 
 .sidebar li:hover {
-
-    background-color: var(--bg-interactive);
-    color: var(--text-interactive);
-
+  background-color: var(--primary-interactive);
+  color: var(--text-on-dark);
 }
 
 .sidebar .active {
-
-    background-color: #FFFFFF;
-    color: var(--text-dark);
-
+  background-color: var(--primary-interactive);
+  color: var(--text-on-dark);
+  font-weight: bold;
 }
 
+.sidebar .active a {
+  color: var(--text-on-dark);
+}
+
+/* Títulos Globais */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--primary);
+}
+
+/* Top Bar & Page Header */
 .top-bar, .page-header, .bottom-bar {
-    align-items: center;
+  align-items: center;
 }
 
 .top-bar, .page-header {
-    justify-content: space-between;
+  justify-content: space-between;
+  background-color: var(--bg-card);
 }
 
 .top-bar, .page-header, .cards-grid, .card-item, .panel-main, .panel-side, .panel-full, .step-card {
-    border: 1px solid;
+  border: 1px solid var(--border);
 }
 
 .top-bar {
-    height: 4vh;
+  height: 4vh;
 }
 
 .user-avatar {
-    padding: 0.2rem;
-    border: 1px solid;
-    border-radius: 50%;
+  padding: 0.2rem;
+  border: 1px solid var(--border);
+  border-radius: 50%;
 }
 
-.page-header a {
-    border: 1px solid;
-    padding: 0.3rem;
+/* Botões */
+.btn-primary, .page-header a {
+  background-color: var(--primary);
+  color: var(--text-on-dark);
+  border: 1px solid var(--primary);
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+.btn-primary:hover, .page-header a:hover {
+  background-color: var(--primary-interactive);
+}
+
+.btn-highlight, .btn-accent {
+  background-color: var(--accent);
+  color: var(--text-on-dark);
+  border: 1px solid var(--accent);
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+.btn-highlight:hover, .btn-accent:hover {
+  filter: brightness(0.9);
+}
+
+/* Estrutura de Cards e Painéis */
+.card-item, .panel-main, .panel-side, .panel-full, .step-card {
+  background-color: var(--bg-card);
 }
 
 .bottom-bar {
-    gap: 1rem;
+  gap: 1rem;
 }
 
 .bottom-bar h1 {
-    font-size: 1rem;
+  font-size: 1rem;
 }
 
 .cards-grid, .panels-row {
-    flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
 .cards-grid, .panels-row, .panel-full {
-    margin: 1rem 0 0 0;
+  margin: 1rem 0 0 0;
 }
 
 .card-item, .panel-main {
-    margin: 0 1rem 0 0;
+  margin: 0 1rem 0 0;
 }
 
 .card-item {
-    width: 25%;
-    padding: 0.3rem;
+  width: 25%;
+  padding: 0.3rem;
 }
 
 .panel-main {
-    width: 70%;
+  width: 70%;
 }
 
 .panel-side {
-    width: 30%;
+  width: 30%;
 }
 
 .module-item {
-    flex: 1;
+  flex: 1;
 }
 
 .steps-grid {
-    flex-wrap: wrap;
-    gap: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1.5rem;
 }
 
 .step-card {
-    flex: 1 1 15em;
-    padding: 0.2rem;
+  flex: 1 1 15em;
+  padding: 0.2rem;
 }
 
 .breadcrumbs li::after {
-    content: "/";
+  content: "/";
+  color: var(--text-secondary);
+  margin: 0 0.3rem;
 }
 
 ol, ul {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
