@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
 :root {
   /* Cores de Fundo (Backgrounds) */
   --bg-main: #F4F7FA;
@@ -16,12 +18,17 @@
   --text-dark: #000000;
   --text-muted: #64748B;
   --text-on-dark: #FFFFFF;
+
+  /* Fontes Do Site */
+  --font-main: "Roboto", sans-serif;
 }
 
 body {
   margin: 0;
   background-color: var(--bg-main);
   color: var(--text-primary);
+  font-family: var(--font-main);
+  
 }
 
 a {
