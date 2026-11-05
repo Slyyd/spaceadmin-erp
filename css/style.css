@@ -37,7 +37,7 @@ a {
 }
 
 a:visited {
-  color: inherit;
+  color: var(--text-on-dark);
 }
 
 .dashboard-content a,
@@ -71,6 +71,7 @@ a:visited {
   background-color: var(--bg-sidebar);
   color: var(--text-on-dark);
   box-sizing: border-box;
+  overflow-y: scroll;
 }
 
 .sidebar-header {
@@ -116,8 +117,6 @@ a:visited {
 }
 
 .sidebar ul {
-  flex: 1;
-  overflow-y: auto;
   margin: 0.3rem 0 0 0; 
   padding: 0;
 }
@@ -174,16 +173,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Botões */
-.btn-primary, .page-header a {
+.btn-primary{
   background-color: var(--primary);
   color: var(--text-on-dark);
   border: 1px solid var(--primary);
   padding: 0.4rem 0.8rem;
+  margin-bottom: 0.2rem;
   border-radius: 0.25rem;
   cursor: pointer;
 }
 
-.btn-primary:hover, .page-header a:hover {
+.btn-primary:hover {
   background-color: var(--primary-interactive);
 }
 
@@ -206,6 +206,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .bottom-bar {
+  margin-left: 0.4rem;
   gap: 1rem;
 }
 
