@@ -33,11 +33,10 @@ body {
 
 a {
   text-decoration: none;
-  color: var(--primary);
 }
 
 a:visited {
-  color: var(--text-on-dark);
+  color: inherit;
 }
 
 .dashboard-content a,
@@ -185,6 +184,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .btn-primary:hover {
   background-color: var(--primary-interactive);
+}
+
+.btn-primary:visited {
+  color: var(--text-on-dark);
 }
 
 .btn-highlight, .btn-accent {
