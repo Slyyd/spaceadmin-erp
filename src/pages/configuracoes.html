@@ -79,108 +79,174 @@
                         <p>Gerencie os dados e acompanhe as atividades da sua unidade.</p>
                     </div>
 
-                    <a href="../../index.html">Voltar ao painel</a>
+                    <a class="btn-primary" href="../../index.html">Voltar ao painel</a>
 
                 </header>
 
                 <section class="panel-full">
                     <h2>Dados da empresa</h2>
-                    <form>
+                    <form class="form-wrapper">
 
-                        <p>
-                            <label>Nome</label>
-                            <input type="text" id="nome_locatario" placeholder="Espaço Centro Coworking" required />
-                        </p>
+                        <div class="form-panel">
 
-                        <p>
-                            <label>Documento</label>
-                            <input type="text" id="documento_locatario" placeholder="12.345.678/0001-90" required />
-                        </p>
+                            <div class="form-field">
+                                <label class="input-label">Nome</label>
+                                <input class="input-text" type="text" id="nome_locatario"
+                                    placeholder="Espaço Centro Coworking" required />
+                            </div>
 
-                        <p>
-                            <label>Telefone</label>
-                            <input type="tel" id="telefone_locatario" placeholder="(11) 3456-7890" required />
-                        </p>
+                            <div class="form-field">
+                                <label class="input-label">Documento</label>
+                                <input class="input-text" type="text" id="documento_locatario"
+                                    placeholder="12.345.678/0001-90" required />
+                            </div>
 
-                        <p>
-                            <label>E-mail</label>
-                            <input type="email" id="email_locatario" placeholder="contato@espacocentro.com.br"
-                                required />
-                        </p>
+                            <div class="form-field">
+                                <label class="input-label">Telefone</label>
+                                <input class="input-text" type="tel" id="telefone_locatario"
+                                    placeholder="(11) 3456-7890" required />
+                            </div>
 
-                        <p>
-                            <label for="c-address">Endereço</label>
-                            <input type="text" id="c-address"
-                                placeholder="Av. Paulista, 1000 - Bela Vista, São Paulo - SP" required />
-                        </p>
-                        <button type="submit">Salvar dados da empresa</button>
+                        </div>
+
+                        <div class="form-panel">
+
+
+
+                            <div class="form-field">
+                                <label class="input-label">E-mail</label>
+                                <input class="input-text" type="email" id="email_locatario"
+                                    placeholder="contato@espacocentro.com.br" required />
+                            </div>
+
+                            <div class="form-field">
+                                <label class="input-label" for="c-address">Endereço</label>
+                                <input class="input-text" type="text" id="c-address"
+                                    placeholder="Av. Paulista, 1000 - Bela Vista, São Paulo - SP" required />
+                            </div>
+                            <button class="btn-forms" type="submit">Salvar dados da empresa</button>
+
+                        </div>
+
+
                     </form>
                 </section>
 
                 <section class="panel-full">
                     <h2>Regras de cancelamento</h2>
-                    <ul id="rules-list">
-                        <li>Flexível — mínimo 24h antes, multa 0%</li>
-                        <li>Moderada — mínimo 12h antes, multa 25%</li>
-                        <li>Rígida — mínimo 2h antes, multa 50%</li>
-                    </ul>
+                    <table class="form-table">
 
-                    <form>
-                        <p>
-                            <label>N° da sala </label>
-                            <input type="number" id="regra_sala" required />
-                        </p>
+                        <tr>
+                            <th>Classificação</th>
+                            <th>Tempo de tolerância</th>
+                            <th>Porcentagem</th>
+                        </tr>
 
-                        <p>
-                            <label>Horas mínimas</label>
-                            <input type="number" id="r-hours" value="24" required />
-                        </p>
+                        <tr>
+                            <td>Flexível</td>
+                            <td>24H</td>
+                            <td>0%</td>
+                        </tr>
 
-                        <p>
-                            <label>Multa (%)</label>
-                            <!-- step define a quantidade de casas decimais que o input aceita -->
-                            <input type="number" step="0.01" id="r-penalty" value="0" required />
-                        </p>
+                        <tr>
+                            <td>Moderada</td>
+                            <td>12h</td>
+                            <td>25%</td>
+                        </tr>
 
-                        <button type="submit">Adicionar</button>
+                        <tr>
+                            <td>Rígida</td>
+                            <td>2h</td>
+                            <td>50%</td>
+                        </tr>
+
+                    </table>
+
+                    <form class="form-wrapper">
+                        <div class="form-panel">
+                            <div class="form-field">
+                                <label class="input-label" for="regra_sala">N° da sala</label>
+                                <input class="input-number" type="number" id="regra_sala" required />
+                            </div>
+
+                            <div class="form-field">
+                                <label class="input-label" for="r-hours">Horas mínimas</label>
+                                <input class="input-number" type="number" id="r-hours" value="24" required />
+                            </div>
+
+                            <div class="form-field">
+                                <label class="input-label" for="r-penalty">Multa (%)</label>
+                                <input class="input-number" type="number" step="0.01" id="r-penalty" value="0" required />
+                            </div>
+
+                            <button class="btn-forms" type="submit">Adicionar</button>
+                        </div>
                     </form>
                 </section>
 
                 <section class="panel-full">
                     <h2>Taxas</h2>
-                    <ul>
-                        <li>Taxa de limpeza — R$ 50,00</li>
-                        <li>Taxa de serviço — 5%</li>
-                        <li>Taxa de equipamento (projetor) — R$ 30,00</li>
-                        <li>Taxa de conveniência — 2,5%</li>
-                    </ul>
+                    <table class="form-table">
+                        <tr>
+                            <th>Tipo de Taxa</th>
+                            <th>Valor</th>
+                        </tr>
 
-                    <form>
-                        <p>
-                            <label>Taxa a ser adicionada ao valor final</label>
-                            <select id="selecao_de_taxa" required>
-                                <option value="">Selecione uma taxa</option>
-                                <option value="limpeza">Taxa de limpeza</option>
-                                <option value="servico">Taxa de serviço</option>
-                                <option value="equipamento">Taxa de equipamento</option>
-                                <option value="conveniencia">Taxa de conveniência</option>
-                            </select>
-                        </p>
+                        <tr>
+                            <td>Limpeza</td>
+                            <td>R$ 50,00</td>
+                        </tr>
 
-                        <p>
-                            <label>Tipo</label>
-                            <select id="tipo_taxa" required>
-                                <option value="PERCENTUAL">Percentual</option>
-                                <option value="FIXO">Fixo</option>
-                            </select>
-                        </p>
+                        <tr>
+                            <td>Serviço</td>
+                            <td>5%</td>
+                        </tr>
 
+                        <tr>
+                            <td>Equipamento (Projetor)</td>
+                            <td>R$ 30,00</td>
+                        </tr>
 
-                        <label for="f-value">Valor</label>
-                        <input type="number" step="0.01" id="f-value" required />
+                        <tr>
+                            <td>Conveniência</td>
+                            <td>2,5%</td>
+                        </tr>
 
-                        <button type="submit">Adicionar</button>
+                    </table>
+
+                    <form class="form-wrapper">
+                        <div class="form-panel">
+
+                            <div class="form-field">
+                                <label class="input-label" for="selecao_de_taxa">Taxa a ser adicionada ao valor
+                                    final</label>
+                                <select class="input-select" id="selecao_de_taxa" required>
+                                    <option value="">Selecione uma taxa</option>
+                                    <option value="limpeza">Taxa de limpeza</option>
+                                    <option value="servico">Taxa de serviço</option>
+                                    <option value="equipamento">Taxa de equipamento</option>
+                                    <option value="conveniencia">Taxa de conveniência</option>
+                                </select>
+                            </div>
+
+                            <div class="form-field">
+                                <label class="input-label" for="tipo_taxa">Tipo</label>
+                                <select class="input-select" id="tipo_taxa" required>
+                                    <option value="PERCENTUAL">Percentual</option>
+                                    <option value="FIXO">Fixo</option>
+                                </select>
+                            </div>
+
+                            <div class="form-field">
+                                <label class="input-label" for="f-value">Valor</label>
+                                <input class="input-number" type="number" step="0.01" id="f-value" required />
+                            </div>
+
+                            <button class="btn-forms" type="submit">Adicionar</button>
+
+                        </div>
                     </form>
+
                 </section>
 
             </main>

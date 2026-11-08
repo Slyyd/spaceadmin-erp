@@ -190,17 +190,91 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--text-on-dark);
 }
 
-.btn-highlight, .btn-accent {
+.btn-forms {
   background-color: var(--accent);
-  color: var(--text-on-dark);
+  color: var(--text-primary);
   border: 1px solid var(--accent);
   padding: 0.4rem 0.8rem;
+  margin: 0.4rem 0 0 0;
   border-radius: 0.25rem;
   cursor: pointer;
 }
 
-.btn-highlight:hover, .btn-accent:hover {
+.btn-forms:hover {
   filter: brightness(0.9);
+}
+
+/* Formulários */
+
+.form-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 0.3rem;
+  margin: 0.3rem;
+}
+
+.form-panel {
+  display: inherit;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0 0.5rem 0 0;
+}
+
+.form-field {
+
+  display: inherit;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 0 0 0.4rem;
+  width: 16rem;
+
+}
+
+.form-table {
+  border: 1px solid var(--border);
+  width: 100%;
+}
+
+.form-table th {
+  background-color: var(--accent);
+  padding: 0.2rem;
+}
+
+.form-table tr:nth-child(even) {
+  background-color: var(--bg-sidebar);
+  color: var(--text-on-dark)
+}
+
+.form-table td:hover {
+  filter: brightness(0.9);
+}
+
+
+/* Inputs */
+
+.input-label {
+  font-size: 1.2rem;
+}
+
+.input-text {
+  border: 1px solid var(--border);
+  background-color: var(--bg-main);
+}
+
+.input-select {
+  appearance: none;
+  border: 1px solid var(--border);
+  background-color: var(--bg-main);
+  min-width: 50%;
+}
+
+.input-number {
+  background-color: var(--bg-main);
+  border: 1px solid var(--border);
+  appearance: textfield;
 }
 
 /* Estrutura de Cards e Painéis */
