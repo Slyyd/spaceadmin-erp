@@ -87,67 +87,74 @@
 
                     <h2>Novo fornecedor</h2>
 
-                    <form>
+                    <form class="form-wrapper">
 
-                        <section>
-                            <label>Razão social</label>
-                            <input type="text" id="sup-name">
-                        </section>
+                        <div class="form-panel column">
 
-                        <section>
-                            <label>Nome fantasia</label>
-                            <input type="text" id="sup-fantasy-name">
-                        </section>
+                            <div class="form-field column">
+                                <label class="input-label" for="sup-name">Razão social</label>
+                                <input class="input" type="text" id="sup-name">
+                            </div>
 
-                        <section>
-                            <label>CPF/CNPJ</label>
-                            <input type="text" id="sup-document">
-                        </section>
+                            <div class="form-field column">
+                                <label class="input-label" for="sup-fantasy-name">Nome fantasia</label>
+                                <input class="input" type="text" id="sup-fantasy-name">
+                            </div>
 
-                        <section>
-                            <label>Telefone</label>
-                            <input type="text" id="sup-phone">
-                        </section>
+                            <div class="form-field column">
+                                <label class="input-label" for="sup-document">CPF/CNPJ</label>
+                                <input class="input" type="text" id="sup-document">
+                            </div>
 
-                        <section>
-                            <label>E-mail</label>
-                            <input type="email" id="sup-email">
-                        </section>
+                            <div class="form-field column">
+                                <label class="input-label" for="sup-phone">Telefone</label>
+                                <input class="input" type="text" id="sup-phone">
+                            </div>
 
-                        <section>
-                            <label>Endereço</label>
-                            <input type="text" id="sup-address">
-                        </section>
+                            <div class="form-field column">
+                                <label class="input-label" for="sup-email">E-mail</label>
+                                <input class="input" type="email" id="sup-email">
+                            </div>
 
-                        <section>
-                            <label>Número</label>
-                            <input type="text" id="sup-number">
-                        </section>
+                            <div class="form-field column">
+                                <label class="input-label" for="sup-address">Endereço</label>
+                                <input class="input" type="text" id="sup-address">
+                            </div>
 
-                        <section>
-                            <label>Bairro</label>
-                            <input type="text" id="sup-neighborhood">
-                        </section>
+                        </div>
 
-                        <section>
-                            <label>Cidade</label>
-                            <input type="text" id="sup-city">
-                        </section>
+                        <div class="form-panel column">
 
-                        <section>
-                            <label>Estado</label>
-                            <input type="text" id="sup-state">
-                        </section>
+                            <div class="form-field column">
+                                <label class="input-label" for="sup-number">Número</label>
+                                <input class="input" type="text" id="sup-number">
+                            </div>
 
-                        <section>
-                            <label>CEP</label>
-                            <input type="text" id="sup-cep">
-                        </section>
+                            <div class="form-field column">
+                                <label class="input-label" for="sup-neighborhood">Bairro</label>
+                                <input class="input" type="text" id="sup-neighborhood">
+                            </div>
 
-                        <br>
+                            <div class="form-field column">
+                                <label class="input-label" for="sup-city">Cidade</label>
+                                <input class="input" type="text" id="sup-city">
+                            </div>
 
-                        <button type="button">Cancelar</button>
-                        <button type="submit">Salvar</button>
+                            <div class="form-field column">
+                                <label class="input-label" for="sup-state">Estado</label>
+                                <input class="input" type="text" id="sup-state">
+                            </div>
+
+                            <div class="form-field column">
+                                <label class="input-label" for="sup-cep">CEP</label>
+                                <input class="input" type="text" id="sup-cep">
+                            </div>
+
+                            <div class="form-field row">
+                                <button class="btn-forms" type="submit">Salvar</button>
+                            </div>
+
+                        </div>
 
                     </form>
 
@@ -157,46 +164,51 @@
 
                     <h2>Novo pedido de compra</h2>
 
-                    <form>
+                    <form class="form-wrapper">
 
-                        <section>
-                            <label>Fornecedor</label>
+                        <div class="form-panel column">
 
-                            <select id="order-supplier">
-                                <option value="">Selecione um fornecedor</option>
-                            </select>
-                        </section>
+                            <div class="form-field column">
+                                <label class="input-label" for="order-supplier">Fornecedor</label>
+                                <select class="input select" id="order-supplier">
+                                    <option value="">Selecione um fornecedor</option>
+                                </select>
+                            </div>
 
-                        <section>
-                            <label>Data do pedido</label>
-                            <input type="date" id="order-date">
-                        </section>
+                            <div class="form-field column">
+                                <label class="input-label" for="order-date">Data do pedido</label>
+                                <input class="input" type="date" id="order-date">
+                            </div>
 
-                        <section>
-                            <label>Data prevista</label>
-                            <input type="date" id="order-expected-date">
-                        </section>
+                            <div class="form-field column">
+                                <label class="input-label" for="order-expected-date">Data prevista</label>
+                                <input class="input" type="date" id="order-expected-date">
+                            </div>
 
-                        <section>
-                            <label>Status</label>
+                        </div>
 
-                            <select id="order-status">
-                                <option value="">Selecione o status</option>
-                                <option value="pendente">Pendente</option>
-                                <option value="aprovado">Aprovado</option>
-                                <option value="recebido">Recebido</option>
-                            </select>
-                        </section>
+                        <div class="form-panel column">
 
-                        <section>
-                            <label>Observações</label>
-                            <textarea id="order-notes"></textarea>
-                        </section>
+                            <div class="form-field column">
+                                <label class="input-label" for="order-status">Status</label>
+                                <select class="input select" id="order-status">
+                                    <option value="">Selecione o status</option>
+                                    <option value="pendente">Pendente</option>
+                                    <option value="aprovado">Aprovado</option>
+                                    <option value="recebido">Recebido</option>
+                                </select>
+                            </div>
 
-                        <br>
+                            <div class="form-field column">
+                                <label class="input-label" for="order-notes">Observações</label>
+                                <textarea class="input textarea" id="order-notes"></textarea>
+                            </div>
 
-                        <button type="button">Cancelar</button>
-                        <button type="submit">Criar pedido</button>
+                            <div class="form-field row">
+                                <button class="btn-forms" type="submit">Criar pedido</button>
+                            </div>
+
+                        </div>
 
                     </form>
 

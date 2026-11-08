@@ -85,72 +85,75 @@
 
                 <section class="panel-full">
 
-                    <form class="modal" id="create-cleaning-form">
+                    <h2>Nova ordem de limpeza</h2>
 
-                        <header>
-                            <h2>Nova ordem de limpeza</h2>
-                        </header>
+                    <form class="form-wrapper" id="create-cleaning-form">
 
-                        <section>
-                            <label for="c-room">Sala</label>
-                            <select id="c-room" required>
-                                <option value="">Selecione uma sala</option>
-                            </select>
-                        </section>
+                        <div class="form-panel column">
 
-                        <section>
-                            <label for="c-employee">Funcionário responsável</label>
-                            <select id="c-employee">
-                                <option value="">Selecione um funcionário</option>
-                            </select>
-                        </section>
+                            <div class="form-field column">
+                                <label class="input-label" for="c-room">Sala</label>
+                                <select class="input select" id="c-room" required>
+                                    <option value="">Selecione uma sala</option>
+                                </select>
+                            </div>
 
-                        <section>
-                            <label for="c-date">Data</label>
-                            <input type="date" id="c-date" required />
-                        </section>
+                            <div class="form-field column">
+                                <label class="input-label" for="c-employee">Funcionário responsável</label>
+                                <select class="input select" id="c-employee">
+                                    <option value="">Selecione um funcionário</option>
+                                </select>
+                            </div>
 
-                        <section>
-                            <label for="c-time">Horário previsto</label>
-                            <input type="time" id="c-time" />
-                        </section>
+                            <div class="form-field column">
+                                <label class="input-label" for="c-date">Data</label>
+                                <input class="input" type="date" id="c-date" required />
+                            </div>
 
-                        <section>
-                            <label for="c-status">Status</label>
-                            <select id="c-status">
-                                <option value="pendente">Pendente</option>
-                                <option value="andamento">Em andamento</option>
-                                <option value="concluida">Concluída</option>
-                            </select>
-                        </section>
+                            <div class="form-field column">
+                                <label class="input-label" for="c-time">Horário previsto</label>
+                                <input class="input" type="time" id="c-time" />
+                            </div>
 
-                        <section>
-                            <input type="checkbox" id="c-issue-found" />
-                            <label for="c-issue-found">
-                                Foi identificado problema ou dano na sala
-                            </label>
-                        </section>
+                        </div>
 
-                        <section>
-                            <label for="c-issue-notes">
-                                Descrição do problema
-                            </label>
-                            <textarea id="c-issue-notes"></textarea>
-                        </section>
+                        <div class="form-panel column">
 
-                        <section>
-                            <label for="c-notes">Observações</label>
-                            <textarea id="c-notes"></textarea>
-                        </section>
+                            <div class="form-field column">
+                                <label class="input-label" for="c-status">Status</label>
+                                <select class="input select" id="c-status">
+                                    <option value="pendente">Pendente</option>
+                                    <option value="andamento">Em andamento</option>
+                                    <option value="concluida">Concluída</option>
+                                </select>
+                            </div>
 
-                        <footer>
-                            <button type="button" class="btn btn--outline" id="cleaning-cancel-btn">
-                                Cancelar
-                            </button>
-                            <button type="submit" class="btn btn--primary" id="cleaning-submit-btn">
-                                Salvar
-                            </button>
-                        </footer>
+                            <div class="form-field row">
+                                <input type="checkbox" id="c-issue-found" />
+                                <label class="input-label" for="c-issue-found">
+                                    Foi identificado problema ou dano na sala
+                                </label>
+                            </div>
+
+                            <div class="form-field column" id="issue-notes-field">
+                                <label class="input-label" for="c-issue-notes">
+                                    Descrição do problema
+                                </label>
+                                <textarea class="input textarea" id="c-issue-notes"></textarea>
+                            </div>
+
+                            <div class="form-field column">
+                                <label class="input-label" for="c-notes">Observações</label>
+                                <textarea class="input textarea" id="c-notes"></textarea>
+                            </div>
+
+                            <div class="form-field row">
+                                <button type="submit" class="btn-forms" id="cleaning-submit-btn">
+                                    Salvar
+                                </button>
+                            </div>
+
+                        </div>
 
                     </form>
 
@@ -158,44 +161,47 @@
 
                 <section class="panel-full">
 
-                    <form>
+                    <h2>Registrar uso de material de limpeza</h2>
 
-                        <header>
-                            <h2>Registrar uso de material de limpeza</h2>
-                        </header>
+                    <form class="form-wrapper">
 
-                        <section>
-                            <label for="m-order">Ordem de limpeza</label>
-                            <select id="m-order" required>
-                                <option value="">Selecione uma ordem de limpeza</option>
-                            </select>
-                        </section>
+                        <div class="form-panel column">
 
-                        <section>
-                            <label for="m-product">Produto utilizado</label>
-                            <select id="m-product" required>
-                                <option value="">Selecione um produto</option>
-                            </select>
-                        </section>
+                            <div class="form-field column">
+                                <label class="input-label" for="m-order">Ordem de limpeza</label>
+                                <select class="input select" id="m-order" required>
+                                    <option value="">Selecione uma ordem de limpeza</option>
+                                </select>
+                            </div>
 
-                        <section>
-                            <label for="m-quantity">Quantidade utilizada</label>
-                            <input type="number" id="m-quantity" min="0" step="1" required />
-                        </section>
+                            <div class="form-field column">
+                                <label class="input-label" for="m-product">Produto utilizado</label>
+                                <select class="input select" id="m-product" required>
+                                    <option value="">Selecione um produto</option>
+                                </select>
+                            </div>
 
-                        <section>
-                            <label for="m-notes">Observações</label>
-                            <textarea id="m-notes"></textarea>
-                        </section>
+                        </div>
 
-                        <footer class="modal-actions">
-                            <button type="button" class="btn btn--outline" id="material-cancel-btn">
-                                Cancelar
-                            </button>
-                            <button type="submit" class="btn btn--primary">
-                                Registrar uso
-                            </button>
-                        </footer>
+                        <div class="form-panel column">
+
+                            <div class="form-field column">
+                                <label class="input-label" for="m-quantity">Quantidade utilizada</label>
+                                <input class="input number" type="number" id="m-quantity" min="0" step="1" required />
+                            </div>
+
+                            <div class="form-field column">
+                                <label class="input-label" for="m-notes">Observações</label>
+                                <textarea class="input textarea" id="m-notes"></textarea>
+                            </div>
+
+                            <div class="form-field row">
+                                <button type="submit" class="btn-forms">
+                                    Registrar uso
+                                </button>
+                            </div>
+
+                        </div>
 
                     </form>
 

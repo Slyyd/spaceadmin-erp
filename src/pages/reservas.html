@@ -84,77 +84,73 @@
                 </header>
 
                 <section class="panel-full">
-                    <section>
-                        <form id="checkout-form">
-                            <h2>Confirmar check-out</h2>
-
-                            <fieldset class="form-field">
-                                <label>Condição da sala</label>
-                                <input type="text" id="checkout-condition" placeholder="Ex: limpa, sem danos" />
-                            </fieldset>
-                            <fieldset class="form-field">
-                                <label>Ocorrências (opcional)</label>
-                                <input type="text" id="checkout-occurrences" />
-                            </fieldset>
-                            <label class="checkbox-inline" for="checkout-needs-cleaning">
-                                <input type="checkbox" id="checkout-needs-cleaning" checked /> Precisa de limpeza
-                            </label>
-                            <label class="checkbox-inline" for="checkout-needs-maintenance">
-                                <input type="checkbox" id="checkout-needs-maintenance" /> Precisa de manutenção
-                            </label>
-                            <footer class="modal-actions">
-                                <button type="button" class="btn btn--outline"
-                                    id="checkout-cancel-btn">Cancelar</button>
-                                <button type="submit" class="btn btn--primary">Confirmar check-out</button>
-                            </footer>
-                        </form>
-                    </section>
-
+                    <h2>Confirmar check-out</h2>
+                    <form class="form-wrapper" id="checkout-form">
+                        <div class="form-panel column">
+                            <div class="form-field column">
+                                <label class="input-label" for="checkout-condition">Condição da sala</label>
+                                <input class="input" type="text" id="checkout-condition" placeholder="Ex: limpa, sem danos" />
+                            </div>
+                            <div class="form-field column">
+                                <label class="input-label" for="checkout-occurrences">Ocorrências (opcional)</label>
+                                <input class="input" type="text" id="checkout-occurrences" />
+                            </div>
+                            <div class="form-field row">
+                                <input type="checkbox" id="checkout-needs-cleaning" checked />
+                                <label class="input-label" for="checkout-needs-cleaning">Precisa de limpeza</label>
+                            </div>
+                            <div class="form-field row">
+                                <input type="checkbox" id="checkout-needs-maintenance" />
+                                <label class="input-label" for="checkout-needs-maintenance">Precisa de manutenção</label>
+                            </div>
+                            <div class="form-field row">
+                                <button type="button" class="btn-primary" id="checkout-cancel-btn">Cancelar</button>
+                                <button type="submit" class="btn-forms">Confirmar check-out</button>
+                            </div>
+                        </div>
+                    </form>
                 </section>
 
                 <section class="panel-full">
-                    <section>
-                        <form id="checkin-form">
-                            <h2>Confirmar check-in</h2>
-                            <fieldset class="form-field">
-                                <label>Observações (opcional)</label>
-                                <input type="text" id="checkin-notes" />
-                            </fieldset>
-                            <footer class="modal-actions">
-                                <button type="button" class="btn btn--outline" id="checkin-cancel-btn">Cancelar</button>
-                                <button type="submit" class="btn btn--primary">Confirmar check-in</button>
-                            </footer>
-                        </form>
-                    </section>
+                    <h2>Confirmar check-in</h2>
+                    <form class="form-wrapper" id="checkin-form">
+                        <div class="form-panel column">
+                            <div class="form-field column">
+                                <label class="input-label" for="checkin-notes">Observações (opcional)</label>
+                                <input class="input" type="text" id="checkin-notes" />
+                            </div>
+                            <div class="form-field row">
+                                <button type="button" class="btn-primary" id="checkin-cancel-btn">Cancelar</button>
+                                <button type="submit" class="btn-forms">Confirmar check-in</button>
+                            </div>
+                        </div>
+                    </form>
                 </section>
 
                 <section class="panel-full">
-
-                    <section>
-                        <form>
-                            <h2>Registrar pagamento</h2>
-
-                            <fieldset class="form-field">
-                                <label>Valor (R$)</label>
-                                <input type="number" step="0.01" id="pay-amount" required />
-                            </fieldset>
-                            <fieldset class="form-field">
-                                <label>Forma de pagamento</label>
-                                <select id="pay-method">
+                    <h2>Registrar pagamento</h2>
+                    <form class="form-wrapper">
+                        <div class="form-panel column">
+                            <div class="form-field column">
+                                <label class="input-label" for="pay-amount">Valor (R$)</label>
+                                <input class="input number" type="number" step="0.01" id="pay-amount" required />
+                            </div>
+                            <div class="form-field column">
+                                <label class="input-label" for="pay-method">Forma de pagamento</label>
+                                <select class="input select" id="pay-method">
                                     <option value="PIX">Pix</option>
                                     <option value="CARTAO_CREDITO">Cartão de crédito</option>
                                     <option value="CARTAO_DEBITO">Cartão de débito</option>
                                     <option value="DINHEIRO">Dinheiro</option>
                                     <option value="BOLETO">Boleto</option>
                                 </select>
-                            </fieldset>
-                            <footer class="modal-actions">
-                                <button type="button" class="btn btn--outline" id="payment-cancel-btn">Cancelar</button>
-                                <button type="submit" class="btn btn--primary">Confirmar pagamento</button>
-                            </footer>
-                        </form>
-                    </section>
-
+                            </div>
+                            <div class="form-field row">
+                                <button type="button" class="btn-primary" id="payment-cancel-btn">Cancelar</button>
+                                <button type="submit" class="btn-forms">Confirmar pagamento</button>
+                            </div>
+                        </div>
+                    </form>
                 </section>
 
 

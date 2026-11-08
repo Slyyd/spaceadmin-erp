@@ -84,33 +84,31 @@
                 </header>
 
                 <section class="panel-full">
-                    <form>
-                        <h2>Novo usuário</h2>
+                    <h2>Novo usuário</h2>
 
-                        <fieldset>
-                            <label for="new-name">Nome</label>
-                            <input type="text" id="new-name" required />
-                        </fieldset>
+                    <form class="form-wrapper">
+                        <div class="form-panel column">
+                            <div class="form-field column">
+                                <label class="input-label" for="new-name">Nome</label>
+                                <input class="input" type="text" id="new-name" required />
+                            </div>
 
-                        <fieldset>
-                            <label for="new-email">E-mail</label>
-                            <input type="email" id="new-email" required />
-                        </fieldset>
+                            <div class="form-field column">
+                                <label class="input-label" for="new-email">E-mail</label>
+                                <input class="input" type="email" id="new-email" required />
+                            </div>
 
-                        <fieldset>
-                            <label for="new-password">Senha provisória</label>
-                            <input type="password" id="new-password" required minlength="8" />
-                        </fieldset>
+                            <div class="form-field column">
+                                <label class="input-label" for="new-password">Senha provisória</label>
+                                <input class="input" type="password" id="new-password" required minlength="8" />
+                            </div>
 
-                        <footer>
-                            <button type="button" id="cancel-btn">
-                                Cancelar
-                            </button>
-
-                            <button type="submit">
-                                Salvar
-                            </button>
-                        </footer>
+                            <div class="form-field row">
+                                <button class="btn-forms" type="submit">
+                                    Salvar
+                                </button>
+                            </div>
+                        </div>
                     </form>
                 </section>
 

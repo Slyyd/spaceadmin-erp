@@ -94,35 +94,39 @@
                 <section class="panel-full">
                     <h2>Filtrar movimentações</h2>
 
-                    <form action="financeiro.html" method="get">
-                        <p>
-                            <label for="data-inicial">Data inicial:</label>
-                            <input type="date" id="data-inicial" name="data-inicial">
-                        </p>
+                    <form class="form-wrapper" action="financeiro.html" method="get">
+                        <div class="form-panel column">
+                            <div class="form-field column">
+                                <label class="input-label" for="data-inicial">Data inicial:</label>
+                                <input class="input" type="date" id="data-inicial" name="data-inicial">
+                            </div>
 
-                        <p>
-                            <label for="data-final">Data final:</label>
-                            <input type="date" id="data-final" name="data-final">
-                        </p>
+                            <div class="form-field column">
+                                <label class="input-label" for="data-final">Data final:</label>
+                                <input class="input" type="date" id="data-final" name="data-final">
+                            </div>
 
-                        <p>
-                            <label for="situacao">Situação:</label>
-                            <select id="situacao" name="situacao">
-                                <option value="">Todas</option>
-                                <option value="aberto">Em aberto</option>
-                                <option value="pago">Pago</option>
-                                <option value="vencido">Vencido</option>
-                            </select>
-                        </p>
+                            <div class="form-field column">
+                                <label class="input-label" for="situacao">Situação:</label>
+                                <select class="input select" id="situacao" name="situacao">
+                                    <option value="">Todas</option>
+                                    <option value="aberto">Em aberto</option>
+                                    <option value="pago">Pago</option>
+                                    <option value="vencido">Vencido</option>
+                                </select>
+                            </div>
 
-                        <button type="submit">Filtrar</button>
+                            <div class="form-field column">
+                                <button class="btn-forms" type="submit">Filtrar</button>
+                            </div>
+                        </div>
                     </form>
                 </section>
 
                 <section class="panel-full">
                     <h2>Contas a receber</h2>
 
-                    <table>
+                    <table class="form-table">
                         <caption>Cobranças das locações</caption>
 
                         <thead>
@@ -161,7 +165,7 @@
                 <section class="panel-full">
                     <h2>Contas a pagar</h2>
 
-                    <table>
+                    <table class="form-table">
                         <caption>Despesas da empresa</caption>
 
                         <thead>
@@ -197,48 +201,53 @@
                 <section class="panel-full">
                     <h2>Cadastrar movimentação</h2>
 
-                    <form action="/movimentacoes" method="post">
-                        <p>
-                            <label for="tipo">Tipo:</label>
-                            <select id="tipo" name="tipo" required>
-                                <option value="">Selecione</option>
-                                <option value="receita">Receita</option>
-                                <option value="despesa">Despesa</option>
-                            </select>
-                        </p>
+                    <form class="form-wrapper" action="/movimentacoes" method="post">
+                        <div class="form-panel column">
+                            <div class="form-field column">
+                                <label class="input-label" for="tipo">Tipo:</label>
+                                <select class="input select" id="tipo" name="tipo" required>
+                                    <option value="">Selecione</option>
+                                    <option value="receita">Receita</option>
+                                    <option value="despesa">Despesa</option>
+                                </select>
+                            </div>
 
-                        <p>
-                            <label for="descricao">Descrição:</label>
-                            <input type="text" id="descricao" name="descricao" required>
-                        </p>
+                            <div class="form-field column">
+                                <label class="input-label" for="descricao">Descrição:</label>
+                                <input class="input" type="text" id="descricao" name="descricao" required>
+                            </div>
 
-                        <p>
-                            <label for="cliente-fornecedor">Cliente ou fornecedor:</label>
-                            <input type="text" id="cliente-fornecedor" name="cliente-fornecedor" required>
-                        </p>
+                            <div class="form-field column">
+                                <label class="input-label" for="cliente-fornecedor">Cliente ou fornecedor:</label>
+                                <input class="input" type="text" id="cliente-fornecedor" name="cliente-fornecedor" required>
+                            </div>
 
-                        <p>
-                            <label for="reserva">Número da reserva, se houver:</label>
-                            <input type="text" id="reserva" name="reserva">
-                        </p>
+                            <div class="form-field column">
+                                <label class="input-label" for="reserva">Número da reserva, se houver:</label>
+                                <input class="input" type="text" id="reserva" name="reserva">
+                            </div>
+                        </div>
 
-                        <p>
-                            <label for="valor">Valor em reais:</label>
-                            <input type="number" id="valor" name="valor" min="0.01" step="0.01" required>
-                        </p>
+                        <div class="form-panel column">
+                            <div class="form-field column">
+                                <label class="input-label" for="valor">Valor em reais:</label>
+                                <input class="input number" type="number" id="valor" name="valor" min="0.01" step="0.01" required>
+                            </div>
 
-                        <p>
-                            <label for="vencimento">Data de vencimento:</label>
-                            <input type="date" id="vencimento" name="vencimento" required>
-                        </p>
+                            <div class="form-field column">
+                                <label class="input-label" for="vencimento">Data de vencimento:</label>
+                                <input class="input" type="date" id="vencimento" name="vencimento" required>
+                            </div>
 
-                        <p>
-                            <label for="observacoes">Observações:</label>
-                            <textarea id="observacoes" name="observacoes" rows="4"></textarea>
-                        </p>
+                            <div class="form-field column">
+                                <label class="input-label" for="observacoes">Observações:</label>
+                                <textarea class="input textarea" id="observacoes" name="observacoes" rows="4"></textarea>
+                            </div>
 
-                        <button type="submit">Cadastrar</button>
-                        <button type="reset">Limpar</button>
+                            <div class="form-field row">
+                                <button class="btn-forms" type="submit">Cadastrar</button>
+                            </div>
+                        </div>
                     </form>
                 </section>
 

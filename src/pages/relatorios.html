@@ -87,24 +87,27 @@
                     <h2>Filtrar período</h2>
                     <p>Escolha o intervalo de datas que será usado nos relatórios.</p>
 
-                    <form>
-                        <p>
-                            <label for="dta_inicio_relatorio">De</label>
-                            <input type="date" id="dta_inicio_relatorio" required />
-                        </p>
+                    <form class="form-wrapper">
+                        <div class="form-panel column">
+                            <div class="form-field column">
+                                <label class="input-label" for="dta_inicio_relatorio">De</label>
+                                <input class="input" type="date" id="dta_inicio_relatorio" required />
+                            </div>
 
-                        <p>
-                            <label for="dta_fim_relatorio">Até</label>
-                            <input type="date" id="dta_fim_relatorio" required />
-                        </p>
+                            <div class="form-field column">
+                                <label class="input-label" for="dta_fim_relatorio">Até</label>
+                                <input class="input" type="date" id="dta_fim_relatorio" required />
+                            </div>
 
-                        <button type="submit">Aplicar</button>
+                            <div class="form-field column">
+                                <button class="btn-forms" type="submit">Aplicar</button>
+                            </div>
+                        </div>
                     </form>
                 </section>
 
                 <section class="panel-full">
-                    <!-- cellpadding define o espaço em pixels entre o conteúdo de uma célula de tabela -->
-                    <table border="1" cellpadding="6">
+                    <table class="form-table">
                         <thead>
                             <th colspan="2">Faturamento por período</th>
                         </thead>
@@ -139,7 +142,7 @@
 
                 <section class="panel-full">
 
-                    <table border="1" cellpadding="6">
+                    <table class="form-table">
                         <thead>
                             <th colspan="3">Faturamento por imóvel</th>
                         <tbody>
@@ -168,7 +171,7 @@
 
                 <section class="panel-full">
 
-                    <table border="1" cellpadding="6">
+                    <table class="form-table">
                         <thead>
                             <th colspan="3">Ocupação</th>
                         </thead>
@@ -196,7 +199,7 @@
                 </section>
 
                 <section class="panel-full">
-                    <table border="1" cellpadding="6">
+                    <table  class="form-table">
 
                         <thead>
                             <th colspan="2">Cancelamentos</th>
@@ -221,7 +224,7 @@
                 </section>
 
                 <section class="panel-full">
-                    <table border="1" cellpadding="6">
+                    <table  class="form-table">
                         <thead>
                             <th colspan="3">Custos de manutenção</th>
                         </thead>
@@ -250,7 +253,7 @@
 
                 <section class="panel-full">
 
-                    <table border="1" cellpadding="6">
+                    <table class="form-table">
                         <thead>
                             <th colspan="3">Compras</th>
                         </thead>

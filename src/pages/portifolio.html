@@ -311,28 +311,41 @@
 
                         <h2>Fale conosco!</h2>
 
-                        <form>
+                        <form class="form-wrapper">
 
-                            <label for="contact-name">Nome completo</label><br>
-                            <input type="text" id="contact-name" placeholder="Digite seu nome" required><br><br>
+                            <div class="form-panel column">
 
-                            <label for="contact-email">E-mail corporativo</label><br>
-                            <input type="email" id="contact-email" placeholder="email@empresa.com.br" required><br><br>
+                                <div class="form-field column">
+                                    <label class="input-label" for="contact-name">Nome completo</label>
+                                    <input class="input" type="text" id="contact-name" placeholder="Digite seu nome" required>
+                                </div>
 
-                            <label for="contact-subject">Assunto</label><br>
-                            <select id="contact-subject" required>
-                                <option value="">Selecione o motivo do contato</option>
-                                <option value="duvida">Dúvida sobre o sistema</option>
-                                <option value="comercial">Proposta comercial</option>
-                                <option value="suporte">Suporte técnico</option>
-                                <option value="outros">Outros</option>
-                            </select><br><br>
+                                <div class="form-field column">
+                                    <label class="input-label" for="contact-email">E-mail corporativo</label>
+                                    <input class="input" type="email" id="contact-email" placeholder="email@empresa.com.br" required>
+                                </div>
 
-                            <label for="contact-message">Mensagem</label><br>
-                            <textarea id="contact-message" rows="5" placeholder="Como podemos ajudar?" required></textarea><br><br>
+                                <div class="form-field column">
+                                    <label class="input-label" for="contact-subject">Assunto</label>
+                                    <select class="input select" id="contact-subject" required>
+                                        <option value="">Selecione o motivo do contato</option>
+                                        <option value="duvida">Dúvida sobre o sistema</option>
+                                        <option value="comercial">Proposta comercial</option>
+                                        <option value="suporte">Suporte técnico</option>
+                                        <option value="outros">Outros</option>
+                                    </select>
+                                </div>
 
-                            <button type="reset">Limpar</button>
-                            <button type="submit">Enviar mensagem</button>
+                                <div class="form-field column">
+                                    <label class="input-label" for="contact-message">Mensagem</label>
+                                    <textarea class="input textarea" id="contact-message" rows="5" placeholder="Como podemos ajudar?" required></textarea>
+                                </div>
+
+                                <div class="form-field row">
+                                    <button class="btn-forms" type="submit">Enviar mensagem</button>
+                                </div>
+
+                            </div>
 
                         </form>
 

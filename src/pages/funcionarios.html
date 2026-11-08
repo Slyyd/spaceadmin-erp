@@ -91,34 +91,43 @@
                         Todo funcionário recebe acesso ao sistema para operar suas tarefas.
                     </p>
 
-                    <form>
+                    <form class="form-wrapper">
 
-                        <section>
-                            <label for="f-name">Nome</label>
-                            <input type="text" id="f-name" name="name" autocomplete="name" required />
-                        </section>
+                        <div class="form-panel column">
 
-                        <section>
-                            <label for="f-position">Cargo</label>
-                            <input type="text" id="f-position" name="position" autocomplete="organization-title"
-                                placeholder="Ex.: Recepcionista, Zelador..." required />
-                        </section>
+                            <div class="form-field column">
+                                <label class="input-label" for="f-name">Nome</label>
+                                <input class="input" type="text" id="f-name" name="name" autocomplete="name" required />
+                            </div>
 
-                        <section>
-                            <label for="f-email">E-mail (login)</label>
-                            <input type="email" id="f-email" name="email" autocomplete="email" required />
-                        </section>
+                            <div class="form-field column">
+                                <label class="input-label" for="f-position">Cargo</label>
+                                <input class="input" type="text" id="f-position" name="position" autocomplete="organization-title"
+                                    placeholder="Ex.: Recepcionista, Zelador..." required />
+                            </div>
 
-                        <section>
-                            <label for="f-password">Senha provisória</label>
-                            <input type="password" id="f-password" name="password" autocomplete="new-password"
-                                minlength="8" required />
-                        </section>
+                        </div>
 
-                        <section>
-                            <button type="button" class="btn btn--outline" id="cancel-btn">Cancelar</button>
-                            <button type="submit" class="btn btn--primary">Salvar</button>
-                        </section>
+                        <div class="form-panel column">
+
+                            <div class="form-field column">
+                                <label class="input-label" for="f-email">E-mail (login)</label>
+                                <input class="input" type="email" id="f-email" name="email" autocomplete="email" required />
+                            </div>
+
+                            <div class="form-field column">
+                                <label class="input-label" for="f-password">Senha provisória</label>
+                                <input class="input" type="password" id="f-password" name="password" autocomplete="new-password"
+                                    minlength="8" required />
+                            </div>
+
+                            <div class="form-field row">
+                                <button type="submit" class="btn-forms">Salvar</button>
+                            </div>
+
+                        </div>
+
+                    </form>
 
                 </section>
 

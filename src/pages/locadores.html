@@ -84,64 +84,70 @@
                 </header>
 
                 <section class="panel-full">
-                    <form class="modal" id="create-form">
-                        <header>
-                            <h2>Novo locador</h2>
-                        </header>
+                    <h2>Novo locador</h2>
 
-                        <section>
-                            <label for="f-type">Tipo</label>
-                            <select id="f-type">
-                                <option value="PESSOA_FISICA">Pessoa física</option>
-                                <option value="PESSOA_JURIDICA">Pessoa jurídica</option>
-                            </select>
-                        </section>
+                    <form class="form-wrapper" id="create-form">
 
-                        <section>
-                            <label for="f-name" id="f-name-label">Nome</label>
-                            <input type="text" id="f-name" required />
-                        </section>
+                        <div class="form-panel column">
 
-                        <section id="trade-name-field">
-                            <label for="f-trade-name">Nome fantasia</label>
-                            <input type="text" id="f-trade-name" />
-                        </section>
+                            <div class="form-field column">
+                                <label class="input-label" for="f-type">Tipo</label>
+                                <select class="input select" id="f-type">
+                                    <option value="PESSOA_FISICA">Pessoa física</option>
+                                    <option value="PESSOA_JURIDICA">Pessoa jurídica</option>
+                                </select>
+                            </div>
 
-                        <section>
-                            <label for="f-document" id="f-document-label">CPF</label>
-                            <input type="text" id="f-document" required placeholder="Somente números" />
-                        </section>
+                            <div class="form-field column">
+                                <label class="input-label" for="f-name" id="f-name-label">Nome</label>
+                                <input class="input" type="text" id="f-name" required />
+                            </div>
 
-                        <section>
-                            <label for="f-email">E-mail</label>
-                            <input type="email" id="f-email" required />
-                        </section>
+                            <div class="form-field column" id="trade-name-field">
+                                <label class="input-label" for="f-trade-name">Nome fantasia</label>
+                                <input class="input" type="text" id="f-trade-name" />
+                            </div>
 
-                        <section>
-                            <label for="f-phone">Telefone</label>
-                            <input type="text" id="f-phone" />
-                        </section>
+                            <div class="form-field column">
+                                <label class="input-label" for="f-document" id="f-document-label">CPF</label>
+                                <input class="input" type="text" id="f-document" required
+                                    placeholder="Somente números" />
+                            </div>
 
-                        <section>
-                            <input type="checkbox" id="f-create-login" />
-                            <label for="f-create-login">
-                                Criar acesso ao sistema para este locador
-                            </label>
-                        </section>
+                        </div>
 
-                        <section>
-                            <label for="f-password">Senha provisória</label>
-                            <input type="password" id="f-password" minlength="8" />
-                        </section>
+                        <div class="form-panel column">
 
-                        <footer>
-                            <button type="button">
-                                Cancelar
-                            </button>
-                            <button type="submit">
-                                Salvar
-                            </button>
-                        </footer>
+                            <div class="form-field column">
+                                <label class="input-label" for="f-email">E-mail</label>
+                                <input class="input" type="email" id="f-email" required />
+                            </div>
+
+                            <div class="form-field column">
+                                <label class="input-label" for="f-phone">Telefone</label>
+                                <input class="input" type="text" id="f-phone" />
+                            </div>
+
+                            <div class="form-field column">
+                                <label class="input-label" for="f-password">Senha provisória</label>
+                                <input class="input" type="password" id="f-password" minlength="8" />
+                            </div>
+
+                            <div class="form-field row">
+                                <input type="checkbox" id="f-create-login" />
+                                <label class="input-label checkbox" for="f-create-login">
+                                    Criar acesso ao sistema
+                                </label>
+                            </div>
+
+                            <div class="form-field row">
+                                <button type="submit" class="btn-forms">
+                                    Salvar
+                                </button>
+                            </div>
+
+                        </div>
+
                     </form>
                 </section>
 

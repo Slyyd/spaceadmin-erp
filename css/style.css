@@ -262,7 +262,7 @@ h1, h2, h3, h4, h5, h6 {
 .form-field {
 
   display: flex;
-  margin: 0 0 0.4rem;
+  margin: 0 0 0.6rem 0;
   width: 16rem;
 
 }
@@ -303,6 +303,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .input-label {
   font-size: 1.2rem;
+}
+
+.input-label.checkbox {
+  margin-left: 0;
+  font-size: 1rem;
 }
 
 .input {

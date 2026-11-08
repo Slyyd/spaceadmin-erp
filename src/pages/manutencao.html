@@ -86,56 +86,89 @@
                 <section class="panel-full">
                     <h2>Ordem de Serviço</h2>
 
-                    <form id="formManutencao">
+                    <form class="form-wrapper" id="formManutencao">
 
-                        <label>ID da Sala:</label>
-                        <input type="number" name="sala">
+                        <div class="form-panel column">
 
-                        <label>ID do Imóvel:</label>
-                        <input type="number" name="imovel">
+                            <div class="form-field column">
+                                <label class="input-label" for="m-sala">ID da Sala:</label>
+                                <input class="input number" type="number" id="m-sala" name="sala">
+                            </div>
 
-                        <label>ID do Funcionário:</label>
-                        <input type="number" name="funcionario">
+                            <div class="form-field column">
+                                <label class="input-label" for="m-imovel">ID do Imóvel:</label>
+                                <input class="input number" type="number" id="m-imovel" name="imovel">
+                            </div>
 
-                        <label>ID da Reserva:</label>
-                        <input type="number" name="reserva">
+                            <div class="form-field column">
+                                <label class="input-label" for="m-funcionario">ID do Funcionário:</label>
+                                <input class="input number" type="number" id="m-funcionario" name="funcionario">
+                            </div>
 
-                        <label>Descrição:</label>
-                        <input type="text" name="descricao">
+                            <div class="form-field column">
+                                <label class="input-label" for="m-reserva">ID da Reserva:</label>
+                                <input class="input number" type="number" id="m-reserva" name="reserva">
+                            </div>
 
-                        <label>Prioridade:</label>
-                        <select name="prioridade">
-                            <option value="">Selecione</option>
-                            <option value="Baixa">Baixa</option>
-                            <option value="Média">Média</option>
-                            <option value="Alta">Alta</option>
-                        </select>
+                            <div class="form-field column">
+                                <label class="input-label" for="m-descricao">Descrição:</label>
+                                <input class="input" type="text" id="m-descricao" name="descricao">
+                            </div>
 
-                        <label>Status:</label>
-                        <select name="status">
-                            <option value="">Selecione</option>
-                            <option value="Pendente">Pendente</option>
-                            <option value="Em andamento">Em andamento</option>
-                            <option value="Concluída">Concluída</option>
-                        </select>
+                            <div class="form-field column">
+                                <label class="input-label" for="m-prioridade">Prioridade:</label>
+                                <select class="input select" id="m-prioridade" name="prioridade">
+                                    <option value="">Selecione</option>
+                                    <option value="Baixa">Baixa</option>
+                                    <option value="Média">Média</option>
+                                    <option value="Alta">Alta</option>
+                                </select>
+                            </div>
 
-                        <label>Diagnóstico:</label>
-                        <input type="text" name="diagnostico">
+                        </div>
 
-                        <label>Solução:</label>
-                        <input type="text" name="solucao">
+                        <div class="form-panel column">
 
-                        <label>Custo:</label>
-                        <input type="number" name="custo" step="0.01">
+                            <div class="form-field column">
+                                <label class="input-label" for="m-status">Status:</label>
+                                <select class="input select" id="m-status" name="status">
+                                    <option value="">Selecione</option>
+                                    <option value="Pendente">Pendente</option>
+                                    <option value="Em andamento">Em andamento</option>
+                                    <option value="Concluída">Concluída</option>
+                                </select>
+                            </div>
 
-                        <label>Data de início:</label>
-                        <input type="datetime-local" name="inicio">
+                            <div class="form-field column">
+                                <label class="input-label" for="m-diagnostico">Diagnóstico:</label>
+                                <input class="input" type="text" id="m-diagnostico" name="diagnostico">
+                            </div>
 
-                        <label>Data de conclusão:</label>
-                        <input type="datetime-local" name="conclusao">
+                            <div class="form-field column">
+                                <label class="input-label" for="m-solucao">Solução:</label>
+                                <input class="input" type="text" id="m-solucao" name="solucao">
+                            </div>
 
-                        <input type="submit" value="Cadastrar">
-                        <input type="reset" value="Limpar">
+                            <div class="form-field column">
+                                <label class="input-label" for="m-custo">Custo:</label>
+                                <input class="input number" type="number" id="m-custo" name="custo" step="0.01">
+                            </div>
+
+                            <div class="form-field column">
+                                <label class="input-label" for="m-inicio">Data de início:</label>
+                                <input class="input" type="datetime-local" id="m-inicio" name="inicio">
+                            </div>
+
+                            <div class="form-field column">
+                                <label class="input-label" for="m-conclusao">Data de conclusão:</label>
+                                <input class="input" type="datetime-local" id="m-conclusao" name="conclusao">
+                            </div>
+
+                            <div class="form-field row">
+                                <button class="btn-forms" type="submit">Cadastrar</button>
+                            </div>
+
+                        </div>
 
                     </form>
                 </section>
@@ -143,7 +176,7 @@
                 <section class="panel-full">
                     <h2>Manutenções Cadastradas</h2>
 
-                    <table border="1">
+                    <table class="form-table">
 
                         <tr>
                             <th>Sala</th>
