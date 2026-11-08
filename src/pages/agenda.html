@@ -82,134 +82,247 @@
                     <a href="../../index.html">Voltar ao painel</a>
 
                 </header>
-                <form>
-                    <section class="panel-full">
 
-                        <h2>Escolha o imóvel</h2>
+                <section class="panel-full">
 
-                        <!-- Seleção do imovel -->
-                        <label for="imovel">Escolha uma imovel:</label>
-                        <select id="imovel" name="imovel" required>
-                            <option value="" disabled selected>Selecione uma opção</option>
-                            <option value="imovel1">Imóvel 1</option>
-                            <option value="imovel2">Imóvel 2</option>
-                            <option value="imovel3">Imóvel 3</option>
-                        </select>
+                    <h2>Escolha o imóvel</h2>
 
-                        <!-- <p> está aqui para quebrar a linha porems será trado no CSS -->
-                        <!-- Seleção da sala -->
-                        <p>
-                            <label for="sala">Escolha uma sala:</label>
-                            <select id="sala" name="sala" required>
-                                <option value="" disabled selected>Selecione uma opção</option>
-                                <option value="sala1">Sala 1</option>
-                                <option value="sala2">Sala 2</option>
-                                <option value="sala3">Sala 3</option>
-                            </select>
-                        </p>
+                    <table class="form-table">
 
-                        <p><strong>Capacidade:</strong> 12 pessoas</p>
+                        <tr>
+                            <td>Capacidade: </td>
+                            <td>12 Pessoas</td>
+                        </tr>
 
-                    </section>
+                    </table>
 
-                    <section class="panel-full">
+                    <form class="form-wrapper">
 
-                        <h2>Horário de funcionamento</h2>
+                        <div class="form-panel column">
 
-                        <p>Defina os dias e horários em que a sala poderá receber reservas.</p>
+                            <div class="form-field column">
+                                <label class="input-label" for="imovel">Escolha uma imovel:</label>
+                                <select class="input select" id="imovel" name="imovel" required>
+                                    <option value="" disabled selected>Selecione uma opção</option>
+                                    <option value="imovel1">Imóvel 1</option>
+                                    <option value="imovel2">Imóvel 2</option>
+                                    <option value="imovel3">Imóvel 3</option>
+                                </select>
+                            </div>
+
+
+                        </div>
+
+                        <div class="form-panel column">
+
+                            <div class="form-field column">
+
+                                <label class="input-label" for="sala">Escolha uma sala:</label>
+                                <select class="input select" id="sala" name="sala" required>
+                                    <option value="" disabled selected>Selecione uma opção</option>
+                                    <option value="sala1">Sala 1</option>
+                                    <option value="sala2">Sala 2</option>
+                                    <option value="sala3">Sala 3</option>
+                                </select>
+
+                            </div>
+
+
+                        </div>
+
+                        <div class="form-panel column full-width">
+                            <button class="btn-forms">Selecionar</button>
+                        </div>
+
+                    </form>
+
+                </section>
+
+                <section class="panel-full">
+
+                    <h2>Horário de funcionamento</h2>
+
+                    <p>Defina os dias e horários em que a sala poderá receber reservas.</p>
+
+                    <!-- Seleção dos Dias -->
+
+
+
+                    <form class="form-wrapper has-title">
                         <h3>Dias de Funcionamento</h3>
-                        <!-- Seleção dos Dias -->
-                        <div>
-                            <label><input type="checkbox" name="dias[]" value="seg"> Seg</label>
-                            <label><input type="checkbox" name="dias[]" value="ter"> Ter</label>
-                            <label><input type="checkbox" name="dias[]" value="qua"> Qua</label>
-                            <label><input type="checkbox" name="dias[]" value="qui"> Qui</label>
-                            <label><input type="checkbox" name="dias[]" value="sex"> Sex</label>
-                            <label><input type="checkbox" name="dias[]" value="sab"> Sáb</label>
-                            <label><input type="checkbox" name="dias[]" value="dom"> Dom</label>
+                        <div class="form-panel column">
+
+                            <div class="form-field row">
+                                <label><input type="checkbox" name="dias[]" value="seg"> Seg</label>
+                                <label><input type="checkbox" name="dias[]" value="ter"> Ter</label>
+                                <label><input type="checkbox" name="dias[]" value="qua"> Qua</label>
+                                <label><input type="checkbox" name="dias[]" value="qui"> Qui</label>
+                                <label><input type="checkbox" name="dias[]" value="sex"> Sex</label>
+                                <label><input type="checkbox" name="dias[]" value="sab"> Sáb</label>
+                                <label><input type="checkbox" name="dias[]" value="dom"> Dom</label>
+                            </div>
+
+
+
                         </div>
 
                         <h3>Horário de Funcionamento</h3>
-                        <!-- Seleção das Horas do Funcionamento da sala -->
-                        <label for="hora_abertura">Abertura:</label>
-                        <input type="time" id="hora_abertura" name="hora_abertura" required>
-                        <label for="hora_fechamento">Fechamento:</label>
-                        <input type="time" id="hora_fechamento" name="hora_fechamento" required>
 
-                        <!-- botão para enviar resposta -->
-                        <button type="submit">Salvar Horários</button>
+                        <div class="form-panel column">
 
-                    </section>
-                </form>
+                            <div class="form-field column">
+                                <label class="input-label" for="hora_abertura">Abertura:</label>
+                                <input class="input" type="time" id="hora_abertura" name="hora_abertura" required>
+                            </div>
 
-                <form>
-                    <section class="panel-full">
+                            <div class="form-field column">
+                                <label class="input-label" for="hora_fechamento">Fechamento:</label>
+                                <input class="input" type="time" id="hora_fechamento" name="hora_fechamento" required>
+                            </div>
 
-                        <h2>Consultar disponibilidade</h2>
-                        <p>
-                            <label>Data</label><br>
-                            <input type="date" id="verificar_data" required>
-                            <button type="submit">Verificar</button>
+                            <div class="form-field column">
+                                <button class="btn-forms">Salvar</button>
+                            </div>
 
-                        <p>Sala 1 disponível das 08:00 às 18:00 na data selecionada.</p>
+                        </div>
 
-                        </p>
 
-                    </section>
-                </form>
 
-                <form>
-                    <section class="panel-full">
+                    </form>
 
-                        <h2>Nova reserva</h2>
-                        <p>
-                            <label for="dta_res_começo">Início</label><br>
-                            <input type="datetime-local" id="dta_res_começo" required>
-                        </p>
-                        <p>
-                            <label for="dta_res_fim">Fim</label><br>
-                            <input type="datetime-local" id="dta_res_fim" required>
-                        </p>
-                        <p>
-                            <label for="tipo">Tipo</label><br>
-                            <select id="tipo">
-                                <option value="HORA">Por hora</option>
-                                <option value="DIARIA">Diária</option>
-                            </select>
-                        </p>
-                        <p>
-                            <label for="id_reserva_cliente">Cliente</label><br>
-                            <input type="number" id="id_reserva_cliente" placeholder="id do cliente" required>
-                        </p>
-                        <button type="submit">Criar reserva</button>
+                </section>
 
-                    </section>
-                </form>
+                <section class="panel-full">
 
-                <form>
-                    <section class="panel-full">
-                        <h2>Bloqueios manuais</h2>
-                        <p>Cadastre períodos em que a sala não estará disponível.</p>
+                    <h2>Consultar disponibilidade</h2>
 
-                        <p>
-                            <label for="dta_começo">Início</label><br>
-                            <input type="datetime-local" id="dta_começo" required>
-                        </p>
+                    <form class="form-wrapper">
 
-                        <p>
-                            <label for="dta_fim">Fim</label><br>
-                            <input type="datetime-local" id="dta_fim" required>
-                        </p>
-                        <p>
-                            <label for="motivo">Motivo</label><br>
+                        <div class="form-panel column">
 
-                            <!-- maxlength maximo de 240 caracteres e placeholder texto dentro do campo enquanto não está sendo preenchido -->
-                            <textarea id="motivo" required maxlength="240"
-                                placeholder="Explique brevemente o motivo"></textarea>
-                        </p>
-                        <button type="submit">Bloquear horário</button>
-                    </section>
-                </form>
+                            <div class="form-field column">
+                                <label class="input-label">Data</label>
+                                <input class="input" type="date" id="verificar_data" required>
+                            </div>
+
+                            <div class="form-field column">
+                                <button class="btn-forms">Verificar</button>
+                            </div>
+
+                        </div>
+
+
+                    </form>
+
+                    <table class="form-table">
+                        <tr>
+                            <td>Sala 1 disponível das 08:00 às 18:00 na data selecionada.</td>
+                        </tr>
+                    </table>
+
+                </section>
+
+
+
+                <section class="panel-full">
+
+                    <h2>Nova reserva</h2>
+
+                    <form class="form-wrapper">
+
+                        <div class="form-panel column">
+
+                            <div class="form-field column">
+                                <label class="input-label" for="dta_res_começo">Início</label>
+                                <input class="input" type="datetime-local" id="dta_res_começo" required>
+                            </div>
+
+                            <div class="form-field column">
+                                <label class="input-label" for="dta_res_fim">Fim</label>
+                                <input class="input" type="datetime-local" id="dta_res_fim" required>
+                            </div>
+
+                        </div>
+
+                        <div class="form-panel column">
+
+                            <div class="form-field column">
+
+                                <label class="input-label" for="tipo">Tipo</label>
+                                <select class="input select" id="tipo">
+                                    <option value="HORA">Por hora</option>
+                                    <option value="DIARIA">Diária</option>
+                                </select>
+
+                            </div>
+
+                            <div class="form-field column">
+
+                                <label class="input-label" for="id_reserva_cliente">Cliente</label>
+                                <input class="input number" type="number" id="id_reserva_cliente"
+                                    placeholder="id do cliente" required>
+
+                            </div>
+
+                        </div>
+
+                        <div class="form-panel column full-width">
+
+                            <button class="btn-forms">Criar Reserva</button>
+
+                        </div>
+
+                    </form>
+
+                </section>
+
+
+
+                <section class="panel-full">
+                    <h2>Bloqueios manuais</h2>
+                    <p>Cadastre períodos em que a sala não estará disponível.</p>
+
+                    <form class="form-wrapper">
+
+                        <div class="form-panel column">
+
+
+                            <div class="form-field column">
+                                <label class="input-label" for="dta_começo">Início</label>
+                                <input class="input" type="datetime-local" id="dta_começo" required>
+                            </div>
+
+                            <div class="form-field column">
+                                <label class="input-label" for="dta_fim">Fim</label>
+                                <input class="input" type="datetime-local" id="dta_fim" required>
+                            </div>
+
+                        </div>
+
+                        <div class="form-panel column">
+
+                            <div class="form-field column">
+                                <label for="motivo">Motivo</label>
+                                <textarea class="input textarea" id="motivo" required maxlength="240"
+                                    placeholder="Explique brevemente o motivo"></textarea>
+                            </div>
+
+
+
+                        </div>
+
+                        <div class="form-panel column full-width">
+
+                            <div class="form-field column">
+                                <button class="btn-forms">Bloquear horário</button>
+                            </div>
+
+                        </div>
+
+                    </form>
+
+                </section>
+
             </main>
 
             <!-- RODAPÉ UNIVERSAL -->

@@ -209,27 +209,73 @@ h1, h2, h3, h4, h5, h6 {
 .form-wrapper {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-around;
   padding: 0.3rem;
   margin: 0.3rem;
 }
 
-.form-panel {
-  display: inherit;
+.form-wrapper.has-title {
+  display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  padding: 0.3rem;
+  margin: 0.3rem;
+}
+
+.form.wrapper.has-title > .form-panel {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.form-wrapper > .form-panel:not(.full-width) {
+  flex: 1;
+}
+
+.form-panel {
+  display: flex;
   width: 100%;
   margin: 0 0.5rem 0 0;
 }
 
+.form-panel.column {
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.form-panel.row {
+
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.form-panel.full-width {
+  width: 100%;
+  display: flex;
+}
+
 .form-field {
 
-  display: inherit;
-  flex-direction: column;
-  justify-content: space-around;
+  display: flex;
   margin: 0 0 0.4rem;
   width: 16rem;
+
+}
+
+.form-field.column {
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.form-field.row {
+
+  flex-direction: row;
+  justify-content: space-around;
 
 }
 
@@ -259,22 +305,23 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1.2rem;
 }
 
-.input-text {
-  border: 1px solid var(--border);
-  background-color: var(--bg-main);
-}
-
-.input-select {
-  appearance: none;
+.input {
   border: 1px solid var(--border);
   background-color: var(--bg-main);
   min-width: 50%;
 }
 
-.input-number {
-  background-color: var(--bg-main);
-  border: 1px solid var(--border);
+.input.select {
+  appearance: none;
+}
+
+.input.number {
   appearance: textfield;
+}
+
+.input.textarea {
+  resize: none;
+  min-height: 5rem;
 }
 
 /* Estrutura de Cards e Painéis */
