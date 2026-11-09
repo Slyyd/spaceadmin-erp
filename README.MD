@@ -63,6 +63,8 @@ SpaceAdmin/
 ├── docs/                             # Documentações do projeto e diagramas
 │   ├── SpaceAdmin.docx               # Documento descritivo completo
 │   ├── DER.pdf                       # Diagrama Entidade-Relacionamento
+│   ├── Diário de Bordo.pdf           # Diário de Bordo em PDF
+│   ├── Diário de Bordo.docx          # Diário de Bordo em docx
 │   ├── fluxograma.pdf                # Fluxogramas dos processos de negócio
 │   └── Orcamento_Servidor_Web_e_Dominio.pdf  # Orçamento de servidor web e domínio
 │
